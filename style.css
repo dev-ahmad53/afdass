@@ -585,7 +585,8 @@ html, body {
     z-index: 99999 !important;
     padding: 1.5rem 1.5rem 2rem 1.5rem !important;
     transform: translateX(105%) !important;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    visibility: hidden !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     gap: 0 !important;
@@ -594,6 +595,7 @@ html, body {
 
   .mobile-drawer.active {
     transform: translateX(0) !important;
+    visibility: visible !important;
   }
 
   .drawer-header {

@@ -159,9 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (cartTableHeader) cartTableHeader.style.display = 'grid';
+    if (cartTableHeader) cartTableHeader.style.display = '';
     if (cartEmptyState) cartEmptyState.style.display = 'none';
-    if (cartTableFooter) cartTableFooter.style.display = 'flex';
+    if (cartTableFooter) cartTableFooter.style.display = '';
     if (cartMainGrid) cartMainGrid.classList.remove('is-empty');
     if (orderSummaryCol) orderSummaryCol.style.display = '';
 
