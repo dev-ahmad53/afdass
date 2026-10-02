@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFDASS PERFUMES | A Scent That Feels Like You</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/favicon-512x512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=20261001_footer_acc" />
+  <link rel="stylesheet" href="drawer.css?v=20261001_footer_acc" />
+  <link rel="stylesheet" href="search.css?v=20261001_live" />
+</head>
+<body>
+
+  <!-- Fullscreen Luxury Hero Section -->
+  <div class="hero-stage">
+    
+    <!-- Zoomed-Out Crisp Master Luxury Background (No Coin, Crisp Logo) -->
+    <div class="hero-bg-layer">
+      <img 
+        src="assets/hero-bg-zoomed-out.jpg" 
+        alt="AFDASS Luxury Perfume Stage" 
+        class="master-bg-image"
+      />
+      <div class="bg-vignette-overlay"></div>
+    </div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        
+        <!-- Logo (Pure Transparent Gold PNG) -->
+        <a href="#" class="brand-logo">
+          <img src="assets/logo.png" alt="AFDASS PERFUMES" class="logo-image" />
+        </a>
+
+        <!-- Center Nav Links -->
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="perfumes.html" class="nav-link">Perfumes</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="nav-actions">
+          <button class="nav-action-btn" aria-label="Search">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search</span>
+          </button>
+
+          <a href="cart.html" class="nav-action-btn cart-btn" aria-label="Cart">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">(0)</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Hero Content Overlay (Left Aligned) -->
+    <main class="hero-content-wrapper">
+      <div class="hero-left-content">
+        
+        <!-- Overline Tag -->
+        <div class="hero-overline" style="display:none;">
+          <span class="overline-spark">✦</span>
+          <span>HAUTE PARFUMERIE &bull; PURE OILS</span>
+        </div>
+
+        <!-- Main Headline (Balanced 2-Line Architecture) -->
+        <h1 class="hero-headline">
+          A scent that<br />
+          feels like you<span class="golden-dot">.</span>
+        </h1>
+
+        <!-- Supporting Paragraph -->
+        <p class="hero-subtext">
+          More than a fragrance, AFDASS is an unspoken identity. Handcrafted with rare oud, rich amber, and exotic florals for those who leave an indelible impression.
+        </p>
+
+
+
+        <!-- Dual CTA Area -->
+        <div class="hero-cta-area">
+          <a href="#perfumes" class="btn-shop-pill">
+            <span>Explore Collection</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#about" class="btn-story-outline">
+            <span>The Heritage</span>
+            <svg class="story-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Badges Bar (Frosted Glass & Reassurance) -->
+        <div class="badges-row">
+          
+          <!-- Badge 1: Long Lasting -->
+          <div class="badge-item">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-heading">14h+ Long Lasting</span>
+              <span class="badge-subheading">All-Day Sillage</span>
+            </div>
+          </div>
+
+          <!-- Badge 2: Premium Quality -->
+          <div class="badge-item">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 3h12l4 6-10 12L2 9z"></path>
+                <path d="M2 9h20"></path>
+                <path d="m10 3 2 6 2-6"></path>
+                <path d="m7.5 9 4.5 12 4.5-12"></path>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-heading">Extrait de Parfum</span>
+              <span class="badge-subheading">Pure Concentrated Oils</span>
+            </div>
+          </div>
+
+          <!-- Badge 3: Nationwide Delivery -->
+          <div class="badge-item">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="1"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="badge-text-group">
+              <span class="badge-heading">Nationwide Delivery</span>
+              <span class="badge-subheading">Cash On Delivery</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Featured Products Section -->
+  <section class="featured-section" id="perfumes">
+    <div class="featured-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <a href="perfumes.html" class="btn-view-all">
+          <span>View All</span>
+          <svg class="view-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Products 4-Col Grid -->
+      <div class="products-grid">
+        
+        <!-- Product 1: Ember -->
+        <div class="product-card">
+          <a href="product-detail.html?product=ember" class="product-img-box" aria-label="View AFDASS Ember Details">
+            <img src="assets/product-ember.jpg" alt="AFDASS Ember" class="product-img" />
+          </a>
+          <div class="product-details">
+            <h3 class="product-title"><a href="product-detail.html?product=ember" class="product-title-link">AFDASS Ember</a></h3>
+            <p class="product-notes">Warm Amber &amp; Smoky Oud</p>
+            <span class="product-price">Rs. 4,500</span>
+            <button class="btn-add-cart" data-name="AFDASS Ember">
+              <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2: Venta -->
+        <div class="product-card">
+          <a href="product-detail.html?product=venta" class="product-img-box" aria-label="View AFDASS Venta Details">
+            <img src="assets/product-venta.jpg" alt="AFDASS Venta" class="product-img" />
+          </a>
+          <div class="product-details">
+            <h3 class="product-title"><a href="product-detail.html?product=venta" class="product-title-link">AFDASS Venta</a></h3>
+            <p class="product-notes">Bold Leather &amp; Fresh Citrus</p>
+            <span class="product-price">Rs. 4,500</span>
+            <button class="btn-add-cart" data-name="AFDASS Venta">
+              <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3: Fatima -->
+        <div class="product-card">
+          <a href="product-detail.html?product=fatima" class="product-img-box" aria-label="View AFDASS Fatima Details">
+            <img src="assets/product-fatima.jpg" alt="AFDASS Fatima" class="product-img" />
+          </a>
+          <div class="product-details">
+            <h3 class="product-title"><a href="product-detail.html?product=fatima" class="product-title-link">AFDASS Fatima</a></h3>
+            <p class="product-notes">Royal Damask Rose &amp; Musk</p>
+            <span class="product-price">Rs. 4,500</span>
+            <button class="btn-add-cart" data-name="AFDASS Fatima">
+              <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4: Afeee -->
+        <div class="product-card">
+          <a href="product-detail.html?product=afeee" class="product-img-box" aria-label="View AFDASS Afeee Details">
+            <img src="assets/product-afeee.jpg" alt="AFDASS Afeee" class="product-img" />
+          </a>
+          <div class="product-details">
+            <h3 class="product-title"><a href="product-detail.html?product=afeee" class="product-title-link">AFDASS Afeee</a></h3>
+            <p class="product-notes">Saffron Nectar &amp; White Amber</p>
+            <span class="product-price">Rs. 4,500</span>
+            <button class="btn-add-cart" data-name="AFDASS Afeee">
+              <svg class="cart-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Crafted For Moments That Matter Section (Full Width Distinct Section) -->
+  <section class="moments-section" id="collections">
+    
+    <!-- Full-Bleed Background Layer -->
+    <div class="moments-bg-layer">
+      <img 
+        src="assets/story-banner.jpg" 
+        alt="Crafted For Moments That Matter - AFDASS" 
+        class="moments-bg-img"
+      />
+      <div class="moments-overlay"></div>
+    </div>
+
+    <!-- Content Container (Grid-Aligned) -->
+    <div class="moments-container">
+      <div class="moments-content">
+        <div class="moments-title-wrap">
+          <h2 class="moments-title">
+            Crafted<br />
+            For Moments<br />
+            That Matter
+          </h2>
+        </div>
+        <p class="moments-desc">
+          Discover fragrances designed to complement your story &mdash; from everyday elegance to life&rsquo;s most special moments.
+        </p>
+        <div class="moments-cta">
+          <a href="#perfumes" class="btn-moments-pill">
+            <span>Explore Collection</span>
+            <svg class="moments-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Shop By Category Section (100% Match to Mockup) -->
+  <section class="category-section" id="categories">
+    <div class="category-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 class="section-title">Shop By Category</h2>
+        <a href="#collections" class="btn-view-all">
+          <span>View All</span>
+          <svg class="view-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Categories 4-Col Grid -->
+      <div class="categories-grid">
+        
+        <!-- Category 1: For Men -->
+        <a href="#perfumes" class="category-card">
+          <div class="category-img-box">
+            <img src="assets/category-men.jpg" alt="For Men" class="category-img" />
+          </div>
+          <div class="category-details">
+            <h3 class="category-title">For Men</h3>
+            <span class="category-action">
+              <span>Explore</span>
+              <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Category 2: For Women -->
+        <a href="#perfumes" class="category-card">
+          <div class="category-img-box">
+            <img src="assets/category-women.jpg" alt="For Women" class="category-img" />
+          </div>
+          <div class="category-details">
+            <h3 class="category-title">For Women</h3>
+            <span class="category-action">
+              <span>Explore</span>
+              <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Category 3: Unisex -->
+        <a href="#perfumes" class="category-card">
+          <div class="category-img-box">
+            <img src="assets/category-unisex.jpg" alt="Unisex" class="category-img" />
+          </div>
+          <div class="category-details">
+            <h3 class="category-title">Unisex</h3>
+            <span class="category-action">
+              <span>Explore</span>
+              <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Category 4: Gift Sets -->
+        <a href="#perfumes" class="category-card">
+          <div class="category-img-box">
+            <img src="assets/category-gift-sets.jpg" alt="Gift Sets" class="category-img" />
+          </div>
+          <div class="category-details">
+            <h3 class="category-title">Gift Sets</h3>
+            <span class="category-action">
+              <span>Explore</span>
+              <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The AFDASS Story Section -->
+  <section class="story-section" id="about">
+    <div class="story-container">
+      <div class="story-grid">
+        
+        <!-- Left Column: Luxury Presentation Box (Original Logo) -->
+        <div class="story-image-wrap">
+          <img 
+            src="assets/story-box.jpg" 
+            alt="The AFDASS Story - Luxury Presentation Box" 
+            class="story-img"
+          />
+        </div>
+
+        <!-- Right Column: Editorial Brand Story -->
+        <div class="story-content-wrap">
+          <div class="story-ambient-glow"></div>
+
+          <div class="story-overline">THE AFDASS STORY</div>
+
+          <h2 class="story-title">
+            More Than<br />
+            A Fragrance
+          </h2>
+
+          <p class="story-description">
+            At AFDASS, we believe a fragrance is not just a scent &mdash; it&rsquo;s a part of your identity. Our perfumes are crafted with elegance, confidence and individuality.
+          </p>
+
+          <div class="story-cta-wrap">
+            <a href="#perfumes" class="btn-our-story">
+              <span>Our Story</span>
+              <svg class="our-story-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What Our Customers Say Section (100% Match to Mockup) -->
+  <section class="testimonials-section" id="reviews">
+    <div class="testimonials-container">
+      
+      <!-- Section Header with Arrows -->
+      <div class="testimonials-header">
+        <h2 class="testimonials-title">What Our Customers Say</h2>
+        <div class="testimonials-controls">
+          <button class="t-nav-btn prev-review" aria-label="Previous review" id="prevReviewBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button class="t-nav-btn next-review" aria-label="Next review" id="nextReviewBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonials Cards Carousel -->
+      <div class="testimonials-carousel" id="testimonialsCarousel">
+        
+        <!-- Review 1: Hamza Khan -->
+        <div class="testimonial-card active" data-index="0">
+          <div class="t-card-content">
+            <div class="t-avatar-box">
+              <img src="assets/customer-hamza.jpg" alt="Hamza Khan" class="t-avatar-img" />
+            </div>
+            <div class="t-text-box">
+              <p class="t-quote">&ldquo;Absolutely love the quality! AFDASS fragrances are long lasting and truly premium.&rdquo;</p>
+              <div class="t-author-meta">
+                <span class="t-author-name">Hamza Khan</span>
+                <div class="t-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="t-watermark-quote">&rdquo;</div>
+        </div>
+
+        <!-- Review 2: Ayesha Malik -->
+        <div class="testimonial-card" data-index="1">
+          <div class="t-card-content">
+            <div class="t-avatar-box">
+              <img src="assets/customer-ayesha.jpg" alt="Ayesha Malik" class="t-avatar-img" />
+            </div>
+            <div class="t-text-box">
+              <p class="t-quote">&ldquo;AFDASS Fatima is hands down the best rose and oud blend I have ever worn. The packaging and longevity are truly exceptional!&rdquo;</p>
+              <div class="t-author-meta">
+                <span class="t-author-name">Ayesha Malik</span>
+                <div class="t-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="t-watermark-quote">&rdquo;</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Luxury Footer & Community Section (100% Match to Mockup) -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-container">
+      
+      <!-- Top Newsletter Row: Join The AFDASS Community -->
+      <div class="footer-newsletter-row">
+        <div class="newsletter-text-wrap">
+          <h2 class="newsletter-title">Join The AFDASS Community</h2>
+          <p class="newsletter-subtitle">Get exclusive updates, new arrivals and special offers.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input 
+            type="email" 
+            class="newsletter-input" 
+            id="newsletterEmail"
+            placeholder="Enter your email" 
+            required 
+          />
+          <button type="submit" class="btn-newsletter-submit" aria-label="Subscribe">
+            <svg class="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+        <div class="newsletter-feedback" id="newsletterFeedback" style="display:none;margin-top:10px;font-size:0.92rem;color:#dea65f;font-weight:500;"></div>
+      </div>
+
+      <!-- Main Footer Columns (4-Col Grid) -->
+      <div class="footer-main-grid">
+        
+        <!-- Col 1: Official Logo -->
+        <div class="footer-col brand-col">
+          <a href="#" class="footer-logo-link">
+            <img src="assets/logo.png" alt="AFDASS PERFUMES" class="footer-logo-img" />
+          </a>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Quick Links</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="perfumes.html" class="footer-link">Perfumes</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Customer Care</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="contact.html" class="footer-link">Shipping Policy</a></li>
+            <li><a href="contact.html" class="footer-link">Return &amp; Refund</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="contact.html" class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Follow Us -->
+        <div class="footer-col follow-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Follow Us</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <div class="footer-social-row footer-accordion-content">
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.37a6.34 6.34 0 0 0-.84-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.5a8.28 8.28 0 0 0 4.77 1.48V6.69z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2024 AFDASS Perfumes. All rights reserved.</p>
+        <p class="footer-tagline">A scent that feels like you.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer Menu & Frosted Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="AFDASS PERFUMES" class="drawer-logo" />
+      <button class="drawer-close" id="drawerCloseBtn" type="button" aria-label="Close Menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-link active">Home</a>
+      <a href="perfumes.html" class="mobile-link">Perfumes</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="cart.html" class="mobile-link">Cart</a>
+    </nav>
+    <div class="drawer-cta">
+      <a href="https://wa.me/923125797051" target="_blank" rel="noopener" class="drawer-wa-btn">
+        <svg class="drawer-wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="#25d366">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.53C9.36 7.53 9.08 7.6 8.84 7.86C8.6 8.12 7.93 8.75 7.93 10.03C7.93 11.31 8.86 12.55 9 12.72C9.13 12.9 10.79 15.46 13.33 16.55C15.44 17.47 15.87 17.29 16.33 17.24C16.8 17.2 17.84 16.62 18.06 16.02C18.27 15.42 18.27 14.9 18.21 14.8C18.15 14.7 17.98 14.64 17.72 14.5C17.47 14.38 16.21 13.76 15.98 13.67C15.75 13.59 15.58 13.55 15.41 13.8C15.24 14.06 14.76 14.64 14.62 14.8C14.47 14.97 14.33 15 14.07 14.87C13.82 14.75 13.01 14.48 12.05 13.62C11.3 12.95 10.79 12.13 10.65 11.89C10.51 11.64 10.63 11.51 10.76 11.38C10.87 11.27 11.01 11.09 11.14 10.94C11.27 10.79 11.31 10.69 11.4 10.52C11.49 10.35 11.44 10.2 11.38 10.07C11.31 9.95 10.83 8.77 10.63 8.28C10.43 7.8 10.23 7.87 10.07 7.86L9.53 7.53Z"/>
+        </svg>
+        <span>Order via WhatsApp</span>
+      </a>
+      <p class="drawer-tagline">A scent that feels like you.</p>
+    </div>
+  </aside>
+
+  <script src="script.js?v=20261001_lux_v3"></script>
+  <script src="search.js?v=20261001_live"></script>
+</body>
+</html>

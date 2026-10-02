@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | AFDASS PERFUMES</title>
+  <meta name="description" content="Connect with AFDASS PERFUMES. Reach our luxury fragrance concierge for order inquiries, personal fragrance recommendations, and customer care." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/favicon-192x192.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Cache Prevention -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=20261002_live" />
+  <link rel="stylesheet" href="drawer.css?v=20261002_live" />
+  <link rel="stylesheet" href="contact.css?v=20261002_live_v2" />
+  <link rel="stylesheet" href="search.css?v=20261002_live" />
+
+  <!-- Critical Hero Styles matching About and Perfumes seamless widescreen hero banners -->
+  <style>
+    .contact-hero {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      background-color: #140d09;
+    }
+
+    /* Full-Width Background Image Layer */
+    .contact-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .contact-hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      display: block;
+    }
+
+    /* Dark overlay so text is 100% readable */
+    .contact-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(14, 9, 6, 0.90) 0%,
+        rgba(14, 9, 6, 0.65) 45%,
+        rgba(14, 9, 6, 0.15) 70%,
+        transparent 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Deep soft shadow across top so navbar is crystal clear */
+    .contact-hero-top-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.94) 0%,
+        rgba(4, 2, 2, 0.82) 42%,
+        rgba(10, 7, 5, 0.48) 72%,
+        transparent 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .navbar-in-hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      width: 100%;
+      background: transparent;
+      padding: 1rem 0 0 0;
+    }
+
+    /* Hero Text Content Overlay */
+    .contact-hero-content {
+      position: relative;
+      z-index: 5;
+      height: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 85px 5% 30px 5%;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-hero-text {
+      max-width: 620px;
+    }
+
+    .contact-hero-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.6rem, 4vw, 3.8rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: #ffffff;
+      margin: 0.5rem 0 1.25rem 0;
+      letter-spacing: -0.015em;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .gold-heading-accent {
+      background: linear-gradient(135deg, #f7dfbe 0%, #dea65f 55%, #b87d3b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 400;
+    }
+
+    .contact-hero-lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #c4bbb2;
+      margin: 0 0 1.85rem 0;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.85);
+    }
+
+    .contact-hero-cta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.25rem !important;
+      margin-bottom: 1.85rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #f5cf96 0%, #dea65f 50%, #c98e47 100%);
+      color: #0c0805 !important;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 0.94rem;
+      font-weight: 700;
+      padding: 0.85rem 2.2rem;
+      border-radius: 9999px;
+      text-decoration: none !important;
+      box-shadow: 0 4px 18px rgba(222, 166, 95, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-gold-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(222, 166, 95, 0.55);
+    }
+
+    .btn-dark-outline {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.65rem;
+      background: rgba(30, 21, 14, 0.75);
+      color: #ffffff !important;
+      border: 1px solid rgba(222, 166, 95, 0.35);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 0.85rem 1.85rem;
+      border-radius: 9999px;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-dark-outline:hover {
+      background: rgba(222, 166, 95, 0.18);
+      border-color: #dea65f;
+      color: #f5cf96 !important;
+      transform: translateY(-2px);
+    }
+
+    .contact-hero-perks {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+      flex-wrap: wrap;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(138, 90, 50, 0.22);
+    }
+
+    .hero-perk-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #9e958a;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-perk-item .perk-spark {
+      color: #dea65f;
+      font-size: 0.85rem;
+    }
+
+    .hero-perk-item .perk-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #25d366;
+      box-shadow: 0 0 8px #25d366;
+      display: inline-block;
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        height: auto;
+        min-height: 480px;
+        display: block;
+      }
+      .contact-hero-bg-img {
+        object-position: 75% center;
+      }
+      .contact-hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(14, 9, 6, 0.90) 0%,
+          rgba(14, 9, 6, 0.78) 45%,
+          rgba(14, 9, 6, 0.92) 100%
+        );
+      }
+      .contact-hero-content {
+        padding: 1.5rem 1rem 3rem 1rem;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .contact-hero-text {
+        max-width: 380px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .contact-hero-heading {
+        font-size: clamp(1.75rem, 5.8vw, 2.15rem);
+        line-height: 1.16;
+        text-align: center;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.9);
+      }
+      .contact-hero-lead {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: center;
+        max-width: 330px;
+        margin: 0 auto 1.65rem auto;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 1);
+        text-wrap: balance;
+      }
+      .contact-hero-cta {
+        flex-direction: column !important;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1.85rem auto;
+      }
+      .btn-gold-pill, .btn-dark-outline {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box;
+      }
+      .contact-hero-perks {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.65rem !important;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="contact-page">
+
+  <main>
+    <!-- ===================================================================
+         1. HERO SECTION & TOP NAVBAR
+         Matching the warm roasted chocolate & espresso atmosphere
+         =================================================================== -->
+    <section class="contact-hero">
+      
+      <!-- Full-Width Background Image -->
+      <div class="contact-hero-bg">
+        <img src="assets/contact-hero-banner.jpg?v=20261001_seamless_v2" alt="AFDASS Fragrance Concierge" class="contact-hero-bg-img" />
+        <div class="contact-hero-overlay"></div>
+      </div>
+
+      <!-- Top Subtle Shadow for Crystal Clear Header Contrast -->
+      <div class="contact-hero-top-shadow"></div>
+
+      <!-- Standard Navbar (110px logo, gold actions, exact grid) -->
+      <header class="navbar navbar-in-hero" id="mainNavbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="brand-logo" aria-label="AFDASS PERFUMES Home">
+            <img src="assets/logo.png" alt="AFDASS PERFUMES" class="logo-image" />
+          </a>
+
+          <!-- Center Navigation Links -->
+          <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="perfumes.html" class="nav-link">Perfumes</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </nav>
+
+          <!-- Right Action Buttons -->
+          <div class="nav-actions">
+            <button type="button" class="nav-action-btn search-btn" aria-label="Search Fragrances">
+              <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Search</span>
+            </button>
+
+            <a href="cart.html" class="nav-action-btn cart-btn" id="btnNavCart" aria-label="View Shopping Cart">
+              <svg class="action-icon cart-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span class="cart-badge" id="headerCartCount">(0)</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Header Content: Haute Parfumerie Concierge Stage Overlay -->
+      <div class="contact-hero-content">
+        <div class="contact-hero-text">
+          <span class="section-eyebrow">— HAUTE PARFUMERIE CONCIERGE</span>
+          <h1 class="contact-hero-heading">
+            Personalized<br />
+            <span class="gold-heading-accent">Fragrance Concierge</span>
+          </h1>
+          <p class="contact-hero-lead">
+            Whether you seek bespoke scent recommendations, exclusive gifting guidance, or immediate order assistance, our dedicated fragrance concierge in Islamabad &amp; Rawalpindi is at your service.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="contact-hero-cta">
+            <a href="https://wa.me/923125797051?text=Hello%20AFDASS%20Perfumes!%20I%20would%20like%20to%20connect%20with%20your%20fragrance%20concierge." target="_blank" rel="noopener" class="btn-gold-pill">
+              <span>Chat On WhatsApp</span>
+              <span class="pill-arrow">→</span>
+            </a>
+            <a href="#inquiry-form" class="btn-dark-outline">
+              <span>Send Inquiry</span>
+              <span class="pill-arrow">↓</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Bar -->
+          <div class="contact-hero-perks">
+            <div class="hero-perk-item">
+              <span class="perk-pulse-dot"></span>
+              <span>Instant WhatsApp Concierge</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-spark">✦</span>
+              <span>Nationwide Express (2–4 Days)</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-spark">✦</span>
+              <span>100% Extrait de Parfum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================================================================
+         2. MAIN CONCIERGE & INQUIRY SECTION
+         2-Column Grid: Left Channels / Right Luxury Form
+         =================================================================== -->
+    <section class="contact-main-section">
+      <div class="contact-container">
+        <div class="contact-grid">
+
+          <!-- Left Column: Direct Concierge Channels -->
+          <div class="contact-info-col">
+            
+            <div class="info-header-wrap">
+              <span class="section-eyebrow">— DIRECT CHANNELS</span>
+              <h2 class="info-title">At Your Service</h2>
+              <p class="info-desc">
+                We believe in providing a seamless luxury experience. Connect with us through your preferred channel for prompt, personalized assistance.
+              </p>
+            </div>
+
+            <div class="concierge-cards-list">
+
+              <!-- WhatsApp Card (Primary) -->
+              <div class="concierge-card primary-wa-card">
+                <div class="card-icon-circle wa-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.122-.52-1.823-.759-3.003-2.617-3.094-2.739-.092-.122-.741-.986-.741-1.88 0-.895.468-1.336.635-1.518.167-.182.366-.228.488-.228.121 0 .243.002.349.006.111.004.261-.042.408.31.152.365.518 1.261.564 1.353.045.091.076.198.016.319-.061.122-.092.198-.183.304-.092.106-.193.237-.276.319-.092.091-.188.19-.081.373.107.182.476.786 1.022 1.272.703.626 1.296.82 1.48.911.183.091.289.076.395-.045.107-.122.457-.532.579-.714.122-.182.244-.152.411-.091.167.061 1.066.503 1.249.594.182.091.304.137.349.213.046.076.046.44-.098.845z"/>
+                  </svg>
+                </div>
+                <div class="card-details">
+                  <div class="card-badge-row">
+                    <span class="status-pulse-dot"></span>
+                    <span class="card-badge-text">Instant WhatsApp Concierge</span>
+                  </div>
+                  <h3 class="card-name">+92 312 5797051</h3>
+                  <p class="card-subtext">Direct assistance, order tracking &amp; instant checkout.</p>
+                  <a href="https://wa.me/923125797051?text=Hello%20AFDASS%20Perfumes!%20I%20would%20like%20to%20inquire%20about%20your%20fragrances." target="_blank" rel="noopener" class="card-action-link">
+                    <span>Chat On WhatsApp</span>
+                    <span class="link-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email Concierge Card -->
+              <div class="concierge-card">
+                <div class="card-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div class="card-details">
+                  <span class="card-label">Email Inquiries</span>
+                  <h3 class="card-name">support@afdassperfumes.com</h3>
+                  <p class="card-subtext">Guaranteed response within 24 business hours.</p>
+                  <a href="mailto:support@afdassperfumes.com" class="card-action-link">
+                    <span>Send An Email</span>
+                    <span class="link-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Atelier Location Card -->
+              <div class="concierge-card">
+                <div class="card-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="card-details">
+                  <span class="card-label">Boutique &amp; Dispatch</span>
+                  <h3 class="card-name">Islamabad &bull; Rawalpindi</h3>
+                  <p class="card-subtext">Express Nationwide Shipping across Pakistan (2–4 Days).</p>
+                </div>
+              </div>
+
+              <!-- Concierge Hours Card -->
+              <div class="concierge-card">
+                <div class="card-icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="card-details">
+                  <span class="card-label">Operating Hours</span>
+                  <h3 class="card-name">Mon – Sat: 10:00 AM – 8:00 PM</h3>
+                  <p class="card-subtext">Sunday: 12:00 PM – 6:00 PM (PKT)</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Trust Badges Row -->
+            <div class="contact-trust-badges">
+              <div class="trust-badge-pill">
+                <span class="t-spark">✦</span>
+                <span>Free Express Delivery</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span class="t-spark">✦</span>
+                <span>100% Extrait de Parfum</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span class="t-spark">✦</span>
+                <span>Cash On Delivery</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Bespoke Luxury Inquiry Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card" id="inquiry-form">
+              
+              <div class="form-header">
+                <span class="section-eyebrow">— SEND A MESSAGE</span>
+                <h3 class="form-title">Concierge Inquiry</h3>
+                <p class="form-subtitle">Fill in the details below and our scent specialist will assist you promptly.</p>
+              </div>
+
+              <form id="contactForm" class="luxury-form" novalidate>
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full Name <span class="req">*</span></label>
+                  <input 
+                    type="text" 
+                    id="contactName" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder="e.g. Ayesha Khan" 
+                    required 
+                  />
+                  <span class="input-error-msg" id="nameError">Please enter your name</span>
+                </div>
+
+                <!-- Email & Phone Dual Row -->
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="contactEmail" class="form-label">Email Address <span class="req">*</span></label>
+                    <input 
+                      type="email" 
+                      id="contactEmail" 
+                      name="email" 
+                      class="form-input" 
+                      placeholder="e.g. name@example.com" 
+                      required 
+                    />
+                    <span class="input-error-msg" id="emailError">Please enter a valid email</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactPhone" class="form-label">Phone / WhatsApp <span class="req">*</span></label>
+                    <input 
+                      type="tel" 
+                      id="contactPhone" 
+                      name="phone" 
+                      class="form-input" 
+                      placeholder="e.g. 0312 5797051" 
+                      required 
+                    />
+                    <span class="input-error-msg" id="phoneError">Please enter your phone number</span>
+                  </div>
+                </div>
+
+                <!-- Subject Dropdown -->
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Inquiry Topic</label>
+                  <select id="contactSubject" name="subject" class="form-input form-select">
+                    <option value="Fragrance Consultation">Personal Fragrance Consultation</option>
+                    <option value="Order Inquiry & Tracking">Order Inquiry &amp; Tracking</option>
+                    <option value="Bespoke Gifting & Favors">Bespoke Gifting &amp; Event Favors</option>
+                    <option value="Wholesale & Distribution">Wholesale &amp; Distribution</option>
+                    <option value="General Inquiry">General Inquiry / Feedback</option>
+                  </select>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Your Message <span class="req">*</span></label>
+                  <textarea 
+                    id="contactMessage" 
+                    name="message" 
+                    rows="4" 
+                    class="form-input form-textarea" 
+                    placeholder="Tell us how we can assist you..." 
+                    required
+                  ></textarea>
+                  <span class="input-error-msg" id="messageError">Please enter your message</span>
+                </div>
+
+                <!-- Dual Submission Buttons -->
+                <div class="form-actions-wrap">
+                  <button type="submit" class="btn-gold-pill btn-submit-form" id="btnSubmitForm">
+                    <span>Send Message</span>
+                    <span class="pill-arrow">→</span>
+                  </button>
+
+                  <button type="button" class="btn-wa-direct" id="btnSendViaWhatsApp">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.122-.52-1.823-.759-3.003-2.617-3.094-2.739-.092-.122-.741-.986-.741-1.88 0-.895.468-1.336.635-1.518.167-.182.366-.228.488-.228.121 0 .243.002.349.006.111.004.261-.042.408.31.152.365.518 1.261.564 1.353.045.091.076.198.016.319-.061.122-.092.198-.183.304-.092.106-.193.237-.276.319-.092.091-.188.19-.081.373.107.182.476.786 1.022 1.272.703.626 1.296.82 1.48.911.183.091.289.076.395-.045.107-.122.457-.532.579-.714.122-.182.244-.152.411-.091.167.061 1.066.503 1.249.594.182.091.304.137.349.213.046.076.046.44-.098.845z"/>
+                    </svg>
+                    <span>Send via WhatsApp</span>
+                  </button>
+                </div>
+
+                <!-- Form Feedback Notification -->
+                <div class="form-feedback-box" id="formFeedback"></div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3. CUSTOMER CARE FAQ SECTION
+         Interactive accordion answering common questions
+         =================================================================== -->
+    <section class="contact-faq-section">
+      <div class="contact-container">
+        
+        <div class="faq-header-wrap">
+          <span class="section-eyebrow center">✦ &nbsp; FREQUENTLY ASKED QUESTIONS &nbsp; ✦</span>
+          <h2 class="faq-heading">
+            Customer Care <span class="gold-heading-accent italic">&amp; FAQs</span>
+          </h2>
+          <p class="faq-lead">Quick answers to our most common questions regarding shipping, concentration, and orders.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+          
+          <!-- Item 1: Longevity -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">How long do AFDASS fragrances last on skin and clothes?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>Every AFDASS fragrance is formulated as an <strong>Extrait de Parfum</strong> with exceptionally high concentrations of pure French and oriental oils. Our fragrances typically provide <strong>14+ hours of all-day longevity</strong> with a bold, magnetic sillage that leaves an unforgettable impression.</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Delivery & COD -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">What are the delivery times and charges across Pakistan?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>We provide <strong>Express Nationwide Delivery</strong> across all major cities of Pakistan within <strong>2 to 4 business days</strong>. Cash on Delivery (COD) is available nationwide for your convenience.</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Order via WhatsApp -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">Can I place my order directly through WhatsApp?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>Yes, absolutely! You can tap any of our WhatsApp buttons or message us directly at <strong>+92 312 5797051</strong>. Our concierge will take your order details, confirm your delivery address, and dispatch your parcel immediately.</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Fragrance Consultation -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">Can you help me choose the right fragrance for my personality?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>We would love to! Whether you prefer the warm smoky amber of <em>Ember</em>, the bold leather of <em>Venta</em>, the soft floral elegance of <em>Fatima</em>, or the versatile allure of <em>Afeee</em>, our scent advisors can guide you based on your taste and occasions.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       4. LUXURY FOOTER (Unified Standard Across Entire Website)
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Newsletter Banner -->
+      <div class="footer-newsletter-row">
+        <div class="newsletter-text-wrap">
+          <h2 class="newsletter-title">Join The AFDASS Community</h2>
+          <p class="newsletter-subtitle">Get exclusive updates, new arrivals and special offers.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for joining the AFDASS community!');">
+          <input 
+            type="email" 
+            class="newsletter-input" 
+            placeholder="Enter your email" 
+            required 
+          />
+          <button type="submit" class="btn-newsletter-submit" aria-label="Subscribe">
+            <svg class="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Main Footer Columns (4-Col Grid) -->
+      <div class="footer-main-grid">
+
+        <!-- Col 1: Official Logo -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="assets/logo.png" alt="AFDASS PERFUMES" class="footer-logo-img" />
+          </a>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Quick Links</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="perfumes.html" class="footer-link">Perfumes</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link active">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Customer Care</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="#shipping" class="footer-link">Shipping Policy</a></li>
+            <li><a href="#refund" class="footer-link">Return &amp; Refund</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#terms" class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Follow Us -->
+        <div class="footer-col follow-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Follow Us</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <div class="footer-social-row footer-accordion-content">
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.37a6.34 6.34 0 0 0-.84-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 0 0 0 6.34-6.34V8.5a8.28 8.28 0 0 0 4.77 1.48V6.69z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2024 AFDASS Perfumes. All rights reserved.</p>
+        <p class="footer-tagline">A scent that feels like you.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer Menu & Frosted Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="AFDASS PERFUMES" class="drawer-logo" />
+      <button class="drawer-close" id="drawerCloseBtn" type="button" aria-label="Close Menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="perfumes.html" class="mobile-link">Perfumes</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link active">Contact</a>
+      <a href="cart.html" class="mobile-link">Cart</a>
+    </nav>
+    <div class="drawer-cta">
+      <a href="https://wa.me/923125797051" target="_blank" rel="noopener" class="drawer-wa-btn">
+        <svg class="drawer-wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="#25d366">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.53C9.36 7.53 9.08 7.6 8.84 7.86C8.6 8.12 7.93 8.75 7.93 10.03C7.93 11.31 8.86 12.55 9 12.72C9.13 12.9 10.79 15.46 13.33 16.55C15.44 17.47 15.87 17.29 16.33 17.24C16.8 17.2 17.84 16.62 18.06 16.02C18.27 15.42 18.27 14.9 18.21 14.8C18.15 14.7 17.98 14.64 17.72 14.5C17.47 14.38 16.21 13.76 15.98 13.67C15.75 13.59 15.58 13.55 15.41 13.8C15.24 14.06 14.76 14.64 14.62 14.8C14.47 14.97 14.33 15 14.07 14.87C13.82 14.75 13.01 14.48 12.05 13.62C11.3 12.95 10.79 12.13 10.65 11.89C10.51 11.64 10.63 11.51 10.76 11.38C10.87 11.27 11.01 11.09 11.14 10.94C11.27 10.79 11.31 10.69 11.4 10.52C11.49 10.35 11.44 10.2 11.38 10.07C11.31 9.95 10.83 8.77 10.63 8.28C10.43 7.8 10.23 7.87 10.07 7.86L9.53 7.53Z"/>
+        </svg>
+        <span>Order via WhatsApp</span>
+      </a>
+      <p class="drawer-tagline">A scent that feels like you.</p>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="contact.js?v=20261001_lux_v3"></script>
+  <script src="search.js?v=20261001_live"></script>
+</body>
+</html>

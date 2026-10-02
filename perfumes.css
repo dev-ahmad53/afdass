@@ -1,0 +1,1147 @@
+/* ===================================================================
+   AFDASS PERFUMES — perfumes.css
+   Signature Collections Page Styles
+   Matching 100% to the Home Page Luxury Dark Chocolate & Espresso Palette
+   =================================================================== */
+
+/* ── Base Page Styling ── */
+.perfumes-page {
+  background-color: #120b08;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(160, 105, 55, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(138, 90, 50, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(160, 105, 55, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(107, 69, 38, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: var(--text-pure);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===================================================================
+   1. HERO BANNER (Height: 350px, Full Space Luxury Banner)
+   =================================================================== */
+.coll-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #140d09;
+}
+
+.coll-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.coll-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+/* Soft warm chocolate vignette on left side to ensure text legibility without black look */
+.coll-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 9, 6, 0.88) 0%,
+    rgba(14, 9, 6, 0.62) 42%,
+    rgba(14, 9, 6, 0.15) 68%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Deep soft black shadow across top so header navbar and icons are 100% crystal clear */
+.coll-hero-top-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.94) 0%,
+    rgba(4, 2, 2, 0.82) 42%,
+    rgba(10, 7, 5, 0.48) 72%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Navbar placed inside Hero (normal flow, scrolls up with banner) */
+.navbar-in-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+  padding: 1rem 0 0 0;
+}
+
+.navbar-in-hero .nav-link {
+  color: var(--text-nav, #a8a8a9);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-in-hero .nav-link:hover,
+.navbar-in-hero .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 12px rgba(222, 166, 95, 0.6);
+}
+
+.navbar-in-hero .nav-action-btn {
+  color: var(--gold-primary);
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9), 0 0 12px rgba(222, 166, 95, 0.35);
+  transition: all 0.25s ease;
+}
+
+.navbar-in-hero .nav-action-btn:hover {
+  color: #f7d197;
+  text-shadow: 0 0 16px rgba(222, 166, 95, 0.9), 0 2px 10px rgba(0, 0, 0, 0.95);
+  transform: translateY(-1px);
+}
+
+.navbar-in-hero .cart-badge {
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+/* Hero Content (left aligned text, right aligned 4 bottles) */
+.coll-hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 85px 5% 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coll-hero-left {
+  max-width: 620px;
+}
+
+.coll-overline {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.coll-hero-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.1rem, 3.2vw, 2.75rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: #fdf6ee;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
+}
+
+.coll-gold {
+  color: var(--gold-primary);
+  font-weight: 400;
+}
+
+.coll-hero-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.06rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.48;
+  color: #dbd2c8;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+  max-width: 580px;
+}
+
+.coll-hero-right {
+  text-align: right;
+  align-self: flex-start;
+  padding-top: 1.5rem;
+}
+
+.coll-hero-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 2;
+  text-transform: uppercase;
+  color: rgba(222, 166, 95, 0.55);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ===================================================================
+   2. CATEGORY TABS STRIP (Clean 4-Item Grid for the 4 Perfumes)
+   =================================================================== */
+.coll-tabs-section {
+  background: radial-gradient(ellipse 100% 100% at 50% 0%, #1e140d 0%, #150e09 100%);
+  border-top: 1px solid rgba(138, 90, 50, 0.28);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+  padding: 0 5%;
+}
+
+.coll-tabs-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 1rem 0;
+}
+
+.coll-tab {
+  background: linear-gradient(180deg, #1f1610 0%, #150e09 100%);
+  border: 1px solid rgba(138, 90, 50, 0.28);
+  border-radius: 14px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.coll-tab:hover {
+  background: linear-gradient(180deg, #281c13 0%, #1b120c 100%);
+  border-color: rgba(222, 166, 95, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 20px rgba(222, 166, 95, 0.15);
+}
+
+.coll-tab.active {
+  background: linear-gradient(180deg, #302016 0%, #20150e 100%);
+  border-color: var(--gold-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 24px rgba(222, 166, 95, 0.25);
+}
+
+.tab-img-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #0d0906;
+  border: 1px solid rgba(222, 166, 95, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tab-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.tab-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.tab-name {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ede6dc;
+  letter-spacing: 0.01em;
+}
+
+.coll-tab.active .tab-name {
+  color: var(--gold-primary);
+}
+
+.tab-sub {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: #8c8378;
+}
+
+/* ===================================================================
+   3. PRODUCTS MAIN SHOWCASE (Home Page Luxury Espresso Palette)
+   =================================================================== */
+.coll-main {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(ellipse 80% 65% at 50% 15%, #241b12 0%, #1a130c 55%, #130d08 100%);
+  padding: 4.5rem 0 5.5rem 0;
+  border-top: 1px solid rgba(138, 90, 50, 0.2);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.2);
+}
+
+.coll-main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Products Header */
+.products-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.75rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.products-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  color: #f5f0e6;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.products-sub {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: #a89f94;
+}
+
+.products-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sort-label {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #8c8378;
+}
+
+.sort-select {
+  background: #18110c;
+  border: 1px solid rgba(222, 166, 95, 0.3);
+  border-radius: 8px;
+  color: #f5f0e6;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sort-select:focus {
+  border-color: var(--gold-primary);
+}
+
+/* ── 4-Column Luxury Product Grid ── */
+.products-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+/* Luxury Product Card (Matching Home Page) */
+.prod-card {
+  background: linear-gradient(180deg, #1c140d 0%, #140e09 100%);
+  border: 1px solid rgba(138, 90, 50, 0.26);
+  border-radius: 18px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(222, 166, 95, 0.08);
+}
+
+.prod-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(222, 166, 95, 0.48);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.8), 0 0 32px rgba(138, 90, 50, 0.2);
+}
+
+.prod-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Image Box with ambient amber glow */
+.prod-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0d0906;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.15rem;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.8);
+}
+
+.prod-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(222, 166, 95, 0.22) 0%, rgba(138, 90, 50, 0.08) 50%, transparent 75%);
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.prod-card:hover .prod-glow {
+  transform: scale(1.15);
+}
+
+.prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.prod-card:hover .prod-img {
+  transform: scale(1.04);
+}
+
+/* Floating Tag */
+.prod-tag {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  background: rgba(222, 166, 95, 0.18);
+  border: 1px solid rgba(222, 166, 95, 0.4);
+  color: var(--gold-title);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.6rem;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+/* Wishlist Button */
+.prod-wish {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(18, 12, 8, 0.75);
+  border: 1px solid rgba(222, 166, 95, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #a8a8a9;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.prod-wish:hover {
+  background: rgba(222, 166, 95, 0.2);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: scale(1.08);
+}
+
+.prod-wish svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Card Details */
+.prod-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.prod-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.prod-badge {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.prod-volume {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: #7a7368;
+}
+
+.prod-img-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.prod-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f7e9d7;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.prod-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.prod-title-link:hover {
+  color: var(--gold-primary);
+}
+
+.prod-note {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #a59e95;
+  margin-bottom: 0.95rem;
+  line-height: 1.45;
+}
+
+.prod-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 0.95rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(138, 90, 50, 0.16);
+}
+
+.prod-price {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.02em;
+}
+
+.prod-in-stock {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: #6da377;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.prod-in-stock::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6da377;
+}
+
+/* Add to Cart Button */
+.btn-add-cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background: rgba(28, 20, 13, 0.85);
+  border: 1px solid rgba(222, 166, 95, 0.35);
+  border-radius: 9999px;
+  color: var(--gold-primary);
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.7rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-add-cart:hover {
+  background: var(--gold-primary);
+  color: #0e0906;
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 18px rgba(222, 166, 95, 0.25);
+  transform: translateY(-1px);
+}
+
+.cart-btn-icon {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+
+/* ===================================================================
+   4. BRAND TRUST PILLARS STRIP
+   =================================================================== */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: linear-gradient(180deg, rgba(28, 20, 13, 0.85) 0%, rgba(20, 14, 9, 0.9) 100%);
+  border: 1px solid rgba(138, 90, 50, 0.28);
+  border-radius: 16px;
+  padding: 2.25rem 2.5rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(222, 166, 95, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.trust-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(222, 166, 95, 0.12);
+  border: 1px solid rgba(222, 166, 95, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.trust-title {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f7e9d7;
+}
+
+.trust-desc {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: #8c8378;
+  line-height: 1.45;
+}
+
+/* ===================================================================
+   5. SIGNATURE SCENT CTA BANNER (Contained Luxury Card, Warm Silk Glow)
+   =================================================================== */
+.sig-scent-section {
+  position: relative;
+  max-width: 1400px;
+  margin: 4rem auto 5rem auto;
+  height: 320px;
+  border-radius: 20px;
+  border: 1px solid rgba(222, 166, 95, 0.32);
+  overflow: hidden;
+  background-color: #120b08;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 36px rgba(138, 90, 50, 0.16);
+}
+
+.sig-scent-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.sig-scent-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.sig-scent-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 12, 7, 0.75) 0%,
+    rgba(18, 12, 7, 0.45) 45%,
+    rgba(18, 12, 7, 0.12) 70%,
+    transparent 85%
+  );
+  pointer-events: none;
+}
+
+.sig-scent-content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4.5rem;
+}
+
+.sig-overline {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sig-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: #f7e9d7;
+  margin-bottom: 0.45rem;
+}
+
+.sig-desc {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  color: #b8b0a5;
+  margin-bottom: 1.25rem;
+  max-width: 460px;
+}
+
+.btn-sig-shop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold-primary);
+  color: #0a0705;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-sig-shop:hover {
+  background: var(--gold-hover);
+  transform: translateX(3px);
+  box-shadow: 0 6px 20px rgba(222, 166, 95, 0.35);
+}
+
+/* ===================================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================================== */
+@media (max-width: 1200px) {
+  .products-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coll-tabs-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .coll-hero {
+    height: auto;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coll-hero-img {
+    object-position: 75% center;
+  }
+
+  .coll-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 9, 6, 0.88) 0%,
+      rgba(14, 9, 6, 0.72) 40%,
+      rgba(14, 9, 6, 0.90) 100%
+    );
+  }
+
+  .coll-hero-content {
+    width: 100%;
+    padding: 165px 1.25rem 3.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .coll-hero-left {
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .coll-hero-title {
+    font-size: clamp(2.5rem, 8.5vw, 3.2rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    text-shadow: 0 4px 22px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .coll-hero-title .coll-gold {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--gold-primary, #e2b978);
+  }
+
+  .coll-hero-desc {
+    font-size: 1.15rem;
+    line-height: 1.62;
+    max-width: 350px;
+    margin: 0 auto;
+    color: #ede5da;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 1), 0 0 25px rgba(0, 0, 0, 0.9);
+    text-wrap: balance;
+  }
+
+  .coll-tabs-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .products-grid-4 {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto 3rem auto;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  /* Signature Scent CTA Banner Mobile View */
+  .sig-scent-section {
+    height: auto;
+    min-height: 360px;
+    margin: 3rem 1.25rem 3.5rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .sig-scent-img {
+    object-position: center center;
+  }
+
+  .sig-scent-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 9, 6, 0.88) 0%,
+      rgba(14, 9, 6, 0.76) 50%,
+      rgba(14, 9, 6, 0.92) 100%
+    );
+  }
+
+  .sig-scent-content {
+    padding: 2.8rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sig-scent-left {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sig-overline {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+  }
+
+  .sig-title {
+    font-size: clamp(2rem, 6.5vw, 2.45rem);
+    line-height: 1.15;
+    margin-bottom: 0.65rem;
+    color: #ffffff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .sig-desc {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: #ede4d8;
+    margin-bottom: 1.35rem;
+    max-width: 320px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.9);
+    text-wrap: balance;
+  }
+
+  .btn-sig-shop {
+    margin: 0 auto;
+    font-size: 0.9rem;
+    padding: 0.8rem 1.85rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(222, 166, 95, 0.25);
+  }
+}
+
+@media (max-width: 480px) {
+  .coll-hero-content {
+    padding: 155px 1.15rem 3rem 1.15rem;
+  }
+
+  .coll-hero-title {
+    font-size: 2.5rem;
+    line-height: 1.12;
+  }
+
+  .coll-hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 330px;
+  }
+
+  .coll-tabs-wrap {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .products-sort {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sort-select {
+    flex: 1;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .sig-scent-section {
+    margin: 2.5rem 0.85rem 3rem 0.85rem;
+    min-height: 350px;
+  }
+
+  .sig-scent-content {
+    padding: 2.2rem 1rem;
+  }
+
+  .sig-title {
+    font-size: 1.95rem;
+  }
+
+  .sig-desc {
+    font-size: 0.9rem;
+    max-width: 295px;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-quick-cart {
+    top: auto !important;
+    bottom: 24px !important;
+    right: 18px !important;
+    transform: translateY(80px) scale(0.95);
+  }
+
+  .floating-quick-cart.visible {
+    transform: translateY(0) scale(1) !important;
+  }
+}
+
+/* =====================================================================
+   FLY TO CART LUXURY ANIMATION & FLOATING QUICK CART
+   ===================================================================== */
+
+/* Floating Quick Cart Pill (appears when scrolled past hero) */
+.floating-quick-cart {
+  position: fixed;
+  top: 24px;
+  right: 5%;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.65rem 1.35rem;
+  background: rgba(22, 14, 9, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(222, 166, 95, 0.45);
+  border-radius: 999px;
+  color: #f7d197;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75), 0 0 22px rgba(222, 166, 95, 0.25);
+  transform: translateY(-80px) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.floating-quick-cart.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.floating-quick-cart:hover {
+  background: rgba(36, 23, 15, 0.96);
+  border-color: #dea65f;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 28px rgba(222, 166, 95, 0.45);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.floating-quick-cart .action-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--gold-primary);
+}
+
+.floating-quick-cart .cart-badge {
+  background: linear-gradient(135deg, #f7d197 0%, #dea65f 55%, #b87d3b 100%) !important;
+  color: #0e0906 !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  transition: transform 0.25s ease;
+}
+
+/* Flying Bottle Clone (Physics Parabolic Arc) */
+.fly-to-cart-particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 999999999 !important;
+  pointer-events: none;
+  border-radius: 18px;
+  border: 2px solid #dea65f;
+  box-shadow: 0 0 35px rgba(222, 166, 95, 0.95), 0 20px 45px rgba(0, 0, 0, 0.9);
+  background: #140d09;
+  object-fit: contain;
+  padding: 5px;
+  box-sizing: border-box;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* Cart Icon Bump & Golden Glow Celebration */
+.cart-bump-glow {
+  animation: cartBumpAnim 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+@keyframes cartBumpAnim {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.38) rotate(-9deg);
+    color: #f7d197 !important;
+    text-shadow: 0 0 22px rgba(222, 166, 95, 0.95), 0 0 40px rgba(222, 166, 95, 0.75);
+  }
+  60% {
+    transform: scale(1.18) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Golden Radial Shockwave Ring */
+.cart-sparkle-ring {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  border-radius: 50%;
+  border: 2px solid #dea65f;
+  box-shadow: 0 0 20px #dea65f;
+  z-index: 999998;
+  pointer-events: none;
+  animation: cartRingExpand 0.7s ease-out forwards;
+}
+
+@keyframes cartRingExpand {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(6.2);
+    opacity: 0;
+  }
+}
+

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFDASS PERFUMES | Luxury Fragrance Details</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-512x512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=20261002_live" />
+  <link rel="stylesheet" href="drawer.css?v=20261002_live" />
+  <link rel="stylesheet" href="product-detail.css?v=20261002_live_v2" />
+  <link rel="stylesheet" href="search.css?v=20261002_live" />
+</head>
+<body class="product-page">
+
+  <!-- ===================================================================
+       1. HEADER / NAVBAR
+       =================================================================== -->
+  <header class="navbar navbar-solid" id="mainNavbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="AFDASS PERFUMES Home">
+        <img src="assets/logo.png" alt="AFDASS PERFUMES" class="logo-image" />
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="perfumes.html" class="nav-link active">Perfumes</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Action Buttons (Metallic Gold) -->
+      <div class="nav-actions">
+        <button class="nav-action-btn" id="btnNavSearch" aria-label="Search">
+          <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+        </button>
+
+        <a href="cart.html" class="nav-action-btn cart-btn" id="btnNavCart" aria-label="Cart">
+          <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="headerCartCount">(0)</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floating Quick Cart Button (Slides in when scrolled down) -->
+  <a href="cart.html" class="floating-quick-cart" id="floatingQuickCart" aria-label="Cart">
+    <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="quick-cart-text">Cart</span>
+    <span class="cart-badge floating-cart-badge">(0)</span>
+  </a>
+
+  <!-- Main Content Wrap -->
+  <main class="product-page-main">
+
+    <!-- ===================================================================
+         2. BREADCRUMBS
+         =================================================================== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="detail-container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumb-sep">&gt;</li>
+          <li><a href="perfumes.html">Perfumes</a></li>
+          <li class="breadcrumb-sep">&gt;</li>
+          <li class="breadcrumb-current" id="breadCrumbName">AFDASS Ember</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ===================================================================
+         3. PRODUCT SHOWCASE GRID (Gallery + Details)
+         =================================================================== -->
+    <section class="product-showcase-section">
+      <div class="detail-container">
+        <div class="product-showcase-grid">
+
+          <!-- Left Column: Interactive Multi-Angle Gallery -->
+          <div class="gallery-col">
+            <!-- Vertical Thumbnails Strip -->
+            <div class="thumb-carousel-wrap">
+              <button class="thumb-nav-btn prev" id="thumbPrevBtn" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+              </button>
+
+              <div class="thumb-track" id="thumbTrack">
+                <!-- Dynamically populated or static slots -->
+                <button class="thumb-item active" data-index="0" aria-label="Thumbnail 1">
+                  <img src="assets/bottle-ember.jpg" alt="Angle 1" class="thumb-img" id="thumbImg0" />
+                </button>
+                <button class="thumb-item" data-index="1" aria-label="Thumbnail 2">
+                  <img src="assets/gallery-ember-2.jpg" alt="Angle 2" class="thumb-img" id="thumbImg1" />
+                </button>
+                <button class="thumb-item" data-index="2" aria-label="Thumbnail 3">
+                  <img src="assets/story-box.jpg" alt="Angle 3" class="thumb-img" id="thumbImg2" />
+                </button>
+                <button class="thumb-item" data-index="3" aria-label="Thumbnail 4">
+                  <img src="assets/story-box-from-user.png" alt="Angle 4" class="thumb-img" id="thumbImg3" />
+                </button>
+                <button class="thumb-item" data-index="4" aria-label="Thumbnail 5">
+                  <img src="assets/product-ember.jpg" alt="Angle 5" class="thumb-img" id="thumbImg4" />
+                </button>
+              </div>
+
+              <button class="thumb-nav-btn next" id="thumbNextBtn" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Large Main Display Stage -->
+            <div class="main-display-wrap">
+              <div class="main-display-inner" id="mainDisplayInner">
+                <div class="arch-backlight"></div>
+                <img src="assets/bottle-ember.jpg" alt="AFDASS Ember" class="main-display-img" id="mainProductImg" />
+                
+                <!-- Zoom Lightbox Button -->
+                <button class="btn-expand-zoom" id="btnExpandZoom" aria-label="View Fullscreen">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Product Info & Purchase Controls -->
+          <div class="details-col">
+            <!-- Brand Badge -->
+            <span class="detail-brand-tag">AFDASS</span>
+
+            <!-- Title -->
+            <h1 class="detail-prod-title" id="prodTitle">AFDASS Ember</h1>
+
+            <!-- Scent Profile -->
+            <p class="detail-scent-profile" id="prodSubtitle">Woody &amp; Rich</p>
+
+            <!-- Rating & Reviews -->
+            <div class="detail-rating-row">
+              <div class="star-rating">
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+                <span class="star-filled">★</span>
+              </div>
+              <span class="rating-text" id="prodRatingText">4.9 (128 reviews)</span>
+            </div>
+
+            <!-- Price & Stock Row -->
+            <div class="detail-price-row">
+              <span class="detail-price" id="prodPrice">Rs. 4,500</span>
+              <span class="detail-stock-badge">
+                <span class="stock-dot"></span>
+                <span>In Stock</span>
+              </span>
+            </div>
+
+            <!-- Short Evocative Description -->
+            <p class="detail-description-lead" id="prodDescription">
+              A bold and captivating fragrance crafted for those who appreciate depth and sophistication. AFDASS blends the richness of rare oriental notes with modern elegance, leaving a lasting impression wherever you go.
+            </p>
+
+            <!-- Size Selector -->
+            <div class="control-block">
+              <label class="control-label">Size</label>
+              <div class="size-options-grid">
+                <button class="size-card-btn" data-size="30ml" data-price="2800">
+                  <span class="size-vol">30ml</span>
+                  <span class="size-pr">Rs. 2,800</span>
+                </button>
+                <button class="size-card-btn active" data-size="50ml" data-price="4500">
+                  <span class="size-vol">50ml</span>
+                  <span class="size-pr">Rs. 4,500</span>
+                </button>
+                <button class="size-card-btn" data-size="100ml" data-price="7500">
+                  <span class="size-vol">100ml</span>
+                  <span class="size-pr">Rs. 7,500</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="control-block">
+              <label class="control-label">Quantity</label>
+              <div class="qty-counter-box">
+                <button class="qty-btn" id="qtyMinusBtn" aria-label="Decrease quantity">−</button>
+                <input type="number" id="qtyInput" class="qty-input" value="1" min="1" max="10" readonly />
+                <button class="qty-btn" id="qtyPlusBtn" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Add to Cart & WhatsApp Order -->
+            <div class="cta-actions-row">
+              <button class="btn-primary-add" id="btnAddToCart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Add to Cart</span>
+              </button>
+
+              <a href="#" class="btn-whatsapp-order" id="btnWhatsApp" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.53C9.36 7.53 9.08 7.6 8.84 7.86C8.6 8.12 7.93 8.75 7.93 10.03C7.93 11.31 8.86 12.55 9 12.72C9.13 12.9 10.79 15.46 13.33 16.55C15.44 17.47 15.87 17.29 16.33 17.24C16.8 17.2 17.84 16.62 18.06 16.02C18.27 15.42 18.27 14.9 18.21 14.8C18.15 14.7 17.98 14.64 17.72 14.5C17.47 14.38 16.21 13.76 15.98 13.67C15.75 13.59 15.58 13.55 15.41 13.8C15.24 14.06 14.76 14.64 14.62 14.8C14.47 14.97 14.33 15 14.07 14.87C13.82 14.75 13.01 14.48 12.05 13.62C11.3 12.95 10.79 12.13 10.65 11.89C10.51 11.64 10.63 11.51 10.76 11.38C10.87 11.27 11.01 11.09 11.14 10.94C11.27 10.79 11.31 10.69 11.4 10.52C11.49 10.35 11.44 10.2 11.38 10.07C11.31 9.95 10.83 8.77 10.63 8.28C10.43 7.8 10.23 7.87 10.07 7.86L9.53 7.53Z" />
+                </svg>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Value Props / Trust Badges Strip -->
+            <div class="trust-features-strip">
+              <div class="trust-feat-item">
+                <svg class="trust-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                <span>Long Lasting Fragrance</span>
+              </div>
+
+              <div class="trust-feat-item">
+                <svg class="trust-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Premium French Quality</span>
+              </div>
+
+              <div class="trust-feat-item">
+                <svg class="trust-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <span>Nationwide Delivery</span>
+              </div>
+
+              <div class="trust-feat-item">
+                <svg class="trust-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Secure Payments</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. INTERACTIVE INFORMATION TABS (Description, Notes, Usage, Shipping)
+         =================================================================== -->
+    <section class="product-tabs-section">
+      <div class="detail-container">
+
+        <!-- Tabs Navigation -->
+        <div class="tabs-nav-bar" role="tablist">
+          <button class="tab-nav-btn active" role="tab" aria-selected="true" data-tab="description">
+            Description
+          </button>
+          <button class="tab-nav-btn" role="tab" aria-selected="false" data-tab="fragrance-notes">
+            Fragrance Notes
+          </button>
+          <button class="tab-nav-btn" role="tab" aria-selected="false" data-tab="how-to-use">
+            How to Use
+          </button>
+          <button class="tab-nav-btn" role="tab" aria-selected="false" data-tab="shipping-returns">
+            Shipping &amp; Returns
+          </button>
+        </div>
+
+        <!-- Tab 1: Description -->
+        <div class="tab-panel active" id="tab-description" role="tabpanel">
+          <div class="tab-content-grid">
+            <div class="tab-left-narrative">
+              <h2 class="tab-heading">A Fragrance of Character</h2>
+              <p class="tab-p" id="tabStoryText">
+                AFDASS Ember is more than a scent; it is an unforgettable signature statement. Inspired by the timeless allure of aged smoked oud, this fragrance combines traditional Middle Eastern depth with French modern elegance, perfect for those who value individuality, class, and presence.
+              </p>
+              
+              <!-- Attribute Badges Row -->
+              <div class="attributes-grid">
+                <div class="attr-card">
+                  <div class="attr-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div class="attr-info">
+                    <span class="attr-title">Ideal for</span>
+                    <span class="attr-val" id="attrIdeal">Evening Wear</span>
+                  </div>
+                </div>
+
+                <div class="attr-card">
+                  <div class="attr-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="attr-info">
+                    <span class="attr-title">Best for</span>
+                    <span class="attr-val" id="attrBest">Men &amp; Unisex</span>
+                  </div>
+                </div>
+
+                <div class="attr-card">
+                  <div class="attr-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="attr-info">
+                    <span class="attr-title">Perfect for</span>
+                    <span class="attr-val" id="attrOccasion">Special Occasions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fragrance Notes Preview on Right of Description -->
+            <div class="tab-right-notes-box">
+              <h3 class="notes-box-heading">Fragrance Notes</h3>
+              <div class="notes-cards-row">
+                <!-- Top Notes Card -->
+                <div class="note-visual-card">
+                  <div class="note-card-img-wrap">
+                    <img src="assets/note-top-oud.jpg" alt="Top Notes" class="note-card-img" id="noteTopImg" />
+                  </div>
+                  <div class="note-card-body">
+                    <h4 class="note-level">Top Notes</h4>
+                    <p class="note-items" id="noteTopText">Oud, Saffron, Bergamot</p>
+                  </div>
+                </div>
+
+                <!-- Heart Notes Card -->
+                <div class="note-visual-card">
+                  <div class="note-card-img-wrap">
+                    <img src="assets/note-heart-amber.jpg" alt="Heart Notes" class="note-card-img" id="noteHeartImg" />
+                  </div>
+                  <div class="note-card-body">
+                    <h4 class="note-level">Heart Notes</h4>
+                    <p class="note-items" id="noteHeartText">Amber, Rose, Spices</p>
+                  </div>
+                </div>
+
+                <!-- Base Notes Card -->
+                <div class="note-visual-card">
+                  <div class="note-card-img-wrap">
+                    <img src="assets/note-base-woods.jpg" alt="Base Notes" class="note-card-img" id="noteBaseImg" />
+                  </div>
+                  <div class="note-card-body">
+                    <h4 class="note-level">Base Notes</h4>
+                    <p class="note-items" id="noteBaseText">Musk, Leather, Woods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Full Fragrance Notes -->
+        <div class="tab-panel" id="tab-fragrance-notes" role="tabpanel">
+          <div class="notes-expanded-wrap">
+            <h2 class="tab-heading">The Olfactory Pyramid</h2>
+            <p class="tab-p">
+              Each layer of this fragrance unfolds sequentially over 12+ hours, creating an evocative transformation from the radiant opening to the smoldering dry-down.
+            </p>
+            <div class="notes-cards-row full-width-notes">
+              <div class="note-visual-card">
+                <div class="note-card-img-wrap">
+                  <img src="assets/note-top-oud.jpg" alt="Top Notes" class="note-card-img" />
+                </div>
+                <div class="note-card-body">
+                  <span class="note-time">0 — 30 Minutes</span>
+                  <h4 class="note-level">Top Notes</h4>
+                  <p class="note-items" id="tabNotesTop">Oud, Saffron, Bergamot</p>
+                  <p class="note-expl">The immediate burst of aromatic brilliance that captivates from the very first spritz.</p>
+                </div>
+              </div>
+
+              <div class="note-visual-card">
+                <div class="note-card-img-wrap">
+                  <img src="assets/note-heart-amber.jpg" alt="Heart Notes" class="note-card-img" />
+                </div>
+                <div class="note-card-body">
+                  <span class="note-time">30 Mins — 4 Hours</span>
+                  <h4 class="note-level">Heart Notes</h4>
+                  <p class="note-items" id="tabNotesHeart">Amber, Rose, Spices</p>
+                  <p class="note-expl">The opulent soul of the perfume that radiates warmth and magnetic sillage.</p>
+                </div>
+              </div>
+
+              <div class="note-visual-card">
+                <div class="note-card-img-wrap">
+                  <img src="assets/note-base-woods.jpg" alt="Base Notes" class="note-card-img" />
+                </div>
+                <div class="note-card-body">
+                  <span class="note-time">4 — 14+ Hours</span>
+                  <h4 class="note-level">Base Notes</h4>
+                  <p class="note-items" id="tabNotesBase">Musk, Leather, Woods</p>
+                  <p class="note-expl">The lingering, sensual foundation that settles deeply on skin and fabrics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: How to Use -->
+        <div class="tab-panel" id="tab-how-to-use" role="tabpanel">
+          <div class="tab-simple-content">
+            <h2 class="tab-heading">Application &amp; Longevity Ritual</h2>
+            <div class="usage-steps-grid">
+              <div class="usage-step-card">
+                <span class="step-num">01</span>
+                <h4 class="step-title">Pulse Points</h4>
+                <p class="step-desc">Apply 2–3 spritzes directly to pulse points: the base of the neck, inner wrists, and behind the ears where body heat amplifies sillage.</p>
+              </div>
+              <div class="usage-step-card">
+                <span class="step-num">02</span>
+                <h4 class="step-title">Do Not Rub</h4>
+                <p class="step-desc">Allow the perfume to dry naturally on the skin. Rubbing wrists together fractures delicate top notes and diminishes longevity.</p>
+              </div>
+              <div class="usage-step-card">
+                <span class="step-num">03</span>
+                <h4 class="step-title">Proper Storage</h4>
+                <p class="step-desc">Keep your crystal bottle away from direct sunlight and humid bathrooms. Store in a cool, dark wardrobe to preserve the essences for years.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Shipping & Returns -->
+        <div class="tab-panel" id="tab-shipping-returns" role="tabpanel">
+          <div class="tab-simple-content">
+            <h2 class="tab-heading">Nationwide Delivery &amp; Guarantee</h2>
+            <div class="shipping-grid">
+              <div class="ship-info-card">
+                <h4 class="ship-card-title">Express Shipping Across Pakistan</h4>
+                <p class="ship-card-desc">Orders are dispatched within 24 hours. Delivery takes 2–4 business days across Karachi, Lahore, Islamabad, Peshawar, Quetta, and all major cities via premium courier partners.</p>
+              </div>
+              <div class="ship-info-card">
+                <h4 class="ship-card-title">Cash on Delivery (COD) Available</h4>
+                <p class="ship-card-desc">Pay with cash upon delivery right at your doorstep, or securely via Bank Transfer and JazzCash/Easypaisa.</p>
+              </div>
+              <div class="ship-info-card">
+                <h4 class="ship-card-title">7-Day Hassle-Free Exchange</h4>
+                <p class="ship-card-desc">If your bottle arrives damaged or unsealed, contact our concierge on WhatsApp within 7 days for an immediate replacement with zero questions asked.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. RELATED PRODUCTS: "YOU MAY ALSO LIKE"
+         =================================================================== -->
+    <section class="related-section">
+      <div class="detail-container">
+        <div class="related-header">
+          <h2 class="related-title">You May Also Like</h2>
+          <a href="perfumes.html" class="btn-view-all">
+            <span>View All</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Related Perfumes Grid -->
+        <div class="related-grid" id="relatedGrid">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       6. FOOTER
+       =================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Newsletter Banner -->
+      <div class="footer-newsletter-row">
+        <div class="newsletter-text-wrap">
+          <h2 class="newsletter-title">Join The AFDASS Community</h2>
+          <p class="newsletter-subtitle">Get exclusive updates, new arrivals and special offers.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for joining the AFDASS community!');">
+          <input 
+            type="email" 
+            class="newsletter-input" 
+            placeholder="Enter your email" 
+            required 
+          />
+          <button type="submit" class="btn-newsletter-submit" aria-label="Subscribe">
+            <svg class="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Main Footer Columns (4-Col Grid) -->
+      <div class="footer-main-grid">
+
+        <!-- Col 1: Official Logo -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="assets/logo.png" alt="AFDASS PERFUMES" class="footer-logo-img" />
+          </a>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Quick Links</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="perfumes.html" class="footer-link">Perfumes</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div class="footer-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Customer Care</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <ul class="footer-links-list">
+            <li><a href="contact.html" class="footer-link">Shipping Policy</a></li>
+            <li><a href="contact.html" class="footer-link">Return &amp; Refund</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+            <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="contact.html" class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Follow Us -->
+        <div class="footer-col follow-col footer-accordion-col">
+          <h3 class="footer-col-title footer-accordion-toggle">
+            <span>Follow Us</span>
+            <span class="footer-accordion-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </h3>
+          <div class="footer-social-row footer-accordion-content">
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.37a6.34 6.34 0 0 0-.84-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.5a8.28 8.28 0 0 0 4.77 1.48V6.69z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2024 AFDASS Perfumes. All rights reserved.</p>
+        <p class="footer-tagline">A scent that feels like you.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       7. FULLSCREEN LIGHTBOX MODAL
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close fullscreen">&times;</button>
+      <img src="assets/bottle-ember.jpg" alt="Fullscreen View" class="lightbox-img" id="lightboxImg" />
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu & Frosted Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="AFDASS PERFUMES" class="drawer-logo" />
+      <button class="drawer-close" id="drawerCloseBtn" type="button" aria-label="Close Menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="perfumes.html" class="mobile-link active">Perfumes</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <a href="cart.html" class="mobile-link">Cart</a>
+    </nav>
+    <div class="drawer-cta">
+      <a href="https://wa.me/923125797051" target="_blank" rel="noopener" class="drawer-wa-btn">
+        <svg class="drawer-wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="#25d366">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.53C9.36 7.53 9.08 7.6 8.84 7.86C8.6 8.12 7.93 8.75 7.93 10.03C7.93 11.31 8.86 12.55 9 12.72C9.13 12.9 10.79 15.46 13.33 16.55C15.44 17.47 15.87 17.29 16.33 17.24C16.8 17.2 17.84 16.62 18.06 16.02C18.27 15.42 18.27 14.9 18.21 14.8C18.15 14.7 17.98 14.64 17.72 14.5C17.47 14.38 16.21 13.76 15.98 13.67C15.75 13.59 15.58 13.55 15.41 13.8C15.24 14.06 14.76 14.64 14.62 14.8C14.47 14.97 14.33 15 14.07 14.87C13.82 14.75 13.01 14.48 12.05 13.62C11.3 12.95 10.79 12.13 10.65 11.89C10.51 11.64 10.63 11.51 10.76 11.38C10.87 11.27 11.01 11.09 11.14 10.94C11.27 10.79 11.31 10.69 11.4 10.52C11.49 10.35 11.44 10.2 11.38 10.07C11.31 9.95 10.83 8.77 10.63 8.28C10.43 7.8 10.23 7.87 10.07 7.86L9.53 7.53Z"/>
+        </svg>
+        <span>Order via WhatsApp</span>
+      </a>
+      <p class="drawer-tagline">A scent that feels like you.</p>
+    </div>
+  </aside>
+
+  <!-- JavaScript -->
+  <script src="product-detail.js?v=20261001_lux_v3"></script>
+  <script src="search.js?v=20261001_live"></script>
+</body>
+</html>

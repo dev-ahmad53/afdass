@@ -1,0 +1,1014 @@
+/**
+ * AFDASS PERFUMES — about.css
+ * Bespoke Haute Parfumerie About Page Styles
+ * Exact match to reference design (media_1790366352609.jpg)
+ */
+
+:root {
+  color-scheme: dark;
+  --about-gold: #dea65f;
+  --about-gold-light: #f5cf96;
+  --about-gold-dark: #b87d3b;
+  --about-border: rgba(138, 90, 50, 0.22);
+  --about-border-gold: rgba(222, 166, 95, 0.35);
+  --about-text-primary: #ffffff;
+  --about-text-secondary: #c4bbb2;
+  --about-text-muted: #9e958a;
+  --about-font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --about-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body.about-page {
+  background-color: #120b08;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(160, 105, 55, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(138, 90, 50, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(160, 105, 55, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(107, 69, 38, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: var(--about-text-secondary);
+  font-family: var(--about-font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =====================================================================
+   GLOBAL UTILITIES & TYPOGRAPHY
+   ===================================================================== */
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--about-font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--about-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-eyebrow.center {
+  display: block;
+  text-align: center;
+}
+
+.gold-heading-accent {
+  background: linear-gradient(135deg, #f7dfbe 0%, #dea65f 55%, #b87d3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+}
+
+.gold-heading-accent.italic {
+  font-style: italic;
+}
+
+/* Golden Pill Button */
+.btn-gold-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #f5cf96 0%, #dea65f 50%, #c98e47 100%);
+  color: #0c0805;
+  font-family: var(--about-font-sans);
+  font-size: 0.94rem;
+  font-weight: 700;
+  padding: 0.85rem 2.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(222, 166, 95, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.02em;
+}
+
+.btn-gold-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(222, 166, 95, 0.55);
+  background: linear-gradient(135deg, #fae2be 0%, #e5b26f 50%, #d89b53 100%);
+}
+
+.pill-arrow {
+  font-size: 1.15rem;
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.btn-gold-pill:hover .pill-arrow {
+  transform: translateX(4px);
+}
+
+/* =====================================================================
+   1. TOP NAVBAR (Standard across entire website matching style.css)
+   ===================================================================== */
+.about-page .navbar.navbar-in-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  width: 100%;
+  background: transparent;
+  padding: 1rem 0 0 0;
+}
+
+.about-page .navbar-in-hero .nav-link {
+  color: var(--text-nav);
+  font-family: var(--about-font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-page .navbar-in-hero .nav-link:hover,
+.about-page .navbar-in-hero .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 12px rgba(222, 166, 95, 0.6);
+}
+
+.about-page .navbar-in-hero .nav-action-btn {
+  color: var(--about-gold);
+  font-family: var(--about-font-sans);
+  font-size: 0.86rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.about-page .navbar-in-hero .nav-action-btn:hover {
+  color: var(--about-gold-light);
+}
+
+.about-page .navbar-in-hero .cart-badge {
+  color: var(--about-gold);
+}
+
+/* =====================================================================
+   2. HERO SECTION ("More Than A Fragrance")
+   Seamless warm chocolate stage with ambient amber glow
+   ===================================================================== */
+.about-hero-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #140d09;
+}
+
+/* Full-width background image layer */
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.about-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+/* Dark overlay so text is readable */
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 9, 6, 0.88) 0%,
+    rgba(14, 9, 6, 0.65) 42%,
+    rgba(14, 9, 6, 0.15) 68%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Deep soft shadow across top so navbar is crystal clear */
+.about-hero-top-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.94) 0%,
+    rgba(4, 2, 2, 0.82) 42%,
+    rgba(10, 7, 5, 0.48) 72%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Text content overlay */
+.about-hero-content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 90px 5% 0 5%;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero-text {
+  max-width: 560px;
+  transform: translateY(10px);
+}
+
+.about-hero-heading {
+  font-family: var(--about-font-serif);
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.06;
+  color: #ffffff;
+  margin: 0.5rem 0 1.2rem 0;
+  letter-spacing: -0.015em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+}
+
+.about-hero-lead {
+  font-size: 1.0rem;
+  line-height: 1.75;
+  color: rgba(235, 225, 210, 0.88);
+  margin: 0 0 2rem 0;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.85);
+}
+
+.about-hero-visual {
+  display: none;
+}
+
+.hero-bottle-frame {
+  display: none;
+}
+
+/* =====================================================================
+   3. OUR STORY SECTION ("Rooted In Heritage, Driven By Passion")
+   ===================================================================== */
+.about-story-section {
+  position: relative;
+  padding: 6.5rem 0;
+  background: linear-gradient(135deg, #140d08 0%, #19110b 45%, #22160e 85%, #1b120a 100%);
+  border-top: 1px solid rgba(138, 90, 50, 0.22);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.story-visual-wrap {
+  position: relative;
+}
+
+.story-img-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(222, 166, 95, 0.32);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(222, 166, 95, 0.15);
+  background: #1c140d;
+}
+
+.story-oud-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-img-frame:hover .story-oud-img {
+  transform: scale(1.03);
+}
+
+.story-frame-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(222, 166, 95, 0.14) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.story-content-wrap {
+  max-width: 620px;
+}
+
+.story-heading {
+  font-family: var(--about-font-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: #ffffff;
+  margin: 0 0 1.4rem 0;
+  letter-spacing: -0.01em;
+}
+
+.story-lead {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--about-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+/* 3 Pillars List */
+.story-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.pillar-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.pillar-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(222, 166, 95, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--about-gold);
+  background: rgba(222, 166, 95, 0.08);
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(222, 166, 95, 0.18);
+  transition: all 0.3s ease;
+}
+
+.pillar-row:hover .pillar-icon-circle {
+  border-color: var(--about-gold);
+  background: rgba(222, 166, 95, 0.16);
+  transform: scale(1.06);
+}
+
+.pillar-icon-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pillar-info {
+  flex: 1;
+}
+
+.pillar-title {
+  font-family: var(--about-font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--about-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =====================================================================
+   4. MEET THE FOUNDER ("Muqaddas Fatima")
+   Bespoke Haute Parfumerie 2-Column Luxury Editorial Feature
+   ===================================================================== */
+.about-founder-section {
+  position: relative;
+  padding: 6.5rem 0;
+  background: radial-gradient(ellipse 85% 65% at 50% 25%, #241b12 0%, #19120b 55%, #120c08 100%);
+  border-top: 1px solid rgba(138, 90, 50, 0.22);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+  overflow: hidden;
+}
+
+/* Master Grand Editorial Card */
+.founder-editorial-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 3.5rem;
+  background: linear-gradient(145deg, rgba(28, 19, 13, 0.78) 0%, rgba(20, 13, 8, 0.92) 100%);
+  border: 1px solid rgba(222, 166, 95, 0.28);
+  border-radius: 28px;
+  padding: 3.25rem 3.5rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 40px rgba(138, 90, 50, 0.12), inset 0 1px 0 rgba(222, 166, 95, 0.15);
+  overflow: hidden;
+}
+
+/* Ambient warm corner glow inside the editorial card */
+.founder-editorial-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(222, 166, 95, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Left: Portrait Frame */
+.founder-visual-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 4.8;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(222, 166, 95, 0.38);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(222, 166, 95, 0.14);
+  background: #18110c;
+}
+
+.founder-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.founder-portrait-frame:hover .founder-portrait-img {
+  transform: scale(1.03);
+}
+
+.founder-frame-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 65%,
+    rgba(18, 11, 7, 0.65) 90%,
+    rgba(18, 11, 7, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.founder-frame-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(20, 13, 8, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(222, 166, 95, 0.45);
+  border-radius: 9999px;
+  padding: 0.45rem 1.15rem;
+  font-family: var(--about-font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--about-gold);
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.founder-badge-dot {
+  font-size: 0.85rem;
+  color: var(--about-gold-light);
+}
+
+/* Right: Narrative Column */
+.founder-narrative-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-eyebrow-row {
+  margin-bottom: 0.75rem;
+}
+
+.founder-main-heading {
+  font-family: var(--about-font-serif);
+  font-size: clamp(2.6rem, 3.8vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: #ffffff;
+  margin: 0 0 1.35rem 0;
+  letter-spacing: -0.015em;
+}
+
+.founder-bio-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--about-text-secondary);
+  margin: 0 0 1.75rem 0;
+}
+
+/* Luxury Quote Box */
+.founder-quote-box {
+  position: relative;
+  background: rgba(24, 16, 11, 0.75);
+  border: 1px solid rgba(222, 166, 95, 0.3);
+  border-left: 3px solid var(--about-gold);
+  border-radius: 16px;
+  padding: 1.6rem 2rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.founder-quote-box .quote-mark-icon {
+  font-family: var(--about-font-serif);
+  font-size: 2.8rem;
+  line-height: 0.75;
+  color: var(--about-gold);
+  margin-bottom: 0.6rem;
+  opacity: 0.9;
+}
+
+.founder-quote-text {
+  font-family: var(--about-font-sans);
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: #ede4db;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+}
+
+.founder-quote-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-quote-name {
+  font-family: var(--about-font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.15rem 0;
+}
+
+.founder-quote-role {
+  font-family: var(--about-font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--about-gold);
+}
+
+/* 3 Luxury Craft Signature Tags (Strictly 1 Single Line) */
+.founder-signatures-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.founder-signature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(222, 166, 95, 0.08);
+  border: 1px solid rgba(222, 166, 95, 0.24);
+  border-radius: 9999px;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--about-font-sans);
+  font-size: clamp(0.72rem, 0.9vw, 0.78rem);
+  font-weight: 500;
+  color: #e5ded6;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tag-spark {
+  color: var(--about-gold);
+  font-size: 0.8rem;
+}
+
+.founder-action-wrap {
+  display: flex;
+  align-items: center;
+}
+
+/* =====================================================================
+   5. OUR VALUES SECTION (4 Gold Icon Columns)
+   ===================================================================== */
+.about-values-section {
+  position: relative;
+  padding: 6rem 0;
+  background: radial-gradient(ellipse 90% 70% at 50% 30%, #20170f 0%, #16100a 60%, #110b07 100%);
+  border-top: 1px solid rgba(138, 90, 50, 0.22);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+}
+
+.values-header {
+  margin-bottom: 3.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.2rem 1.4rem;
+  background: linear-gradient(180deg, #1c140d 0%, #140e09 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(138, 90, 50, 0.26);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(222, 166, 95, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-item:hover {
+  background: linear-gradient(180deg, #241a11 0%, #18110b 100%);
+  border-color: rgba(222, 166, 95, 0.48);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(138, 90, 50, 0.22);
+}
+
+.value-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(222, 166, 95, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--about-gold);
+  background: rgba(222, 166, 95, 0.08);
+  margin-bottom: 1.4rem;
+  box-shadow: 0 4px 18px rgba(222, 166, 95, 0.18);
+  transition: all 0.3s ease;
+}
+
+.value-item:hover .value-icon-circle {
+  border-color: var(--about-gold);
+  background: rgba(222, 166, 95, 0.16);
+  box-shadow: 0 6px 24px rgba(222, 166, 95, 0.35);
+  transform: scale(1.08);
+}
+
+.value-icon-circle svg {
+  width: 26px;
+  height: 26px;
+}
+
+.value-title {
+  font-family: var(--about-font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.value-sub {
+  font-size: 0.88rem;
+  color: var(--about-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =====================================================================
+   6. CTA SECTION ("Experience The Essence Of AFDASS")
+   Bespoke Haute Parfumerie Grand Prestige Showcase
+   ===================================================================== */
+.about-cta-section {
+  position: relative;
+  padding: 6.5rem 0 7rem 0;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid rgba(138, 90, 50, 0.22);
+  background-color: #100a06;
+}
+
+.about-cta-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  opacity: 0.85;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+.cta-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 90% 85% at 50% 50%,
+    rgba(18, 11, 7, 0.52) 0%,
+    rgba(18, 11, 7, 0.82) 65%,
+    #100a06 100%
+  );
+}
+
+/* Grand Floating Glassmorphic Prestige Card */
+.about-cta-card {
+  position: relative;
+  z-index: 5;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4.25rem 3.5rem 3.5rem 3.5rem;
+  background: rgba(22, 14, 9, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(222, 166, 95, 0.35);
+  border-radius: 32px;
+  box-shadow: 
+    0 35px 90px rgba(0, 0, 0, 0.92),
+    0 0 55px rgba(222, 166, 95, 0.16),
+    inset 0 1px 0 rgba(222, 166, 95, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cta-card-glow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 220px;
+  background: radial-gradient(ellipse at center, rgba(222, 166, 95, 0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-emblem-wrap {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-emblem-img {
+  height: 55px;
+  width: auto;
+  filter: drop-shadow(0 4px 18px rgba(222, 166, 95, 0.5));
+}
+
+.cta-eyebrow {
+  display: inline-block;
+  font-family: var(--about-font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--about-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.about-cta-heading {
+  font-family: var(--about-font-serif);
+  font-size: clamp(2.6rem, 4.4vw, 4rem);
+  font-weight: 400;
+  line-height: 1.14;
+  color: #ffffff;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.015em;
+}
+
+.about-cta-sub {
+  font-family: var(--about-font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--about-text-secondary);
+  max-width: 620px;
+  margin: 0 auto 2.4rem auto;
+}
+
+.about-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2.75rem;
+  flex-wrap: wrap;
+}
+
+.cta-main-btn {
+  padding: 0.95rem 2.5rem;
+  font-size: 0.98rem;
+}
+
+.btn-cta-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(22, 14, 9, 0.6);
+  border: 1px solid rgba(222, 166, 95, 0.4);
+  color: #ede4db;
+  font-family: var(--about-font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-cta-outline:hover {
+  background: rgba(222, 166, 95, 0.15);
+  border-color: var(--about-gold);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(222, 166, 95, 0.2);
+}
+
+.cta-perks-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(138, 90, 50, 0.22);
+  width: 100%;
+}
+
+.cta-perk-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--about-font-sans);
+  font-size: 0.84rem;
+  color: #c9bfb4;
+  letter-spacing: 0.02em;
+}
+
+.perk-spark {
+  color: var(--about-gold);
+  font-size: 0.85rem;
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ===================================================================== */
+@media (max-width: 1024px) {
+  .about-hero-grid,
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .founder-editorial-card {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    padding: 3rem 2.5rem;
+  }
+
+  .founder-portrait-frame {
+    max-width: 440px;
+  }
+
+  .about-hero-text,
+  .story-content-wrap,
+  .founder-narrative-col {
+    max-width: 100%;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    height: auto;
+    min-height: 490px;
+  }
+
+  .about-hero-bg-img {
+    object-position: 75% center;
+  }
+
+  .about-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 9, 6, 0.88) 0%,
+      rgba(14, 9, 6, 0.78) 45%,
+      rgba(14, 9, 6, 0.90) 100%
+    );
+  }
+
+  .about-hero-content {
+    padding: 100px 1.25rem 2.5rem 1.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-hero-text {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-hero-heading {
+    font-size: 2.35rem;
+    text-align: center;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.85);
+  }
+
+  .about-hero-lead {
+    font-size: 0.95rem;
+    text-align: center;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.85);
+    max-width: 340px;
+  }
+
+  .founder-editorial-card {
+    padding: 2.25rem 1.6rem;
+    border-radius: 22px;
+    gap: 2.5rem;
+  }
+
+  .founder-portrait-frame {
+    max-width: 100%;
+    aspect-ratio: 4 / 4.6;
+    border-radius: 18px;
+  }
+
+  .founder-main-heading {
+    font-size: 2.2rem;
+  }
+
+  .founder-quote-box {
+    padding: 1.35rem 1.45rem;
+  }
+
+  .founder-signatures-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-cta-card {
+    padding: 2.75rem 1.6rem;
+    border-radius: 22px;
+  }
+
+  .about-cta-heading {
+    font-size: 2.3rem;
+  }
+
+  .about-cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cta-main-btn,
+  .btn-cta-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-perks-row {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+}

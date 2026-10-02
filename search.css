@@ -1,0 +1,401 @@
+/* ===================================================================
+   AFDASS PERFUMES — search.css
+   Omnipresent Luxury Live Search Modal
+   =================================================================== */
+
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(8, 5, 3, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.search-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 740px;
+  background: radial-gradient(ellipse 100% 120% at 50% 0%, #1e130c 0%, #120b08 100%);
+  border: 1.5px solid rgba(222, 166, 95, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(222, 166, 95, 0.18);
+  overflow: hidden;
+  transform: translateY(-24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.search-modal-backdrop.active .search-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+/* ── Top Search Input Bar ── */
+.search-input-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid rgba(138, 90, 50, 0.25);
+  background: rgba(14, 9, 6, 0.6);
+}
+
+.search-icon-svg {
+  width: 24px;
+  height: 24px;
+  stroke: #dea65f;
+  flex-shrink: 0;
+}
+
+.search-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.search-input-field::placeholder {
+  color: #7d7265;
+}
+
+.search-actions-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.search-esc-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(222, 166, 95, 0.14);
+  color: #cbb8a3;
+  border: 1px solid rgba(222, 166, 95, 0.28);
+}
+
+.search-close-btn {
+  background: none;
+  border: none;
+  color: #9c9288;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-close-btn:hover {
+  color: #dea65f;
+  transform: scale(1.1);
+}
+
+/* ── Filter Tags Strip ── */
+.search-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: rgba(14, 9, 6, 0.35);
+  border-bottom: 1px solid rgba(138, 90, 50, 0.18);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.search-tags-row::-webkit-scrollbar {
+  display: none;
+}
+
+.search-tag-chip {
+  background: rgba(22, 14, 9, 0.85);
+  border: 1px solid rgba(138, 90, 50, 0.35);
+  color: #a49a8f;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.search-tag-chip:hover,
+.search-tag-chip.active {
+  background: rgba(222, 166, 95, 0.18);
+  color: #f7d197;
+  border-color: #dea65f;
+}
+
+/* ── Results Container ── */
+.search-results-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.75rem 1.75rem 1.75rem;
+  max-height: 55vh;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(222, 166, 95, 0.4) transparent;
+}
+
+.search-results-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-results-scroll::-webkit-scrollbar-thumb {
+  background: rgba(222, 166, 95, 0.35);
+  border-radius: 999px;
+}
+
+.search-results-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* Single Result Item Card */
+.search-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.85rem 1.15rem;
+  background: rgba(22, 14, 9, 0.6);
+  border: 1px solid rgba(138, 90, 50, 0.22);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-item-card:hover {
+  background: rgba(36, 23, 15, 0.85);
+  border-color: rgba(222, 166, 95, 0.6);
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.search-item-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-item-img {
+  width: 54px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(222, 166, 95, 0.3);
+  background: #0d0704;
+  flex-shrink: 0;
+}
+
+.search-item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.search-item-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.search-item-notes {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  color: #9e9386;
+  line-height: 1.35;
+}
+
+.search-item-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #dea65f;
+  margin-top: 2px;
+}
+
+.search-item-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.search-item-price {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #dea65f;
+  white-space: nowrap;
+}
+
+.search-btn-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: rgba(222, 166, 95, 0.15);
+  border: 1px solid rgba(222, 166, 95, 0.45);
+  border-radius: 999px;
+  color: #f7d197;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-btn-add:hover {
+  background: #dea65f;
+  color: #0e0906;
+  border-color: #dea65f;
+  box-shadow: 0 4px 15px rgba(222, 166, 95, 0.4);
+}
+
+.search-btn-add svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Empty State */
+.search-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.search-empty-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.5;
+}
+
+.search-empty-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  color: #e8ded2;
+  margin-bottom: 0.4rem;
+}
+
+.search-empty-desc {
+  font-size: 0.85rem;
+  color: #8c8175;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .search-modal-backdrop {
+    padding: 1rem 0.65rem;
+    align-items: flex-start;
+  }
+
+  .search-modal-dialog {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .search-input-header {
+    padding: 0.95rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .search-input-field {
+    font-size: 1.05rem;
+  }
+
+  .search-esc-badge {
+    display: none;
+  }
+
+  .search-filters-bar {
+    padding: 0.65rem 0.9rem;
+    gap: 0.45rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .search-filters-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .search-filter-chip {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .search-results-list {
+    padding: 0.85rem 0.9rem;
+    gap: 0.75rem;
+    max-height: 60vh;
+  }
+
+  .search-item-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .search-item-img {
+    width: 52px;
+    height: 62px;
+    object-fit: contain;
+  }
+
+  .search-item-title {
+    font-size: 0.98rem;
+  }
+
+  .search-item-notes {
+    display: none;
+  }
+
+  .search-item-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+  }
+
+  .search-item-price {
+    font-size: 0.92rem;
+  }
+
+  .search-btn-add {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.78rem;
+  }
+}

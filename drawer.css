@@ -1,0 +1,395 @@
+/* ===================================================================
+   AFDASS PERFUMES — Luxury Off-Canvas Mobile Navigation Drawer
+   Guaranteed bulletproof responsive slide drawer & frosted backdrop
+   =================================================================== */
+
+/* Backdrop Overlay */
+.drawer-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background: rgba(8, 5, 3, 0.82) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 99998 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.drawer-backdrop.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Off-Canvas Slide Drawer */
+.mobile-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  width: 86% !important;
+  max-width: 320px !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background: linear-gradient(180deg, #170f0a 0%, #0e0906 100%) !important;
+  border-left: 1px solid rgba(222, 166, 95, 0.35) !important;
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95) !important;
+  z-index: 99999 !important;
+  padding: 1.5rem 1.4rem 2rem 1.4rem !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transform: translateX(105%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 0 !important;
+}
+
+.mobile-drawer.active {
+  transform: translateX(0) !important;
+}
+
+/* Drawer Header */
+.drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-bottom: 1.15rem !important;
+  border-bottom: 1px solid rgba(138, 90, 50, 0.25) !important;
+  margin-bottom: 1.25rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.drawer-logo {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 120px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Close Button Reset & Styling */
+.drawer-close {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(222, 166, 95, 0.35) !important;
+  color: #dea65f !important;
+  font-size: 1.6rem !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.drawer-close:hover,
+.drawer-close:active {
+  background: rgba(222, 166, 95, 0.22) !important;
+  color: #ffffff !important;
+  border-color: #dea65f !important;
+  transform: scale(1.05);
+}
+
+/* Nav Link List */
+.mobile-nav-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important;
+  flex: 1 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.9rem 0.65rem !important;
+  color: #e4dfd7 !important;
+  text-decoration: none !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.18rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  border-bottom: 1px solid rgba(138, 90, 50, 0.15) !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-link::after {
+  content: '›' !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 1.35rem !important;
+  color: rgba(222, 166, 95, 0.4) !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+  color: #dea65f !important;
+  padding-left: 0.9rem !important;
+  background: rgba(222, 166, 95, 0.08) !important;
+}
+
+.mobile-link:hover::after,
+.mobile-link.active::after {
+  color: #dea65f !important;
+  transform: translateX(4px) !important;
+}
+
+/* Drawer CTA Footer */
+.drawer-cta {
+  margin-top: auto !important;
+  padding-top: 1.25rem !important;
+  border-top: 1px solid rgba(138, 90, 50, 0.25) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.drawer-wa-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.65rem !important;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.14) 0%, rgba(222, 166, 95, 0.15) 100%) !important;
+  border: 1px solid rgba(222, 166, 95, 0.45) !important;
+  color: #f7dfbe !important;
+  text-decoration: none !important;
+  padding: 0.82rem 1.2rem !important;
+  border-radius: 9999px !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.drawer-wa-btn:hover,
+.drawer-wa-btn:active {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.25) 0%, rgba(222, 166, 95, 0.25) 100%) !important;
+  border-color: #dea65f !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Explicit WhatsApp SVG Sizing */
+.drawer-wa-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  fill: #25d366 !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.drawer-tagline {
+  text-align: center !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 0.95rem !important;
+  color: rgba(222, 166, 95, 0.72) !important;
+  margin: 0 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Mobile Toggle Hamburger Icon */
+.mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 1024px) {
+  .mobile-toggle {
+    display: flex !important;
+  }
+}
+
+/* ===================================================================
+   FOOTER ACCORDION & MOBILE CENTERING
+   =================================================================== */
+
+/* Desktop defaults: Accordion icon hidden, lists always visible */
+.footer-accordion-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 1. Center the Brand Logo */
+  .brand-col {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    border-bottom: 1px solid rgba(222, 166, 95, 0.16) !important;
+  }
+
+  .footer-logo-link {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-logo-img {
+    height: 110px !important;
+    max-width: 150px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2. Footer Main Grid: Stacked single column with clean borders */
+  .footer-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding-bottom: 1.8rem !important;
+    border-bottom: 1px solid rgba(222, 166, 95, 0.16) !important;
+  }
+
+  /* Remove desktop padding/border from Follow Us column */
+  .follow-col {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  /* 3. Accordion Column Dividers & Toggles */
+  .footer-accordion-col {
+    border-bottom: 1px solid rgba(222, 166, 95, 0.12);
+  }
+
+  .footer-accordion-col:last-child {
+    border-bottom: none;
+  }
+
+  .footer-accordion-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 1.1rem 0.2rem !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-size: 1.02rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    transition: color 0.25s ease;
+  }
+
+  .footer-accordion-col.active .footer-accordion-toggle {
+    color: #dea65f !important;
+  }
+
+  /* Chevron Dropdown Arrow */
+  .footer-accordion-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    color: #dea65f !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .footer-accordion-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+    stroke: currentColor !important;
+  }
+
+  .footer-accordion-col.active .footer-accordion-icon {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Collapsible Content Area (Links List & Social Row) */
+  .footer-accordion-col .footer-links-list,
+  .footer-accordion-col .footer-accordion-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, padding 0.3s ease !important;
+  }
+
+  .footer-accordion-col.active .footer-links-list,
+  .footer-accordion-col.active .footer-accordion-content {
+    max-height: 320px !important;
+    opacity: 1 !important;
+    padding-bottom: 1.15rem !important;
+  }
+
+  .footer-links-list li {
+    padding: 0.32rem 0;
+  }
+
+  .footer-link {
+    font-size: 0.94rem !important;
+    color: #b5ada1 !important;
+    padding: 0.2rem 0;
+    display: inline-block;
+  }
+
+  .footer-link:hover {
+    color: #dea65f !important;
+  }
+
+  .footer-social-row {
+    margin-top: 0.2rem !important;
+    padding-top: 0.2rem !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Footer Bottom Bar Centering */
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.6rem !important;
+    padding-top: 1.8rem !important;
+  }
+}
+
