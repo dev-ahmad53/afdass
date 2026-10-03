@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20261003_maroon" />
+  <link rel="stylesheet" href="style.css?v=20261003_hero_ember" />
   <link rel="stylesheet" href="drawer.css?v=20261003_maroon" />
   <link rel="stylesheet" href="search.css?v=20261003_maroon" />
 </head>
@@ -23,11 +23,11 @@
   <!-- Fullscreen Luxury Hero Section -->
   <div class="hero-stage">
     
-    <!-- Zoomed-Out Crisp Master Luxury Background (No Coin, Crisp Logo) -->
+    <!-- Crisp Master Luxury Background: Amber Silk & Ember Podium -->
     <div class="hero-bg-layer">
       <img 
-        src="assets/hero-bg-zoomed-out.jpg" 
-        alt="AFDASS Luxury Perfume Stage" 
+        src="assets/hero-ember-stage.jpg" 
+        alt="AFDASS Luxury Perfumes - Ember" 
         class="master-bg-image"
       />
       <div class="bg-vignette-overlay"></div>
@@ -38,26 +38,25 @@
       <div class="nav-container">
         
         <!-- Logo (Pure Transparent Gold PNG) -->
-        <a href="#" class="brand-logo">
+        <a href="index.html" class="brand-logo">
           <img src="assets/logo.png" alt="AFDASS PERFUMES" class="logo-image" />
         </a>
 
-        <!-- Center Nav Links -->
+        <!-- Center Nav Links (Exact Match to Mockup) -->
         <nav class="nav-links">
           <a href="index.html" class="nav-link active">Home</a>
-          <a href="perfumes.html" class="nav-link">Perfumes</a>
-          <a href="about.html" class="nav-link">About</a>
+          <a href="about.html" class="nav-link">Our Story</a>
+          <a href="perfumes.html" class="nav-link">Fragrances</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
 
         <!-- Right Actions -->
         <div class="nav-actions">
-          <button class="nav-action-btn" aria-label="Search">
+          <button class="nav-action-btn search-btn" aria-label="Search">
             <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>Search</span>
           </button>
 
           <a href="cart.html" class="nav-action-btn cart-btn" aria-label="Cart">
@@ -66,8 +65,10 @@
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            <span class="cart-badge">(0)</span>
+            <span class="cart-badge">0</span>
           </a>
+
+          <a href="perfumes.html" class="nav-btn-order-now">Order Now</a>
 
           <!-- Mobile Hamburger -->
           <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menu">
@@ -80,100 +81,98 @@
       </div>
     </header>
 
-    <!-- Hero Content Overlay (Left Aligned) -->
+    <!-- Hero Content Overlay (Left Aligned: EXACT TO MOCKUP) -->
     <main class="hero-content-wrapper">
       <div class="hero-left-content">
         
-        <!-- Overline Tag -->
-        <div class="hero-overline" style="display:none;">
-          <span class="overline-spark">✦</span>
-          <span>HAUTE PARFUMERIE &bull; PURE OILS</span>
+        <!-- Eyebrow / Pre-title -->
+        <span class="hero-eyebrow">A FRAGRANCE FOR</span>
+
+        <!-- Main Headline -->
+        <h1 class="hero-headline">EVERY YOU</h1>
+
+        <!-- Sparkle Horizontal Accent Divider -->
+        <div class="hero-sparkle-divider">
+          <span class="divider-line"></span>
+          <span class="sparkle-symbol">✦</span>
+          <span class="divider-line"></span>
         </div>
 
-        <!-- Main Headline (Balanced 2-Line Architecture) -->
-        <h1 class="hero-headline">
-          A scent that<br />
-          feels like you<span class="golden-dot">.</span>
-        </h1>
-
-        <!-- Supporting Paragraph -->
-        <p class="hero-subtext">
-          More than a fragrance, AFDASS is an unspoken identity. Handcrafted with rare oud, rich amber, and exotic florals for those who leave an indelible impression.
-        </p>
-
-
-
-        <!-- Dual CTA Area -->
+        <!-- Single Primary CTA Pill Button -->
         <div class="hero-cta-area">
-          <a href="#perfumes" class="btn-shop-pill">
-            <span>Explore Collection</span>
+          <a href="perfumes.html" class="btn-shop-collection">
+            <span>Shop Collection</span>
             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="#about" class="btn-story-outline">
-            <span>The Heritage</span>
-            <svg class="story-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Badges Bar (Frosted Glass & Reassurance) -->
-        <div class="badges-row">
-          
-          <!-- Badge 1: Long Lasting -->
-          <div class="badge-item">
-            <div class="badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-              </svg>
-            </div>
-            <div class="badge-text-group">
-              <span class="badge-heading">14h+ Long Lasting</span>
-              <span class="badge-subheading">All-Day Sillage</span>
-            </div>
-          </div>
-
-          <!-- Badge 2: Premium Quality -->
-          <div class="badge-item">
-            <div class="badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 3h12l4 6-10 12L2 9z"></path>
-                <path d="M2 9h20"></path>
-                <path d="m10 3 2 6 2-6"></path>
-                <path d="m7.5 9 4.5 12 4.5-12"></path>
-              </svg>
-            </div>
-            <div class="badge-text-group">
-              <span class="badge-heading">Extrait de Parfum</span>
-              <span class="badge-subheading">Pure Concentrated Oils</span>
-            </div>
-          </div>
-
-          <!-- Badge 3: Nationwide Delivery -->
-          <div class="badge-item">
-            <div class="badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="1" y="3" width="15" height="13" rx="1"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
-            </div>
-            <div class="badge-text-group">
-              <span class="badge-heading">Nationwide Delivery</span>
-              <span class="badge-subheading">Cash On Delivery</span>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </main>
+
+    <!-- Floating Trust Features Strip (EXACT TO MOCKUP) -->
+    <div class="hero-trust-strip-container">
+      <div class="hero-trust-strip">
+        
+        <!-- Feature 1: Nationwide Delivery -->
+        <div class="hero-trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <span class="trust-item-text">Nationwide<br class="trust-br-mobile" /> Delivery</span>
+        </div>
+
+        <div class="trust-item-divider"></div>
+
+        <!-- Feature 2: Secure Packaging -->
+        <div class="hero-trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <span class="trust-item-text">Secure<br class="trust-br-mobile" /> Packaging</span>
+        </div>
+
+        <div class="trust-item-divider"></div>
+
+        <!-- Feature 3: Premium Fragrances -->
+        <div class="hero-trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+          </div>
+          <span class="trust-item-text">Premium<br class="trust-br-mobile" /> Fragrances</span>
+        </div>
+
+        <div class="trust-item-divider"></div>
+
+        <!-- Feature 4: Perfect for Gifting -->
+        <div class="hero-trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 12 20 22 4 22 4 12"></polyline>
+              <rect x="2" y="7" width="20" height="5"></rect>
+              <line x1="12" y1="22" x2="12" y2="7"></line>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+            </svg>
+          </div>
+          <span class="trust-item-text">Perfect<br class="trust-br-mobile" /> for Gifting</span>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 
