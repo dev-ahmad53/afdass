@@ -774,7 +774,7 @@ html, body {
 
   /* ── Mobile Hero: Center background bottle with gentle warm overlay ── */
   .master-bg-image {
-    object-position: center center;
+    object-position: 68% center;
   }
 
   .bg-vignette-overlay {
