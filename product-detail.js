@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Unisex & Men',
       occasion: 'Special Occasions & Soirées',
       images: [
-        'assets/bottle-ember.jpg',
+        'assets/bottle-ember.jpg?v=20261004',
         'assets/gallery-ember-2.jpg',
         'assets/story-box.jpg',
         'assets/story-box-from-user.png',
-        'assets/product-ember.jpg'
+        'assets/product-ember.jpg?v=20261004'
       ],
       notes: {
         top: 'Smoked Oud, Royal Saffron, Italian Bergamot',
@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Men',
       occasion: 'Executive Boardroom & High-Profile Events',
       images: [
-        'assets/bottle-venta.jpg',
+        'assets/bottle-venta.jpg?v=20261004',
         'assets/gallery-venta-2.jpg',
         'assets/story-box.jpg',
         'assets/story-box-from-user.png',
-        'assets/product-venta.jpg'
+        'assets/product-venta.jpg?v=20261004'
       ],
       notes: {
         top: 'Italian Bergamot, Pink Peppercorn, Lemon Zest',
@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Women',
       occasion: 'Weddings, Celebrations & Intimate Dinners',
       images: [
-        'assets/bottle-fatima.jpg',
+        'assets/bottle-fatima.jpg?v=20261004',
         'assets/gallery-fatima-2.jpg',
         'assets/story-box.jpg',
         'assets/story-box-from-user.png',
-        'assets/product-fatima.jpg'
+        'assets/product-fatima.jpg?v=20261004'
       ],
       notes: {
         top: 'Taif Rose Petals, Sparkling Lychee, White Peach',
@@ -104,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Women & Unisex',
       occasion: 'Date Nights & Cozy VIP Gatherings',
       images: [
-        'assets/bottle-afeee.jpg',
+        'assets/bottle-afeee.jpg?v=20261004',
         'assets/gallery-afeee-2.jpg',
         'assets/story-box.jpg',
         'assets/story-box-from-user.png',
-        'assets/product-afeee.jpg'
+        'assets/product-afeee.jpg?v=20261004'
       ],
       notes: {
         top: 'Golden Honey, Candied Orange, Saffron Flakes',
