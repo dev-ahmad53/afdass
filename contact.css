@@ -24,12 +24,12 @@ html {
 }
 
 body.contact-page {
-  background-color: #120b08;
+  background-color: #160706;
   background-image:
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(160, 105, 55, 0.16) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(138, 90, 50, 0.12) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(160, 105, 55, 0.12) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(107, 69, 38, 0.08) 0%, transparent 60%);
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(175, 48, 32, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(140, 35, 24, 0.13) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(175, 48, 32, 0.13) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(120, 28, 20, 0.10) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--contact-text-secondary);
   font-family: var(--contact-font-sans);
@@ -121,10 +121,10 @@ body.contact-page {
   position: relative;
   width: 100%;
   padding: 0 0 5.5rem 0;
-  background-color: #140d09;
+  background-color: #180706;
   background-image:
-    radial-gradient(ellipse 85% 70% at 50% 30%, #2a1d13 0%, #1e150d 50%, #130d08 100%);
-  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+    radial-gradient(ellipse 85% 70% at 50% 30%, #30110d 0%, #220b08 50%, #150505 100%);
+  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
   overflow: hidden;
 }
 
@@ -136,8 +136,8 @@ body.contact-page {
   height: 140px;
   background: linear-gradient(
     180deg,
-    rgba(14, 9, 6, 0.88) 0%,
-    rgba(14, 9, 6, 0.50) 50%,
+    rgba(22, 7, 6, 0.88) 0%,
+    rgba(22, 7, 6, 0.50) 50%,
     transparent 100%
   );
   z-index: 2;
@@ -333,8 +333,8 @@ body.contact-page {
 .contact-main-section {
   position: relative;
   padding: 6.5rem 0;
-  background: radial-gradient(ellipse 90% 70% at 50% 20%, #20170f 0%, #16100a 60%, #110b07 100%);
-  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+  background: radial-gradient(ellipse 90% 70% at 50% 20%, #2c100c 0%, #1e0b08 60%, #150605 100%);
+  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 .contact-grid {
@@ -382,8 +382,8 @@ body.contact-page {
   align-items: flex-start;
   gap: 1.35rem;
   padding: 1.5rem 1.75rem;
-  background: linear-gradient(180deg, #1c140d 0%, #140e09 100%);
-  border: 1px solid rgba(138, 90, 50, 0.24);
+  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
+  border: 1px solid rgba(185, 80, 55, 0.24);
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(222, 166, 95, 0.08);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -392,12 +392,12 @@ body.contact-page {
 .concierge-card:hover {
   transform: translateY(-3px);
   border-color: rgba(222, 166, 95, 0.45);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(138, 90, 50, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(185, 80, 55, 0.2);
 }
 
 .primary-wa-card {
   border-color: rgba(37, 211, 102, 0.35);
-  background: linear-gradient(145deg, rgba(28, 20, 13, 0.95) 0%, rgba(20, 14, 9, 0.98) 100%);
+  background: linear-gradient(145deg, rgba(38, 13, 10, 0.95) 0%, rgba(26, 8, 7, 0.98) 100%);
 }
 
 .primary-wa-card:hover {
@@ -596,8 +596,8 @@ body.contact-page {
 
 .form-input {
   width: 100%;
-  background: #110b07;
-  border: 1px solid rgba(138, 90, 50, 0.32);
+  background: #180706;
+  border: 1px solid rgba(185, 80, 55, 0.32);
   border-radius: 12px;
   color: #ffffff;
   font-family: var(--contact-font-sans);
@@ -609,7 +609,7 @@ body.contact-page {
 
 .form-input:focus {
   outline: none;
-  background: #160e09;
+  background: #200b09;
   border-color: var(--contact-gold);
   box-shadow: 0 0 16px rgba(222, 166, 95, 0.25);
 }
@@ -629,7 +629,7 @@ body.contact-page {
 }
 
 .form-select option {
-  background: #140e09;
+  background: #1c0a08;
   color: #ffffff;
 }
 

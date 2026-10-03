@@ -13,13 +13,13 @@
   --gold-bronze: #8a5a32;
   --gold-hairline: rgba(222, 166, 95, 0.16);
 
-  /* Haute Parfumerie Dark Chocolate & Espresso Palette */
-  --bg-deep-noir: #0a0705;
-  --bg-espresso-base: #120b08;
-  --bg-espresso-card: #18110c;
-  --bg-chocolate-rich: #1d150e;
-  --bg-chocolate-card: #221811;
-  --bg-chocolate-accent: #2a1b12;
+  /* Haute Parfumerie Royal Maroon Silk & Burgundy Palette (matching official logo) */
+  --bg-deep-noir: #120505;
+  --bg-espresso-base: #1a0a07;
+  --bg-espresso-card: #220c0a;
+  --bg-chocolate-rich: #280e0c;
+  --bg-chocolate-card: #2f120e;
+  --bg-chocolate-accent: #3a1611;
 
   --text-pure: #ffffff;
   --text-nav: #a8a8a9;
@@ -75,11 +75,11 @@ input, textarea, select, [contenteditable] {
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #0e0906;
+  background-color: #160706;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(138, 90, 50, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 40%, rgba(107, 69, 38, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(138, 90, 50, 0.04) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 45, 30, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 40%, rgba(135, 32, 22, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(165, 45, 30, 0.08) 0%, transparent 50%);
   background-attachment: fixed;
   color: var(--text-pure);
   font-family: var(--font-sans);
@@ -96,7 +96,7 @@ html, body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #0c0805;
+  background-color: #140505;
 }
 
 
@@ -552,7 +552,7 @@ html, body {
   .drawer-backdrop {
     position: fixed !important;
     inset: 0 !important;
-    background: rgba(8, 5, 3, 0.82) !important;
+    background: rgba(18, 6, 5, 0.88) !important;
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
     z-index: 99998 !important;
@@ -579,7 +579,7 @@ html, body {
     max-width: 320px !important;
     height: 100vh !important;
     height: 100dvh !important;
-    background: linear-gradient(180deg, #170f0a 0%, #0e0906 100%) !important;
+    background: linear-gradient(180deg, #220c0a 0%, #150605 100%) !important;
     border-left: 1px solid rgba(222, 166, 95, 0.3) !important;
     box-shadow: -20px 0 60px rgba(0, 0, 0, 0.95) !important;
     z-index: 99999 !important;
@@ -847,10 +847,10 @@ html, body {
 .featured-section {
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse 80% 65% at 50% 15%, #241b12 0%, #1a130c 55%, #130d08 100%);
+  background: radial-gradient(ellipse 80% 65% at 50% 15%, #2d110c 0%, #200c09 55%, #150605 100%);
   padding: 5rem 0 6rem 0;
   z-index: 10;
-  border-top: 1px solid rgba(138, 90, 50, 0.2);
+  border-top: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 .featured-container {
@@ -917,8 +917,8 @@ html, body {
 
 /* Card */
 .product-card {
-  background: linear-gradient(180deg, #1c140d 0%, #140e09 100%);
-  border: 1px solid rgba(138, 90, 50, 0.24);
+  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
+  border: 1px solid rgba(185, 80, 55, 0.24);
   border-radius: 18px;
   padding: 1.1rem;
   display: flex;
@@ -932,7 +932,7 @@ html, body {
 .product-card:hover {
   transform: translateY(-5px);
   border-color: rgba(222, 166, 95, 0.45);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(138, 90, 50, 0.16);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 80, 55, 0.2);
 }
 
 /* Image Box */
@@ -941,7 +941,7 @@ html, body {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  background: #0d0906;
+  background: #140505;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1074,12 +1074,12 @@ html, body {
   position: relative;
   width: 100%;
   min-height: 600px;
-  background-color: #060505;
+  background-color: #140505;
   overflow: hidden;
   display: flex;
   align-items: center;
-  border-top: 1px solid rgba(138, 90, 50, 0.22);
-  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+  border-top: 1px solid rgba(185, 80, 55, 0.22);
+  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
   z-index: 10;
 }
 
@@ -1105,9 +1105,9 @@ html, body {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(20, 13, 8, 0.6) 0%,
-    rgba(20, 13, 8, 0.42) 35%,
-    rgba(20, 13, 8, 0.12) 55%,
+    rgba(24, 7, 6, 0.65) 0%,
+    rgba(24, 7, 6, 0.42) 35%,
+    rgba(24, 7, 6, 0.12) 55%,
     transparent 75%
   );
   z-index: 2;
@@ -1229,10 +1229,10 @@ html, body {
 .category-section {
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse 80% 65% at 50% 20%, #20170f 0%, #16100a 60%, #110b07 100%);
+  background: radial-gradient(ellipse 80% 65% at 50% 20%, #2c100c 0%, #1e0b08 60%, #150605 100%);
   padding: 5.5rem 0 6.5rem 0;
   z-index: 10;
-  border-top: 1px solid rgba(138, 90, 50, 0.2);
+  border-top: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 .category-container {
@@ -1248,8 +1248,8 @@ html, body {
 }
 
 .category-card {
-  background: linear-gradient(180deg, #1b130c 0%, #130d08 100%);
-  border: 1px solid rgba(138, 90, 50, 0.22);
+  background: linear-gradient(180deg, #240d0a 0%, #190706 100%);
+  border: 1px solid rgba(185, 80, 55, 0.22);
   border-radius: 18px;
   padding: 1.1rem;
   display: flex;
@@ -1264,7 +1264,7 @@ html, body {
 .category-card:hover {
   transform: translateY(-6px);
   border-color: rgba(222, 166, 95, 0.45);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(138, 90, 50, 0.16);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 80, 55, 0.2);
 }
 
 .category-img-box {
@@ -1272,7 +1272,7 @@ html, body {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  background: #0d0906;
+  background: #140505;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1363,10 +1363,10 @@ html, body {
 .story-section {
   position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #140d08 0%, #19110b 45%, #22160e 85%, #1b120a 100%);
+  background: linear-gradient(135deg, #180706 0%, #200b09 45%, #2c100c 85%, #220c09 100%);
   padding: 6.5rem 0 7.5rem 0;
   overflow: hidden;
-  border-top: 1px solid rgba(138, 90, 50, 0.2);
+  border-top: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 .story-container {
@@ -1391,9 +1391,9 @@ html, body {
   aspect-ratio: 4 / 3;
   border-radius: 20px;
   overflow: hidden;
-  background: #140d08;
-  border: 1px solid rgba(138, 90, 50, 0.28);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(138, 90, 50, 0.08);
+  background: #180706;
+  border: 1px solid rgba(185, 80, 55, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(185, 80, 55, 0.12);
 }
 
 .story-img {
@@ -1559,17 +1559,17 @@ html, body {
 .testimonials-section {
   position: relative;
   width: 100%;
-  background-color: #120c08;
+  background-color: #160706;
   background-image: 
     url('assets/smoke-left.png'),
     url('assets/smoke-right.png'),
-    radial-gradient(ellipse 80% 65% at 50% 15%, #231910 0%, #18110a 60%, #110c07 100%);
+    radial-gradient(ellipse 80% 65% at 50% 15%, #2f110c 0%, #200b08 60%, #150505 100%);
   background-position: left center, right center, center center;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto 100%, auto 100%, cover;
   padding: 5.5rem 0 6.5rem 0;
   overflow: hidden;
-  border-top: 1px solid rgba(138, 90, 50, 0.2);
+  border-top: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 .testimonials-container {
@@ -1605,8 +1605,8 @@ html, body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #19120c;
-  border: 1px solid rgba(138, 90, 50, 0.3);
+  background: #240d0a;
+  border: 1px solid rgba(185, 80, 55, 0.3);
   color: #dea65f;
   display: flex;
   align-items: center;
@@ -1624,7 +1624,7 @@ html, body {
 
 .t-nav-btn:hover {
   background: #dea65f;
-  color: #12100d;
+  color: #120505;
   border-color: #dea65f;
   box-shadow: 0 6px 20px rgba(222, 166, 95, 0.35);
   transform: translateY(-2px);
@@ -1646,8 +1646,8 @@ html, body {
   transform: translateY(8px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   position: relative;
-  background: linear-gradient(180deg, #201710 0%, #17100a 100%);
-  border: 1px solid rgba(138, 90, 50, 0.24);
+  background: linear-gradient(180deg, #2b100d 0%, #1e0a08 100%);
+  border: 1px solid rgba(185, 80, 55, 0.24);
   border-radius: 22px;
   padding: 2.8rem 3.5rem;
   align-items: center;
@@ -1785,7 +1785,7 @@ html, body {
 .site-footer {
   position: relative;
   width: 100%;
-  background-color: #120b07;
+  background-color: #150605;
   background-image: url('assets/footer-bg-exact.jpg');
   background-position: center top;
   background-repeat: no-repeat;
@@ -1839,7 +1839,7 @@ html, body {
 .newsletter-form {
   display: flex;
   align-items: center;
-  background: #0f0a07;
+  background: #190807;
   border: 1.2px solid rgba(222, 166, 95, 0.45);
   border-radius: 9999px;
   padding: 4px 4px 4px 22px;

@@ -6,10 +6,10 @@
 
 :root {
   color-scheme: dark;
-  --cart-bg-deep: #0c0805;
-  --cart-card-bg: #150e09;
-  --cart-card-inner: #1a120c;
-  --cart-border: rgba(138, 90, 50, 0.24);
+  --cart-bg-deep: #160706;
+  --cart-card-bg: #200c0a;
+  --cart-card-inner: #270f0c;
+  --cart-border: rgba(185, 80, 55, 0.24);
   --cart-border-hover: rgba(222, 166, 95, 0.45);
   --cart-gold-primary: #dea65f;
   --cart-gold-light: #f5cf96;
@@ -27,6 +27,11 @@ html {
 
 body.cart-page {
   background-color: var(--cart-bg-deep);
+  background-image:
+    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(175, 48, 32, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 100% 35%, rgba(140, 35, 24, 0.13) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 0% 75%, rgba(175, 48, 32, 0.13) 0%, transparent 55%);
+  background-attachment: fixed;
   color: var(--cart-text-light);
   font-family: var(--cart-font-sans);
   min-height: 100vh;
@@ -47,9 +52,9 @@ body.cart-page {
   position: relative;
   width: 100%;
   height: 500px;
-  background-color: #140d09;
+  background-color: #180706;
   overflow: hidden;
-  border-bottom: 1px solid rgba(138, 90, 50, 0.22);
+  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
 }
 
 /* Background Layer */
@@ -75,9 +80,9 @@ body.cart-page {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(14, 9, 6, 0.88) 0%,
-    rgba(14, 9, 6, 0.60) 42%,
-    rgba(14, 9, 6, 0.15) 68%,
+    rgba(22, 7, 6, 0.90) 0%,
+    rgba(22, 7, 6, 0.65) 42%,
+    rgba(22, 7, 6, 0.18) 68%,
     transparent 100%
   );
   pointer-events: none;
@@ -93,9 +98,9 @@ body.cart-page {
   height: 140px;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.94) 0%,
-    rgba(4, 2, 2, 0.82) 42%,
-    rgba(10, 7, 5, 0.48) 72%,
+    rgba(14, 5, 5, 0.94) 0%,
+    rgba(18, 6, 5, 0.82) 42%,
+    rgba(22, 7, 6, 0.48) 72%,
     transparent 100%
   );
   z-index: 3;
@@ -399,8 +404,8 @@ body.cart-page {
   width: 76px;
   height: 76px;
   border-radius: 12px;
-  background: #0f0a07;
-  border: 1px solid rgba(138, 90, 50, 0.28);
+  background: #140505;
+  border: 1px solid rgba(185, 80, 55, 0.28);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -488,8 +493,8 @@ body.cart-page {
 .cart-qty-stepper {
   display: inline-flex;
   align-items: center;
-  background: #110b07;
-  border: 1px solid rgba(138, 90, 50, 0.32);
+  background: #1e0b09;
+  border: 1px solid rgba(185, 80, 55, 0.32);
   border-radius: 8px;
   overflow: hidden;
   height: 38px;
@@ -579,7 +584,7 @@ body.cart-page {
   padding: 4.2rem 2.8rem 3.5rem;
   border: 1px solid rgba(222, 166, 95, 0.22);
   border-radius: 22px;
-  background: radial-gradient(ellipse 90% 70% at 50% 15%, rgba(36, 23, 15, 0.95) 0%, rgba(18, 11, 7, 0.98) 100%);
+  background: radial-gradient(ellipse 90% 70% at 50% 15%, rgba(44, 16, 12, 0.95) 0%, rgba(22, 7, 6, 0.98) 100%);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(222, 166, 95, 0.16);
   text-align: center;
 }
@@ -618,7 +623,7 @@ body.cart-page {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(45, 29, 19, 0.95) 0%, rgba(22, 14, 9, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(50, 18, 14, 0.95) 0%, rgba(28, 10, 8, 0.95) 100%);
   border: 1.5px solid rgba(222, 166, 95, 0.4);
   display: flex;
   align-items: center;
@@ -849,7 +854,7 @@ body.cart-page {
 .coupon-field {
   flex: 1;
   min-width: 0;
-  background: rgba(14, 9, 6, 0.65);
+  background: rgba(22, 8, 7, 0.75);
   border: 1px solid rgba(222, 166, 95, 0.3);
   border-radius: 999px;
   padding: 0.65rem 1.1rem;
@@ -862,7 +867,7 @@ body.cart-page {
 
 .coupon-field:focus {
   border-color: #dea65f;
-  background: rgba(20, 13, 8, 0.9);
+  background: rgba(34, 12, 10, 0.95);
   box-shadow: 0 0 12px rgba(222, 166, 95, 0.2);
 }
 
@@ -969,7 +974,7 @@ body.cart-page {
 /* WhatsApp Order Button */
 .btn-whatsapp-cart {
   width: 100%;
-  background: #110b07;
+  background: #1b0907;
   border: 1px solid rgba(222, 166, 95, 0.35);
   border-radius: 50px;
   padding: 0.9rem 1.5rem;
@@ -1114,14 +1119,14 @@ body.cart-page {
 .rec-card:hover {
   transform: translateY(-5px);
   border-color: var(--cart-border-hover);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75), 0 0 24px rgba(138, 90, 50, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75), 0 0 24px rgba(185, 60, 40, 0.22);
 }
 
 .rec-img-wrap {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
-  background: #0d0906;
+  background: #140505;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1148,7 +1153,7 @@ body.cart-page {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(18, 12, 8, 0.75);
+  background: rgba(28, 10, 8, 0.85);
   border: 1px solid rgba(222, 166, 95, 0.25);
   color: #9e968c;
   display: flex;
@@ -1212,7 +1217,7 @@ body.cart-page {
 
 .btn-rec-add {
   width: 100%;
-  background: rgba(26, 18, 12, 0.9);
+  background: rgba(36, 13, 10, 0.9);
   border: 1px solid rgba(222, 166, 95, 0.4);
   color: var(--cart-gold-primary);
   border-radius: 50px;
@@ -1246,7 +1251,7 @@ body.cart-page {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #19110b;
+  background: #200c0a;
   border: 1px solid var(--cart-gold-primary);
   border-radius: 12px;
   padding: 1rem 1.4rem;
@@ -1610,7 +1615,7 @@ body.cart-page {
 .checkout-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(8, 5, 3, 0.88);
+  background: rgba(14, 5, 5, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -1622,11 +1627,11 @@ body.cart-page {
   max-width: 960px;
   max-height: 92vh;
   overflow-y: auto;
-  background: linear-gradient(180deg, #170f0a 0%, #110b07 100%);
+  background: linear-gradient(180deg, #240d0a 0%, #160706 100%);
   border: 1px solid rgba(222, 166, 95, 0.4);
   border-radius: 22px;
   padding: 2.25rem 2.5rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(222, 166, 95, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 60, 40, 0.2);
   transform: translateY(20px) scale(0.98);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1640,7 +1645,7 @@ body.cart-page {
   width: 6px;
 }
 .checkout-modal-dialog::-webkit-scrollbar-track {
-  background: #110b07;
+  background: #180706;
 }
 .checkout-modal-dialog::-webkit-scrollbar-thumb {
   background: rgba(222, 166, 95, 0.3);
@@ -1769,8 +1774,8 @@ body.cart-page {
 .form-input,
 .form-select {
   width: 100%;
-  background: #0d0805;
-  border: 1px solid rgba(138, 90, 50, 0.35);
+  background: #160706;
+  border: 1px solid rgba(185, 80, 55, 0.35);
   border-radius: 10px;
   padding: 0.78rem 1rem;
   color: #ffffff;
@@ -1785,7 +1790,7 @@ body.cart-page {
 .form-select:focus {
   border-color: var(--cart-gold-primary);
   box-shadow: 0 0 14px rgba(222, 166, 95, 0.25);
-  background: #110b07;
+  background: #1e0a08;
 }
 
 .form-input::placeholder {
@@ -1812,9 +1817,9 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
   caret-color: #dea65f !important;
-  -webkit-box-shadow: 0 0 0 1000px #0d0805 inset !important;
-  box-shadow: 0 0 0 1000px #0d0805 inset !important;
-  border-color: rgba(138, 90, 50, 0.45) !important;
+  -webkit-box-shadow: 0 0 0 1000px #160706 inset !important;
+  box-shadow: 0 0 0 1000px #160706 inset !important;
+  border-color: rgba(185, 80, 55, 0.45) !important;
   font-family: var(--cart-font-sans) !important;
   font-size: 0.9rem !important;
   transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
@@ -1824,17 +1829,17 @@ select:-webkit-autofill:focus {
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
   caret-color: #dea65f !important;
-  -webkit-box-shadow: 0 0 0 1000px #110b07 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
-  box-shadow: 0 0 0 1000px #110b07 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
+  -webkit-box-shadow: 0 0 0 1000px #1e0a08 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
+  box-shadow: 0 0 0 1000px #1e0a08 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
   border-color: var(--cart-gold-primary) !important;
 }
 
 .form-input:-moz-autofill,
 input:-moz-autofill {
-  box-shadow: 0 0 0 1000px #0d0805 inset !important;
+  box-shadow: 0 0 0 1000px #160706 inset !important;
   -moz-text-fill-color: #ffffff !important;
   color: #ffffff !important;
-  border-color: rgba(138, 90, 50, 0.45) !important;
+  border-color: rgba(185, 80, 55, 0.45) !important;
 }
 
 .form-select {
@@ -1847,7 +1852,7 @@ input:-moz-autofill {
 }
 
 .form-select option {
-  background: #140d08;
+  background: #1c0a08;
   color: #ffffff;
 }
 
@@ -1861,8 +1866,8 @@ input:-moz-autofill {
 .payment-option-card {
   position: relative;
   display: block;
-  background: #0d0805;
-  border: 1px solid rgba(138, 90, 50, 0.28);
+  background: #1a0807;
+  border: 1px solid rgba(185, 80, 55, 0.28);
   border-radius: 12px;
   padding: 0.9rem 1rem;
   cursor: pointer;
@@ -1958,8 +1963,8 @@ input:-moz-autofill {
 
 /* Order Snapshot Right Box */
 .checkout-summary-box {
-  background: rgba(13, 8, 5, 0.9);
-  border: 1px solid rgba(138, 90, 50, 0.28);
+  background: rgba(22, 7, 6, 0.92);
+  border: 1px solid rgba(185, 80, 55, 0.28);
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -2003,8 +2008,8 @@ input:-moz-autofill {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: #0f0a07;
-  border: 1px solid rgba(138, 90, 50, 0.25);
+  background: #140505;
+  border: 1px solid rgba(185, 80, 55, 0.25);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -2123,7 +2128,7 @@ input:-moz-autofill {
 .success-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(8, 5, 3, 0.9);
+  background: rgba(14, 5, 5, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -2133,12 +2138,12 @@ input:-moz-autofill {
   z-index: 10;
   width: 100%;
   max-width: 520px;
-  background: linear-gradient(180deg, #18100a 0%, #110b07 100%);
+  background: linear-gradient(180deg, #250e0b 0%, #150605 100%);
   border: 1px solid var(--cart-gold-primary);
   border-radius: 22px;
   padding: 2.75rem 2.25rem;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(222, 166, 95, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 60, 40, 0.25);
   transform: scale(0.92);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
