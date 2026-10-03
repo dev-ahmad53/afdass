@@ -267,32 +267,6 @@ html, body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
-/* Order Now Pill Button */
-.nav-btn-order-now {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f7d6a5 0%, #dea65f 100%);
-  color: #120505;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 0.55rem 1.45rem;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(222, 166, 95, 0.35);
-  white-space: nowrap;
-}
-
-.nav-btn-order-now:hover {
-  background: linear-gradient(135deg, #fae2bc 0%, #ebb46e 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 22px rgba(222, 166, 95, 0.5);
-  color: #120505;
-}
-
 /* Mobile Toggle */
 .mobile-toggle {
   display: none;
@@ -858,11 +832,6 @@ html, body {
 
   .trust-br-mobile {
     display: inline;
-  }
-
-  .nav-btn-order-now {
-    padding: 0.45rem 1.05rem;
-    font-size: 0.82rem;
   }
 }
 
