@@ -206,12 +206,12 @@ html, body {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Right Nav Actions */
+/* Right Nav Actions (Exact Match to User Reference Screenshot) */
 .nav-actions {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 1.85rem;
 }
 
 .nav-action-btn {
@@ -219,28 +219,49 @@ html, body {
   border: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  color: #dfd7cc;
+  gap: 0.55rem;
+  color: #dea65f;
   font-family: var(--font-sans);
-  font-size: 0.86rem;
+  font-size: 0.98rem;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+  padding: 0.25rem 0;
 }
 
-.nav-action-btn:hover {
-  color: var(--gold-primary);
-  transform: scale(1.06);
+.nav-action-btn span {
+  color: #dea65f;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+  transition: color 0.2s ease;
+}
+
+.nav-action-btn:hover,
+.nav-action-btn:hover span {
+  color: #f7d197;
+  transform: translateY(-1px);
 }
 
 .action-icon {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
+  width: 21px;
+  height: 21px;
+  stroke: #dea65f;
+  stroke-width: 1.8;
+  display: block;
+  flex-shrink: 0;
+  transition: stroke 0.2s ease;
 }
 
-/* Shopping Cart Icon with Circular 0 Badge */
+.nav-action-btn:hover .action-icon {
+  stroke: #f7d197;
+}
+
+/* Shopping Cart Icon with Oval (0) Gold Pill Badge */
 .cart-btn {
   position: relative;
   display: inline-flex;
@@ -249,22 +270,23 @@ html, body {
 
 .cart-btn .cart-badge {
   position: absolute;
-  top: -8px;
-  right: -10px;
+  top: -9px;
+  right: -15px;
   background: linear-gradient(135deg, #fae2bc 0%, #dea65f 100%);
-  color: #120505;
+  color: #0c0503 !important;
   font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 800;
-  min-width: 17px;
-  height: 17px;
-  padding: 0 4px;
+  font-size: 0.74rem;
+  font-weight: 800 !important;
+  padding: 1.5px 6.5px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  line-height: 1.15;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Mobile Toggle */

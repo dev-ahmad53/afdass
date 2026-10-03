@@ -139,17 +139,46 @@ body.about-page {
 .about-page .navbar-in-hero .nav-action-btn {
   color: var(--about-gold);
   font-family: var(--about-font-sans);
-  font-size: 0.86rem;
-  font-weight: 400;
-  transition: color 0.2s ease;
+  font-size: 0.98rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+  transition: all 0.2s ease;
 }
 
 .about-page .navbar-in-hero .nav-action-btn:hover {
   color: var(--about-gold-light);
+  transform: translateY(-1px);
+}
+
+.about-page .navbar-in-hero .cart-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .about-page .navbar-in-hero .cart-badge {
-  color: var(--about-gold);
+  position: absolute;
+  top: -9px;
+  right: -15px;
+  background: linear-gradient(135deg, #fae2bc 0%, #dea65f 100%);
+  color: #0c0503 !important;
+  font-family: var(--about-font-sans);
+  font-size: 0.74rem;
+  font-weight: 800 !important;
+  padding: 1.5px 6.5px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* =====================================================================

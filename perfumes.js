@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       document.querySelectorAll('.navbar .cart-badge, .nav-actions .cart-badge').forEach(badge => {
         badge.textContent = `(${count})`;
-        badge.style.color = count > 0 ? '#dea65f' : '';
+        badge.style.color = '#0c0503';
       });
 
       document.querySelectorAll('.floating-quick-cart .cart-badge').forEach(badge => {

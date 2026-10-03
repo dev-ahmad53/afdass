@@ -83,10 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
       if (cartBadge) {
         cartBadge.textContent = `(${totalCount})`;
-        if (totalCount > 0) cartBadge.style.color = '#dea65f';
+        cartBadge.style.color = '#0c0503';
       }
     } catch (e) {
-      if (cartBadge) cartBadge.textContent = '(0)';
+      if (cartBadge) {
+        cartBadge.textContent = '(0)';
+        cartBadge.style.color = '#0c0503';
+      }
     }
   }
 

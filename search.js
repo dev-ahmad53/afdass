@@ -286,9 +286,7 @@
 
     document.querySelectorAll('.navbar .cart-badge, .nav-actions .cart-badge, #headerCartCount').forEach(badge => {
       badge.textContent = `(${count})`;
-      if (count > 0) {
-        badge.style.color = '#dea65f';
-      }
+      badge.style.color = '#0c0503';
     });
 
     document.querySelectorAll('.floating-quick-cart .cart-badge').forEach(badge => {

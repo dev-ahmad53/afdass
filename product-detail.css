@@ -42,20 +42,47 @@ html {
 
 .navbar-solid .nav-action-btn {
   color: var(--gold-primary);
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
   font-weight: 500;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9), 0 0 12px rgba(222, 166, 95, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
   transition: all 0.25s ease;
 }
 
 .navbar-solid .nav-action-btn:hover {
   color: #f7d197;
-  text-shadow: 0 0 16px rgba(222, 166, 95, 0.9);
   transform: translateY(-1px);
 }
 
+.navbar-solid .cart-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
 .navbar-solid .cart-badge {
-  color: var(--gold-primary);
-  font-weight: 600;
+  position: absolute;
+  top: -9px;
+  right: -15px;
+  background: linear-gradient(135deg, #fae2bc 0%, #dea65f 100%);
+  color: #0c0503 !important;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 800 !important;
+  padding: 1.5px 6.5px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── Breadcrumb Bar ── */
