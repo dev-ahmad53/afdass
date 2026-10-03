@@ -174,44 +174,36 @@ html, body {
   filter: drop-shadow(0 4px 14px rgba(222, 166, 95, 0.35));
 }
 
-/* Center Links */
+/* Center Links (Exact Match to User Reference Screenshot) */
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.85rem;
+  gap: 2.6rem;
 }
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 0.94rem;
+  font-size: 1.02rem;
   font-weight: 500;
-  color: #d1c8be;
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
   position: relative;
   padding: 0.25rem 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
 }
 
 .nav-link:hover {
   color: #ffffff;
+  opacity: 1;
 }
 
 .nav-link.active {
   color: #ffffff;
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gold-primary);
-  border-radius: 999px;
-  box-shadow: 0 0 10px rgba(222, 166, 95, 0.8), 0 0 16px rgba(222, 166, 95, 0.4);
+  font-weight: 700;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Right Nav Actions */
