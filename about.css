@@ -19,12 +19,12 @@
 }
 
 body.about-page {
-  background-color: #160706;
+  background-color: #150a05;
   background-image:
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(175, 48, 32, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(140, 35, 24, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(175, 48, 32, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(120, 28, 20, 0.10) 0%, transparent 60%);
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(185, 105, 48, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(150, 78, 32, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(185, 105, 48, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(140, 70, 28, 0.08) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--about-text-secondary);
   font-family: var(--about-font-sans);
@@ -161,7 +161,7 @@ body.about-page {
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background-color: #180706;
+  background-color: #150a05;
 }
 
 /* Full-width background image layer */
@@ -185,9 +185,9 @@ body.about-page {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(22, 7, 6, 0.88) 0%,
-    rgba(22, 7, 6, 0.65) 42%,
-    rgba(22, 7, 6, 0.15) 68%,
+    rgba(21, 10, 5, 0.88) 0%,
+    rgba(21, 10, 5, 0.65) 42%,
+    rgba(21, 10, 5, 0.15) 68%,
     transparent 100%
   );
   pointer-events: none;
@@ -261,9 +261,9 @@ body.about-page {
 .about-story-section {
   position: relative;
   padding: 6.5rem 0;
-  background: linear-gradient(135deg, #180706 0%, #200b09 45%, #2c100c 85%, #220c09 100%);
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  background: linear-gradient(135deg, #180c06 0%, #201008 45%, #2a150c 85%, #201008 100%);
+  border-top: 1px solid rgba(222, 166, 95, 0.2);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2);
 }
 
 .story-grid {
@@ -281,9 +281,9 @@ body.about-page {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(185, 80, 55, 0.32);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(185, 80, 55, 0.15);
-  background: #240d0a;
+  border: 1px solid rgba(222, 166, 95, 0.28);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(185, 105, 48, 0.15);
+  background: #201008;
 }
 
 .story-oud-img {
@@ -391,9 +391,9 @@ body.about-page {
 .about-founder-section {
   position: relative;
   padding: 6.5rem 0;
-  background: radial-gradient(ellipse 85% 65% at 50% 25%, #2c100c 0%, #200b09 55%, #150605 100%);
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  background: radial-gradient(ellipse 85% 65% at 50% 25%, #2a150c 0%, #1c0e07 55%, #130804 100%);
+  border-top: 1px solid rgba(222, 166, 95, 0.2);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2);
   overflow: hidden;
 }
 
@@ -404,11 +404,11 @@ body.about-page {
   grid-template-columns: 0.85fr 1.15fr;
   align-items: center;
   gap: 3.5rem;
-  background: linear-gradient(145deg, rgba(38, 13, 10, 0.82) 0%, rgba(26, 8, 7, 0.94) 100%);
-  border: 1px solid rgba(185, 80, 55, 0.28);
+  background: linear-gradient(145deg, rgba(38, 20, 12, 0.88) 0%, rgba(24, 12, 7, 0.96) 100%);
+  border: 1px solid rgba(222, 166, 95, 0.25);
   border-radius: 28px;
   padding: 3.25rem 3.5rem;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 40px rgba(185, 80, 55, 0.12), inset 0 1px 0 rgba(222, 166, 95, 0.15);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 40px rgba(185, 105, 48, 0.12), inset 0 1px 0 rgba(222, 166, 95, 0.15);
   overflow: hidden;
 }
 
@@ -439,8 +439,8 @@ body.about-page {
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(222, 166, 95, 0.38);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(185, 80, 55, 0.14);
-  background: #240d0a;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(185, 105, 48, 0.14);
+  background: #180c06;
 }
 
 .founder-portrait-img {
@@ -621,9 +621,9 @@ body.about-page {
 .about-values-section {
   position: relative;
   padding: 6rem 0;
-  background: radial-gradient(ellipse 90% 70% at 50% 30%, #2a0f0c 0%, #1e0b08 60%, #150605 100%);
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  background: radial-gradient(ellipse 90% 70% at 50% 30%, #2a150c 0%, #1c0e07 60%, #130804 100%);
+  border-top: 1px solid rgba(222, 166, 95, 0.2);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2);
 }
 
 .values-header {
@@ -642,18 +642,18 @@ body.about-page {
   align-items: center;
   text-align: center;
   padding: 2.2rem 1.4rem;
-  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
+  background: linear-gradient(180deg, #24130b 0%, #180c06 100%);
   border-radius: 20px;
-  border: 1px solid rgba(185, 80, 55, 0.26);
+  border: 1px solid rgba(222, 166, 95, 0.22);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(222, 166, 95, 0.08);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .value-item:hover {
-  background: linear-gradient(180deg, #2d110d 0%, #200c09 100%);
+  background: linear-gradient(180deg, #2c160d 0%, #1e0f08 100%);
   border-color: rgba(222, 166, 95, 0.48);
   transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 80, 55, 0.22);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 105, 48, 0.18);
 }
 
 .value-icon-circle {
@@ -707,8 +707,8 @@ body.about-page {
   padding: 6.5rem 0 7rem 0;
   overflow: hidden;
   text-align: center;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  background-color: #150605;
+  border-top: 1px solid rgba(222, 166, 95, 0.2);
+  background-color: #130804;
 }
 
 .about-cta-bg-layer {
@@ -733,9 +733,9 @@ body.about-page {
   inset: 0;
   background: radial-gradient(
     ellipse 90% 85% at 50% 50%,
-    rgba(22, 7, 6, 0.55) 0%,
-    rgba(22, 7, 6, 0.85) 65%,
-    #150605 100%
+    rgba(21, 10, 5, 0.55) 0%,
+    rgba(21, 10, 5, 0.85) 65%,
+    #130804 100%
   );
 }
 
@@ -746,10 +746,10 @@ body.about-page {
   max-width: 960px;
   margin: 0 auto;
   padding: 4.25rem 3.5rem 3.5rem 3.5rem;
-  background: rgba(28, 9, 8, 0.82);
+  background: rgba(32, 16, 10, 0.84);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(185, 80, 55, 0.35);
+  border: 1px solid rgba(222, 166, 95, 0.3);
   border-radius: 32px;
   box-shadow: 
     0 35px 90px rgba(0, 0, 0, 0.92),

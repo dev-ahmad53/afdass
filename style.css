@@ -13,13 +13,13 @@
   --gold-bronze: #8a5a32;
   --gold-hairline: rgba(222, 166, 95, 0.16);
 
-  /* Haute Parfumerie Royal Maroon Silk & Burgundy Palette (matching official logo) */
-  --bg-deep-noir: #120505;
-  --bg-espresso-base: #1a0a07;
-  --bg-espresso-card: #220c0a;
-  --bg-chocolate-rich: #280e0c;
-  --bg-chocolate-card: #2f120e;
-  --bg-chocolate-accent: #3a1611;
+  /* Haute Parfumerie Warm Bronze, Roasted Cocoa & Silk Amber Palette (matching Hero section) */
+  --bg-deep-noir: #130804;
+  --bg-espresso-base: #180c06;
+  --bg-espresso-card: #201008;
+  --bg-chocolate-rich: #27140b;
+  --bg-chocolate-card: #2f180e;
+  --bg-chocolate-accent: #3a1e12;
 
   --text-pure: #ffffff;
   --text-nav: #a8a8a9;
@@ -75,11 +75,11 @@ input, textarea, select, [contenteditable] {
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #160706;
+  background-color: #150a05;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 45, 30, 0.14) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 40%, rgba(135, 32, 22, 0.10) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(165, 45, 30, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(185, 105, 48, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 40%, rgba(150, 78, 32, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(185, 105, 48, 0.10) 0%, transparent 50%);
   background-attachment: fixed;
   color: var(--text-pure);
   font-family: var(--font-sans);
@@ -582,7 +582,7 @@ html, body {
     max-width: 320px !important;
     height: 100vh !important;
     height: 100dvh !important;
-    background: linear-gradient(180deg, #220c0a 0%, #150605 100%) !important;
+    background: linear-gradient(180deg, #24130b 0%, #140904 100%) !important;
     border-left: 1px solid rgba(222, 166, 95, 0.3) !important;
     box-shadow: -20px 0 60px rgba(0, 0, 0, 0.95) !important;
     z-index: 99999 !important;
@@ -904,10 +904,10 @@ html, body {
 .featured-section {
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse 80% 65% at 50% 15%, #2d110c 0%, #200c09 55%, #150605 100%);
+  background: radial-gradient(ellipse 80% 65% at 50% 15%, #2a150c 0%, #1c0e07 55%, #130804 100%);
   padding: 5rem 0 6rem 0;
   z-index: 10;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
 }
 
 .featured-container {
@@ -974,8 +974,8 @@ html, body {
 
 /* Card */
 .product-card {
-  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
-  border: 1px solid rgba(185, 80, 55, 0.24);
+  background: linear-gradient(180deg, #24130b 0%, #190c06 100%);
+  border: 1px solid rgba(222, 166, 95, 0.24);
   border-radius: 18px;
   padding: 1.1rem;
   display: flex;
@@ -989,7 +989,7 @@ html, body {
 .product-card:hover {
   transform: translateY(-5px);
   border-color: rgba(222, 166, 95, 0.45);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 80, 55, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(222, 166, 95, 0.2);
 }
 
 /* Image Box */
@@ -998,7 +998,7 @@ html, body {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  background: #140505;
+  background: #140904;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1067,7 +1067,7 @@ html, body {
   padding: 0.68rem 0;
   border-radius: 9999px;
   border: 1px solid rgba(222, 166, 95, 0.5);
-  background: rgba(28, 20, 13, 0.85);
+  background: rgba(30, 16, 10, 0.85);
   color: #dea65f;
   font-family: var(--font-sans);
   font-size: 0.86rem;
@@ -1131,12 +1131,12 @@ html, body {
   position: relative;
   width: 100%;
   min-height: 600px;
-  background-color: #140505;
+  background-color: #130804;
   overflow: hidden;
   display: flex;
   align-items: center;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.22);
   z-index: 10;
 }
 
@@ -1162,9 +1162,9 @@ html, body {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(24, 7, 6, 0.65) 0%,
-    rgba(24, 7, 6, 0.42) 35%,
-    rgba(24, 7, 6, 0.12) 55%,
+    rgba(22, 10, 5, 0.70) 0%,
+    rgba(22, 10, 5, 0.45) 35%,
+    rgba(22, 10, 5, 0.14) 55%,
     transparent 75%
   );
   z-index: 2;
@@ -1266,9 +1266,9 @@ html, body {
   .moments-overlay {
     background: linear-gradient(
       180deg,
-      rgba(6, 5, 5, 0.35) 0%,
-      rgba(6, 5, 5, 0.88) 45%,
-      #060505 100%
+      rgba(18, 9, 5, 0.35) 0%,
+      rgba(18, 9, 5, 0.88) 45%,
+      #120804 100%
     );
   }
   .moments-container {
@@ -1286,10 +1286,10 @@ html, body {
 .category-section {
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse 80% 65% at 50% 20%, #2c100c 0%, #1e0b08 60%, #150605 100%);
+  background: radial-gradient(ellipse 80% 65% at 50% 20%, #2a150c 0%, #1c0e07 60%, #130804 100%);
   padding: 5.5rem 0 6.5rem 0;
   z-index: 10;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
 }
 
 .category-container {
@@ -1305,8 +1305,8 @@ html, body {
 }
 
 .category-card {
-  background: linear-gradient(180deg, #240d0a 0%, #190706 100%);
-  border: 1px solid rgba(185, 80, 55, 0.22);
+  background: linear-gradient(180deg, #24130b 0%, #180c06 100%);
+  border: 1px solid rgba(222, 166, 95, 0.22);
   border-radius: 18px;
   padding: 1.1rem;
   display: flex;
@@ -1321,7 +1321,7 @@ html, body {
 .category-card:hover {
   transform: translateY(-6px);
   border-color: rgba(222, 166, 95, 0.45);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(185, 80, 55, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(222, 166, 95, 0.2);
 }
 
 .category-img-box {
@@ -1329,7 +1329,7 @@ html, body {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  background: #140505;
+  background: #140904;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1420,10 +1420,10 @@ html, body {
 .story-section {
   position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #180706 0%, #200b09 45%, #2c100c 85%, #220c09 100%);
+  background: linear-gradient(135deg, #180c06 0%, #22120a 45%, #2c160d 85%, #22120a 100%);
   padding: 6.5rem 0 7.5rem 0;
   overflow: hidden;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
 }
 
 .story-container {
@@ -1448,9 +1448,9 @@ html, body {
   aspect-ratio: 4 / 3;
   border-radius: 20px;
   overflow: hidden;
-  background: #180706;
-  border: 1px solid rgba(185, 80, 55, 0.28);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(185, 80, 55, 0.12);
+  background: #180c06;
+  border: 1px solid rgba(222, 166, 95, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(222, 166, 95, 0.12);
 }
 
 .story-img {
@@ -1616,17 +1616,17 @@ html, body {
 .testimonials-section {
   position: relative;
   width: 100%;
-  background-color: #160706;
+  background-color: #150a05;
   background-image: 
     url('assets/smoke-left.png'),
     url('assets/smoke-right.png'),
-    radial-gradient(ellipse 80% 65% at 50% 15%, #2f110c 0%, #200b08 60%, #150505 100%);
+    radial-gradient(ellipse 80% 65% at 50% 15%, #2e160e 0%, #1f0f08 60%, #140904 100%);
   background-position: left center, right center, center center;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto 100%, auto 100%, cover;
   padding: 5.5rem 0 6.5rem 0;
   overflow: hidden;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
 }
 
 .testimonials-container {
@@ -1662,8 +1662,8 @@ html, body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #240d0a;
-  border: 1px solid rgba(185, 80, 55, 0.3);
+  background: #24130b;
+  border: 1px solid rgba(222, 166, 95, 0.3);
   color: #dea65f;
   display: flex;
   align-items: center;
@@ -1703,14 +1703,14 @@ html, body {
   transform: translateY(8px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   position: relative;
-  background: linear-gradient(180deg, #2b100d 0%, #1e0a08 100%);
-  border: 1px solid rgba(185, 80, 55, 0.24);
+  background: linear-gradient(180deg, #28140b 0%, #1c0e07 100%);
+  border: 1px solid rgba(222, 166, 95, 0.24);
   border-radius: 22px;
   padding: 2.8rem 3.5rem;
   align-items: center;
   justify-content: space-between;
   gap: 2.5rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(138, 90, 50, 0.06), inset 0 1px 0 rgba(222, 166, 95, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(222, 166, 95, 0.08), inset 0 1px 0 rgba(222, 166, 95, 0.08);
 }
 
 .testimonial-card.active {
@@ -1842,13 +1842,14 @@ html, body {
 .site-footer {
   position: relative;
   width: 100%;
-  background-color: #150605;
+  background-color: #130804;
   background-image: url('assets/footer-bg-exact.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem 0 2.2rem 0;
   overflow: hidden;
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
 }
 
 .footer-container {
@@ -1896,7 +1897,7 @@ html, body {
 .newsletter-form {
   display: flex;
   align-items: center;
-  background: #190807;
+  background: #180c06;
   border: 1.2px solid rgba(222, 166, 95, 0.45);
   border-radius: 9999px;
   padding: 4px 4px 4px 22px;

@@ -6,10 +6,10 @@
 
 :root {
   color-scheme: dark;
-  --cart-bg-deep: #160706;
-  --cart-card-bg: #200c0a;
-  --cart-card-inner: #270f0c;
-  --cart-border: rgba(185, 80, 55, 0.24);
+  --cart-bg-deep: #150a05;
+  --cart-card-bg: #201008;
+  --cart-card-inner: #27140b;
+  --cart-border: rgba(222, 166, 95, 0.22);
   --cart-border-hover: rgba(222, 166, 95, 0.45);
   --cart-gold-primary: #dea65f;
   --cart-gold-light: #f5cf96;
@@ -28,9 +28,9 @@ html {
 body.cart-page {
   background-color: var(--cart-bg-deep);
   background-image:
-    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(175, 48, 32, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 60% at 100% 35%, rgba(140, 35, 24, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 60% at 0% 75%, rgba(175, 48, 32, 0.13) 0%, transparent 55%);
+    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(185, 105, 48, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 100% 35%, rgba(150, 78, 32, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 0% 75%, rgba(185, 105, 48, 0.12) 0%, transparent 55%);
   background-attachment: fixed;
   color: var(--cart-text-light);
   font-family: var(--cart-font-sans);
@@ -52,9 +52,9 @@ body.cart-page {
   position: relative;
   width: 100%;
   height: 500px;
-  background-color: #180706;
+  background-color: #150a05;
   overflow: hidden;
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2);
 }
 
 /* Background Layer */
@@ -404,8 +404,8 @@ body.cart-page {
   width: 76px;
   height: 76px;
   border-radius: 12px;
-  background: #140505;
-  border: 1px solid rgba(185, 80, 55, 0.28);
+  background: #140904;
+  border: 1px solid rgba(222, 166, 95, 0.25);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -493,8 +493,8 @@ body.cart-page {
 .cart-qty-stepper {
   display: inline-flex;
   align-items: center;
-  background: #1e0b09;
-  border: 1px solid rgba(185, 80, 55, 0.32);
+  background: #180c06;
+  border: 1px solid rgba(222, 166, 95, 0.28);
   border-radius: 8px;
   overflow: hidden;
   height: 38px;
@@ -1126,7 +1126,7 @@ body.cart-page {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
-  background: #140505;
+  background: #140904;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1251,7 +1251,7 @@ body.cart-page {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #200c0a;
+  background: #201008;
   border: 1px solid var(--cart-gold-primary);
   border-radius: 12px;
   padding: 1rem 1.4rem;
@@ -1627,11 +1627,11 @@ body.cart-page {
   max-width: 960px;
   max-height: 92vh;
   overflow-y: auto;
-  background: linear-gradient(180deg, #240d0a 0%, #160706 100%);
+  background: linear-gradient(180deg, #24130b 0%, #150a05 100%);
   border: 1px solid rgba(222, 166, 95, 0.4);
   border-radius: 22px;
   padding: 2.25rem 2.5rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 60, 40, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 105, 48, 0.16);
   transform: translateY(20px) scale(0.98);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1645,7 +1645,7 @@ body.cart-page {
   width: 6px;
 }
 .checkout-modal-dialog::-webkit-scrollbar-track {
-  background: #180706;
+  background: #180c06;
 }
 .checkout-modal-dialog::-webkit-scrollbar-thumb {
   background: rgba(222, 166, 95, 0.3);
@@ -1774,8 +1774,8 @@ body.cart-page {
 .form-input,
 .form-select {
   width: 100%;
-  background: #160706;
-  border: 1px solid rgba(185, 80, 55, 0.35);
+  background: #180c06;
+  border: 1px solid rgba(222, 166, 95, 0.3);
   border-radius: 10px;
   padding: 0.78rem 1rem;
   color: #ffffff;
@@ -1790,7 +1790,7 @@ body.cart-page {
 .form-select:focus {
   border-color: var(--cart-gold-primary);
   box-shadow: 0 0 14px rgba(222, 166, 95, 0.25);
-  background: #1e0a08;
+  background: #201008;
 }
 
 .form-input::placeholder {
@@ -1817,9 +1817,9 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
   caret-color: #dea65f !important;
-  -webkit-box-shadow: 0 0 0 1000px #160706 inset !important;
-  box-shadow: 0 0 0 1000px #160706 inset !important;
-  border-color: rgba(185, 80, 55, 0.45) !important;
+  -webkit-box-shadow: 0 0 0 1000px #180c06 inset !important;
+  box-shadow: 0 0 0 1000px #180c06 inset !important;
+  border-color: rgba(222, 166, 95, 0.4) !important;
   font-family: var(--cart-font-sans) !important;
   font-size: 0.9rem !important;
   transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
@@ -1829,17 +1829,17 @@ select:-webkit-autofill:focus {
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
   caret-color: #dea65f !important;
-  -webkit-box-shadow: 0 0 0 1000px #1e0a08 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
-  box-shadow: 0 0 0 1000px #1e0a08 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
+  -webkit-box-shadow: 0 0 0 1000px #201008 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
+  box-shadow: 0 0 0 1000px #201008 inset, 0 0 14px rgba(222, 166, 95, 0.25) !important;
   border-color: var(--cart-gold-primary) !important;
 }
 
 .form-input:-moz-autofill,
 input:-moz-autofill {
-  box-shadow: 0 0 0 1000px #160706 inset !important;
+  box-shadow: 0 0 0 1000px #180c06 inset !important;
   -moz-text-fill-color: #ffffff !important;
   color: #ffffff !important;
-  border-color: rgba(185, 80, 55, 0.45) !important;
+  border-color: rgba(222, 166, 95, 0.4) !important;
 }
 
 .form-select {
@@ -1866,8 +1866,8 @@ input:-moz-autofill {
 .payment-option-card {
   position: relative;
   display: block;
-  background: #1a0807;
-  border: 1px solid rgba(185, 80, 55, 0.28);
+  background: #180c06;
+  border: 1px solid rgba(222, 166, 95, 0.25);
   border-radius: 12px;
   padding: 0.9rem 1rem;
   cursor: pointer;
@@ -1963,8 +1963,8 @@ input:-moz-autofill {
 
 /* Order Snapshot Right Box */
 .checkout-summary-box {
-  background: rgba(22, 7, 6, 0.92);
-  border: 1px solid rgba(185, 80, 55, 0.28);
+  background: rgba(24, 12, 7, 0.94);
+  border: 1px solid rgba(222, 166, 95, 0.25);
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -2008,8 +2008,8 @@ input:-moz-autofill {
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: #140505;
-  border: 1px solid rgba(185, 80, 55, 0.25);
+  background: #140904;
+  border: 1px solid rgba(222, 166, 95, 0.25);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -2138,12 +2138,12 @@ input:-moz-autofill {
   z-index: 10;
   width: 100%;
   max-width: 520px;
-  background: linear-gradient(180deg, #250e0b 0%, #150605 100%);
+  background: linear-gradient(180deg, #24130b 0%, #150a05 100%);
   border: 1px solid var(--cart-gold-primary);
   border-radius: 22px;
   padding: 2.75rem 2.25rem;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 60, 40, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 50px rgba(185, 105, 48, 0.2);
   transform: scale(0.92);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }

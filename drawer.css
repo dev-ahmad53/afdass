@@ -10,7 +10,7 @@
   width: 100vw !important;
   height: 100vh !important;
   height: 100dvh !important;
-  background: rgba(18, 6, 5, 0.88) !important;
+  background: rgba(19, 8, 4, 0.88) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
   z-index: 99998 !important;
@@ -35,7 +35,7 @@
   max-width: 320px !important;
   height: 100vh !important;
   height: 100dvh !important;
-  background: linear-gradient(180deg, #240d0a 0%, #150605 100%) !important;
+  background: linear-gradient(180deg, #24130b 0%, #140904 100%) !important;
   border-left: 1px solid rgba(222, 166, 95, 0.35) !important;
   box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95) !important;
   z-index: 99999 !important;

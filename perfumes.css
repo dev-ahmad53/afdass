@@ -6,12 +6,12 @@
 
 /* ── Base Page Styling ── */
 .perfumes-page {
-  background-color: #160706;
+  background-color: #150a05;
   background-image:
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(175, 48, 32, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(140, 35, 24, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(175, 48, 32, 0.13) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(120, 28, 20, 0.10) 0%, transparent 60%);
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(185, 105, 48, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 65% at 100% 40%, rgba(150, 78, 32, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 65% at 0% 80%, rgba(185, 105, 48, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(140, 70, 28, 0.08) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--text-pure);
   font-family: var(--font-sans);
@@ -28,7 +28,7 @@
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background-color: #180706;
+  background-color: #150a05;
 }
 
 .coll-hero-bg {
@@ -202,9 +202,9 @@
    2. CATEGORY TABS STRIP (Clean 4-Item Grid for the 4 Perfumes)
    =================================================================== */
 .coll-tabs-section {
-  background: radial-gradient(ellipse 100% 100% at 50% 0%, #280d0a 0%, #1a0806 100%);
-  border-top: 1px solid rgba(185, 80, 55, 0.28);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  background: radial-gradient(ellipse 100% 100% at 50% 0%, #26130a 0%, #150a05 100%);
+  border-top: 1px solid rgba(222, 166, 95, 0.22);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.18);
   padding: 0 5%;
 }
 
@@ -218,8 +218,8 @@
 }
 
 .coll-tab {
-  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
-  border: 1px solid rgba(185, 80, 55, 0.28);
+  background: linear-gradient(180deg, #24130b 0%, #180c06 100%);
+  border: 1px solid rgba(222, 166, 95, 0.25);
   border-radius: 14px;
   padding: 0.85rem 1.25rem;
   display: flex;
@@ -232,14 +232,14 @@
 }
 
 .coll-tab:hover {
-  background: linear-gradient(180deg, #30110d 0%, #220b08 100%);
+  background: linear-gradient(180deg, #2e170e 0%, #1f0f08 100%);
   border-color: rgba(222, 166, 95, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 20px rgba(222, 166, 95, 0.15);
 }
 
 .coll-tab.active {
-  background: linear-gradient(180deg, #3a1510 0%, #260d09 100%);
+  background: linear-gradient(180deg, #381c11 0%, #221008 100%);
   border-color: var(--gold-primary);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 24px rgba(222, 166, 95, 0.25);
 }
@@ -248,7 +248,7 @@
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: #140505;
+  background: #140904;
   border: 1px solid rgba(222, 166, 95, 0.3);
   display: flex;
   align-items: center;
@@ -294,10 +294,10 @@
 .coll-main {
   position: relative;
   width: 100%;
-  background: radial-gradient(ellipse 80% 65% at 50% 15%, #2e110c 0%, #200c09 55%, #150505 100%);
+  background: radial-gradient(ellipse 80% 65% at 50% 15%, #2a150c 0%, #1b0d07 55%, #130804 100%);
   padding: 4.5rem 0 5.5rem 0;
-  border-top: 1px solid rgba(185, 80, 55, 0.22);
-  border-bottom: 1px solid rgba(185, 80, 55, 0.22);
+  border-top: 1px solid rgba(222, 166, 95, 0.2);
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2);
 }
 
 .coll-main-container {
@@ -344,8 +344,8 @@
 }
 
 .sort-select {
-  background: #240d0a;
-  border: 1px solid rgba(185, 80, 55, 0.3);
+  background: #201008;
+  border: 1px solid rgba(222, 166, 95, 0.3);
   border-radius: 8px;
   color: #f5f0e6;
   font-family: var(--font-sans);
@@ -370,8 +370,8 @@
 
 /* Luxury Product Card (Matching Home Page) */
 .prod-card {
-  background: linear-gradient(180deg, #240d0a 0%, #1a0806 100%);
-  border: 1px solid rgba(185, 80, 55, 0.26);
+  background: linear-gradient(180deg, #24130b 0%, #180c06 100%);
+  border: 1px solid rgba(222, 166, 95, 0.22);
   border-radius: 18px;
   padding: 1.15rem;
   display: flex;
@@ -385,7 +385,7 @@
 .prod-card:hover {
   transform: translateY(-6px);
   border-color: rgba(222, 166, 95, 0.48);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.8), 0 0 32px rgba(185, 80, 55, 0.2);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.8), 0 0 32px rgba(185, 105, 48, 0.18);
 }
 
 .prod-card-inner {
@@ -400,7 +400,7 @@
   aspect-ratio: 4 / 5;
   border-radius: 14px;
   overflow: hidden;
-  background: #140505;
+  background: #140904;
   position: relative;
   display: flex;
   align-items: center;
@@ -684,10 +684,10 @@
   margin: 4rem auto 5rem auto;
   height: 320px;
   border-radius: 20px;
-  border: 1px solid rgba(185, 80, 55, 0.32);
+  border: 1px solid rgba(222, 166, 95, 0.28);
   overflow: hidden;
-  background-color: #160706;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 36px rgba(185, 80, 55, 0.16);
+  background-color: #150a05;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 36px rgba(185, 105, 48, 0.16);
 }
 
 .sig-scent-bg {
@@ -707,9 +707,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(22, 7, 6, 0.80) 0%,
-    rgba(22, 7, 6, 0.50) 45%,
-    rgba(22, 7, 6, 0.14) 70%,
+    rgba(21, 10, 5, 0.85) 0%,
+    rgba(21, 10, 5, 0.55) 45%,
+    rgba(21, 10, 5, 0.16) 70%,
     transparent 85%
   );
   pointer-events: none;
