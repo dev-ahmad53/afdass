@@ -760,7 +760,7 @@
 @media (max-width: 768px) {
   .coll-hero {
     height: auto;
-    min-height: 480px;
+    min-height: 520px;
     display: block;
     position: relative;
     overflow: hidden;
@@ -791,7 +791,7 @@
   .coll-hero-content {
     width: 100%;
     max-width: 100%;
-    padding: 125px 1.25rem 3.5rem 1.25rem;
+    padding: 155px 1.25rem 3.5rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -810,9 +810,9 @@
   }
 
   .coll-hero-title {
-    font-size: clamp(2rem, 7.5vw, 2.65rem);
+    font-size: clamp(2.4rem, 8.5vw, 3rem);
     line-height: 1.15;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.95rem;
     color: #ffffff;
     letter-spacing: 0.01em;
     text-shadow: 0 4px 22px rgba(0, 0, 0, 1), 0 2px 8px rgba(0, 0, 0, 0.9);
@@ -826,9 +826,9 @@
   }
 
   .coll-hero-desc {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 420px;
+    font-size: 1.22rem;
+    line-height: 1.62;
+    max-width: 440px;
     margin: 0 auto;
     color: #ede5da;
     text-shadow: 0 2px 16px rgba(0, 0, 0, 1), 0 0 25px rgba(0, 0, 0, 0.9);
@@ -923,20 +923,20 @@
 
 @media (max-width: 480px) {
   .coll-hero-content {
-    padding: 110px 1rem 2.5rem 1rem;
+    padding: 145px 1.15rem 3rem 1.15rem;
   }
 
   .coll-hero-title {
-    font-size: 2.1rem;
-    line-height: 1.15;
+    font-size: 2.45rem;
+    line-height: 1.12;
     word-break: normal;
     overflow-wrap: break-word;
   }
 
   .coll-hero-desc {
-    font-size: 0.98rem;
-    line-height: 1.55;
-    max-width: 320px;
+    font-size: 1.16rem;
+    line-height: 1.6;
+    max-width: 350px;
   }
 
   .coll-tabs-wrap {
