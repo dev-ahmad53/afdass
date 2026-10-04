@@ -136,11 +136,14 @@ html, body {
    TOP NAVBAR
    =================================================================== */
 
-.navbar {
+.navbar,
+.navbar-in-hero,
+.navbar.navbar-in-hero {
   position: relative;
   width: 100%;
   z-index: 30;
   padding: 1.25rem 0 0 0;
+  box-sizing: border-box;
 }
 
 .nav-container {
@@ -764,7 +767,9 @@ html, body {
     padding-bottom: 2.5rem;
   }
 
-  .navbar {
+  .navbar,
+  .navbar-in-hero,
+  .navbar.navbar-in-hero {
     padding: 1rem 1.25rem 0 1.25rem;
   }
 

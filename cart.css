@@ -107,7 +107,7 @@ body.cart-page {
   pointer-events: none;
 }
 
-/* Standard Navbar placed inside Hero (consistent with index, perfumes, about) */
+/* Standard Navbar placed inside Hero - Inherits exact layout, typography & spacing from style.css master navbar */
 .cart-top-banner-wrapper .navbar.navbar-in-hero {
   position: absolute;
   top: 0;
@@ -116,72 +116,7 @@ body.cart-page {
   z-index: 20;
   width: 100%;
   background: transparent;
-  padding: 1rem 0 0 0;
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .nav-link {
-  color: var(--text-nav, #a8a8a9);
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 400;
-  letter-spacing: 0.015em;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .nav-link:hover {
-  color: #ffffff;
-  text-shadow: 0 0 14px rgba(222, 166, 95, 0.85), 0 2px 8px rgba(0, 0, 0, 0.95);
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .nav-link.active {
-  color: #ffffff;
-  font-weight: 500;
-  text-shadow: 0 0 14px rgba(222, 166, 95, 0.9), 0 2px 8px rgba(0, 0, 0, 0.95);
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .nav-action-btn {
-  font-family: var(--cart-font-sans);
-  font-size: 0.98rem;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-  transition: all 0.25s ease;
-  letter-spacing: -0.01em;
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .nav-action-btn:hover {
-  color: #f7d197;
-  transform: translateY(-1px);
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .cart-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.cart-top-banner-wrapper .navbar-in-hero .cart-badge {
-  position: absolute;
-  top: -9px;
-  right: -15px;
-  background: linear-gradient(135deg, #fae2bc 0%, #dea65f 100%);
-  color: #0c0503 !important;
-  font-family: var(--cart-font-sans);
-  font-size: 0.74rem;
-  font-weight: 800 !important;
-  padding: 1.5px 6.5px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.15;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
+  padding: 1.25rem 0 0 0;
 }
 
 /* Hero Content Wrap */
