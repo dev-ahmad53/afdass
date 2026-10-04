@@ -136,10 +136,20 @@ html, body {
    TOP NAVBAR
    =================================================================== */
 
-.navbar,
+.navbar {
+  position: relative;
+  width: 100%;
+  z-index: 30;
+  padding: 1.25rem 0 0 0;
+  box-sizing: border-box;
+}
+
 .navbar-in-hero,
 .navbar.navbar-in-hero {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 30;
   padding: 1.25rem 0 0 0;
