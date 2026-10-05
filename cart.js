@@ -681,16 +681,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 10. Toast Notification Helper
+  // 10. Toast Notification Helper (Disabled per design request)
   function showToast(title, desc) {
-    if (!cartToast) return;
-    if (toastTitle) toastTitle.textContent = title;
-    if (toastDesc) toastDesc.textContent = desc;
-
-    cartToast.classList.add('active');
-    setTimeout(() => {
-      cartToast.classList.remove('active');
-    }, 3200);
+    // Disabled: floating toast notification removed
+    return;
   }
 
   // 11. "You May Also Like" Recommendations Engine

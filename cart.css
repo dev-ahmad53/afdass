@@ -1205,29 +1205,12 @@ body.cart-page {
 /* =====================================================================
    5. TOAST NOTIFICATION
    ===================================================================== */
-.cart-toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #201008;
-  border: 1px solid var(--cart-gold-primary);
-  border-radius: 12px;
-  padding: 1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  z-index: 1000;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 24px rgba(222, 166, 95, 0.2);
-  transform: translateY(120%);
-  opacity: 0;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
-}
-
+.cart-toast,
 .cart-toast.active {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .toast-icon {
