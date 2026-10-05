@@ -9,7 +9,7 @@
   const searchCatalog = [
     {
       id: 'ember',
-      name: 'AFDASS Ember',
+      name: 'Ember',
       category: 'men unisex',
       tag: 'Best Seller',
       notes: 'Velvet Woods, Warm Amber, Italian Bergamot & Spices',
@@ -19,7 +19,7 @@
     },
     {
       id: 'venta',
-      name: 'AFDASS Venta',
+      name: 'Venta',
       category: 'men',
       tag: 'Signature Masculine',
       notes: 'Tuscan Leather, Pink Pepper, Radiant Citrus & Birch',
@@ -29,7 +29,7 @@
     },
     {
       id: 'fatima',
-      name: 'AFDASS Fatima',
+      name: 'Fatima',
       category: 'women',
       tag: 'Haute Floral',
       notes: 'Damascus Rose, White Musk, Soft Cashmere & Peach Nectar',
@@ -39,7 +39,7 @@
     },
     {
       id: 'afeee',
-      name: 'AFDASS Afeee',
+      name: 'Afeee',
       category: 'unisex',
       tag: 'Extrait de Parfum',
       notes: 'Saffron Nectar, Golden Amber, Velvet Vanilla & Cedar',

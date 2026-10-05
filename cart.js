@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cart = [
         {
           id: 'ember',
-          name: 'AFDASS Ember',
+          name: 'Ember',
           subtitle: 'Woody & Rich',
           size: '50ml',
           price: 4500,
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           id: 'venta',
-          name: 'AFDASS Venta',
+          name: 'Venta',
           subtitle: 'Bold & Masculine',
           size: '50ml',
           price: 4500,
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           id: 'fatima',
-          name: 'AFDASS Fatima',
+          name: 'Fatima',
           subtitle: 'Fresh & Long Lasting',
           size: '50ml',
           price: 4500,
@@ -691,29 +691,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const recommendedProducts = [
     {
       id: 'ember',
-      name: 'AFDASS Royal',
-      subtitle: 'Luxury & Elegant',
+      name: 'Ember',
+      subtitle: 'Velvet Woods & Warm Amber',
       price: 4500,
       image: 'assets/bottle-ember.jpg'
     },
     {
       id: 'venta',
-      name: 'AFDASS Intense',
-      subtitle: 'Deep & Mysterious',
+      name: 'Venta',
+      subtitle: 'Bold Leather & Bergamot',
       price: 4500,
       image: 'assets/bottle-venta.jpg'
     },
     {
       id: 'fatima',
-      name: 'AFDASS Amber',
-      subtitle: 'Warm & Sensual',
+      name: 'Fatima',
+      subtitle: 'Royal Damask Rose & Musk',
       price: 4500,
       image: 'assets/bottle-fatima.jpg'
     },
     {
       id: 'afeee',
-      name: 'AFDASS Musk',
-      subtitle: 'Soft & Alluring',
+      name: 'Afeee',
+      subtitle: 'Saffron Nectar & White Amber',
       price: 4500,
       image: 'assets/bottle-afeee.jpg'
     }
