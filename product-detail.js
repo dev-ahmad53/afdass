@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ember: {
       id: 'ember',
       name: 'AFDASS Ember',
-      subtitle: 'Smoky Oud & Warm Amber',
+      subtitle: 'Velvet Woods & Warm Amber',
       ratingText: '4.9 (128 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
       description: 'A bold and captivating fragrance crafted for those who appreciate depth and sophistication. AFDASS Ember blends the richness of smoky oriental notes with warm glowing amber, leaving a lasting impression wherever you go.',
-      story: 'AFDASS Ember is more than a scent; it is an unforgettable signature statement. Inspired by the timeless allure of aged smoked oud, this fragrance combines traditional Middle Eastern depth with French modern elegance, perfect for those who value individuality, class, and presence.',
+      story: 'AFDASS Ember is more than a scent; it is an unforgettable signature statement. Inspired by the timeless allure of warm amber and velvet woods, this fragrance combines oriental depth with French modern elegance, perfect for those who value individuality, class, and presence.',
       ideal: 'Evening Wear',
       best: 'Unisex & Men',
       occasion: 'Special Occasions & Soirées',
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/product-ember.jpg?v=20261004'
       ],
       notes: {
-        top: 'Smoked Oud, Royal Saffron, Italian Bergamot',
+        top: 'Spiced Cardamom, Royal Saffron, Italian Bergamot',
         heart: 'Golden Amber, Damascus Rose, Warm Spices',
         base: 'Saddlewood Musk, Vintage Leather, Rare Cedarwood',
         topImg: 'assets/note-top-oud.jpg',
@@ -94,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     afeee: {
       id: 'afeee',
       name: 'AFDASS Afeee',
-      subtitle: 'Velvet Vanilla & Golden Caramel Oud',
+      subtitle: 'Velvet Vanilla & Golden Caramel Amber',
       ratingText: '4.9 (112 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
-      description: 'Decadently sweet, magnetic, and effortlessly seductive. AFDASS Afeee weaves warm roasted praline, bourbon vanilla, and precious white oud into an unforgettable gourmand masterpiece.',
-      story: 'A delicious reverie of opulent indulgence. AFDASS Afeee balances the warmth of golden spun caramel with the mystical sophistication of precious white oud, creating an irresistible, compliments-guaranteed aura.',
+      description: 'Decadently sweet, magnetic, and effortlessly seductive. AFDASS Afeee weaves warm roasted praline, bourbon vanilla, and precious cashmere wood into an unforgettable gourmand masterpiece.',
+      story: 'A delicious reverie of opulent indulgence. AFDASS Afeee balances the warmth of golden spun caramel with the sophistication of French bourbon vanilla, creating an irresistible, compliments-guaranteed aura.',
       ideal: 'Cool Evenings & Autumn/Winter',
       best: 'Women & Unisex',
       occasion: 'Date Nights & Cozy VIP Gatherings',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       notes: {
         top: 'Golden Honey, Candied Orange, Saffron Flakes',
         heart: 'Roasted Praline, Salted Caramel, Cocoa Bean',
-        base: 'Bourbon Vanilla, Cashmere Wood, Soft White Oud',
+        base: 'Bourbon Vanilla, Cashmere Wood, Warm Musk',
         topImg: 'assets/note-top-oud.jpg',
         heartImg: 'assets/note-heart-amber.jpg',
         baseImg: 'assets/note-base-woods.jpg'

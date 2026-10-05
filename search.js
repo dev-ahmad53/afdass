@@ -12,7 +12,7 @@
       name: 'AFDASS Ember',
       category: 'men unisex',
       tag: 'Best Seller',
-      notes: 'Smoky Oud, Warm Amber, Italian Bergamot & Agarwood',
+      notes: 'Velvet Woods, Warm Amber, Italian Bergamot & Spices',
       price: 4500,
       image: 'assets/bottle-ember.jpg',
       url: 'product-detail.html?product=ember'
@@ -74,7 +74,7 @@
             type="search" 
             class="search-input-field" 
             id="globalSearchInput" 
-            placeholder="Search our fragrances, notes (Oud, Rose, Amber)..." 
+            placeholder="Search our fragrances, notes (Vanilla, Rose, Amber)..." 
             autocomplete="off" 
             spellcheck="false" 
           />
@@ -87,7 +87,7 @@
         <!-- Filter Tags Row -->
         <div class="search-tags-row">
           <button class="search-tag-chip active" data-tag="all">All Fragrances</button>
-          <button class="search-tag-chip" data-tag="oud">Smoky Oud</button>
+          <button class="search-tag-chip" data-tag="vanilla">Velvet Vanilla</button>
           <button class="search-tag-chip" data-tag="amber">Warm Amber</button>
           <button class="search-tag-chip" data-tag="rose">Damask Rose</button>
           <button class="search-tag-chip" data-tag="leather">Tuscan Leather</button>
@@ -181,7 +181,7 @@
         <div class="search-empty-state">
           <div class="search-empty-icon">✧</div>
           <h4 class="search-empty-title">No Fragrances Found</h4>
-          <p class="search-empty-desc">We couldn't find matches for "${query}". Try searching for "Oud", "Amber", "Rose", or "Men".</p>
+          <p class="search-empty-desc">We couldn't find matches for "${query}". Try searching for "Vanilla", "Amber", "Rose", or "Men".</p>
         </div>
       `;
       return;
