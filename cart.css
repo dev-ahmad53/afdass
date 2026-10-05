@@ -144,59 +144,56 @@ body.cart-page {
   gap: 2rem;
 }
 
+.cart-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--cart-font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--cart-gold-primary);
+  margin-bottom: 0.45rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.cart-hero-eyebrow::before {
+  content: '✦';
+  font-size: 0.65rem;
+  color: var(--cart-gold-light);
+  opacity: 0.85;
+}
+
 .cart-hero-title {
-  font-family: var(--cart-font-serif);
-  font-size: clamp(2.8rem, 4.2vw, 3.8rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
   font-weight: 400;
   color: #ffffff;
-  line-height: 1.05;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.015em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
 }
 
 .cart-gold-title {
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
-  color: var(--cart-gold-primary);
-  background: linear-gradient(135deg, #f7dfbe 0%, #dea65f 60%, #b87d3b 100%);
+  background: linear-gradient(135deg, #f7dfbe 0%, #dea65f 55%, #b87d3b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .cart-hero-sub {
-  font-family: var(--cart-font-sans);
-  font-size: 0.96rem;
-  color: #a39b90;
-  margin: 0 0 1.25rem 0;
-  letter-spacing: 0.02em;
-}
-
-.cart-breadcrumb-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  font-family: var(--cart-font-sans);
-}
-
-.bread-link {
-  color: #8c8479;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.bread-link:hover {
-  color: var(--cart-gold-primary);
-}
-
-.bread-sep {
-  color: #665f57;
-  font-size: 0.8rem;
-}
-
-.bread-current {
-  color: var(--cart-gold-primary);
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #dbd2c8;
+  margin: 0;
+  max-width: 540px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
 }
 
 /* Right Tagline with Horizontal Underline */
@@ -1293,13 +1290,22 @@ body.cart-page {
     gap: 0.85rem;
   }
 
+  .cart-hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.35rem;
+  }
+
   .cart-hero-title {
-    font-size: clamp(2.3rem, 7vw, 3rem);
+    font-size: clamp(2.1rem, 6.5vw, 2.75rem);
+    line-height: 1.12;
+    margin-bottom: 0.55rem;
   }
 
   .cart-hero-sub {
-    font-size: 0.92rem;
-    margin-bottom: 0.85rem;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    max-width: 95%;
   }
 
   .cart-hero-right {
@@ -1521,7 +1527,13 @@ body.cart-page {
   }
 
   .cart-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.15rem;
+    line-height: 1.15;
+  }
+
+  .cart-hero-sub {
+    font-size: 1.0rem;
+    line-height: 1.4;
   }
 
   .cart-table-card {
