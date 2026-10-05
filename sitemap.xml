@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://afdassperfumes.com/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/hero-ember-stage.jpg</image:loc>
+      <image:title>AFDASS Luxury Perfumes - A Scent That Feels Like You</image:title>
+    </image:image>
+  </url>
+
+  <!-- Fragrance Collection -->
+  <url>
+    <loc>https://afdassperfumes.com/perfumes.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/collections-hero-banner.jpg</image:loc>
+      <image:title>AFDASS Haute Parfumerie Fragrance Collection</image:title>
+    </image:image>
+  </url>
+
+  <!-- Products -->
+  <url>
+    <loc>https://afdassperfumes.com/product-detail.html?product=ember</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/product-ember.jpg</image:loc>
+      <image:title>AFDASS Ember Perfume - Woody and Rich</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://afdassperfumes.com/product-detail.html?product=venta</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/product-venta.jpg</image:loc>
+      <image:title>AFDASS Venta Perfume - Bold and Masculine</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://afdassperfumes.com/product-detail.html?product=fatima</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/product-fatima.jpg</image:loc>
+      <image:title>AFDASS Fatima Perfume - Fresh and Floral</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://afdassperfumes.com/product-detail.html?product=afeee</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/product-afeee.jpg</image:loc>
+      <image:title>AFDASS Afeee Perfume - Soft Musky Elegance</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://afdassperfumes.com/about.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/about-hero-banner.jpg</image:loc>
+      <image:title>About AFDASS PERFUMES Story</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact Us / Concierge -->
+  <url>
+    <loc>https://afdassperfumes.com/contact.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://afdassperfumes.com/assets/contact-hero-banner.jpg</image:loc>
+      <image:title>AFDASS Fragrance Concierge and Customer Support</image:title>
+    </image:image>
+  </url>
+
+</urlset>
