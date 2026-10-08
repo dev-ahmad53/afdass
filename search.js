@@ -12,7 +12,7 @@
       name: 'Ember',
       category: 'men unisex',
       tag: 'Best Seller',
-      notes: 'Velvet Woods, Warm Amber, Italian Bergamot & Spices',
+      notes: 'Velvet Woods & Warm Amber · Apple, Lemon, Rose, Patchouli & Vanilla',
       price: 4500,
       image: 'assets/bottle-ember.jpg',
       url: 'product-detail.html?product=ember'
@@ -21,18 +21,18 @@
       id: 'venta',
       name: 'Venta',
       category: 'men',
-      tag: 'Signature Masculine',
-      notes: 'Tuscan Leather, Pink Pepper, Radiant Citrus & Birch',
+      tag: 'Fresh Citrus',
+      notes: 'Citrus Energy & Refined Woods · Lemon, Cardamom & Vetiver',
       price: 4500,
       image: 'assets/bottle-venta.jpg',
       url: 'product-detail.html?product=venta'
     },
     {
       id: 'fatima',
-      name: 'Fatima',
+      name: 'Fatimaa',
       category: 'women',
-      tag: 'Haute Floral',
-      notes: 'Damascus Rose, White Musk, Soft Cashmere & Peach Nectar',
+      tag: 'Soft Florals',
+      notes: 'Soft Florals & Sweet Elegance · Mandarin, Gardenia, Jasmine & Brown Sugar',
       price: 4500,
       image: 'assets/bottle-fatima.jpg',
       url: 'product-detail.html?product=fatima'
@@ -41,8 +41,8 @@
       id: 'afeee',
       name: 'Afeee',
       category: 'unisex',
-      tag: 'Extrait de Parfum',
-      notes: 'Saffron Nectar, Golden Amber, Velvet Vanilla & Cedar',
+      tag: 'Fresh Greens',
+      notes: 'Fresh Greens & Soft Musk · Floral Crème Brûlée, Green Notes & Woods',
       price: 4500,
       image: 'assets/bottle-afeee.jpg',
       url: 'product-detail.html?product=afeee'

@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ratingText: '4.9 (128 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
-      description: 'A bold and captivating fragrance crafted for those who appreciate depth and sophistication. Ember blends the richness of smoky oriental notes with warm glowing amber, leaving a lasting impression wherever you go.',
-      story: 'Ember is more than a scent; it is an unforgettable signature statement. Inspired by the timeless allure of warm amber and velvet woods, this fragrance combines oriental depth with French modern elegance, perfect for those who value individuality, class, and presence.',
+      description: 'EMBER is a bold and captivating fragrance crafted for those who appreciate depth and sophistication. A fresh fruity opening gradually unfolds into warm florals and rich woods, settling into a smooth, comforting trail of vanilla and musk. A confident scent that leaves a lasting impression wherever you go.',
+      story: 'EMBER is a bold and captivating fragrance crafted for those who appreciate depth and sophistication. A fresh fruity opening gradually unfolds into warm florals and rich woods, settling into a smooth, comforting trail of vanilla and musk. A confident scent that leaves a lasting impression wherever you go.',
       ideal: 'Evening Wear',
-      best: 'Unisex & Men',
-      occasion: 'Special Occasions & Soirées',
+      best: 'Men & Unisex',
+      occasion: 'Special Occasions, Dates & Soirées',
       images: [
         'assets/bottle-ember.jpg?v=20261004',
         'assets/gallery-ember-2.jpg',
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/product-ember.jpg?v=20261004'
       ],
       notes: {
-        top: 'Spiced Cardamom, Royal Saffron, Italian Bergamot',
-        heart: 'Golden Amber, Damascus Rose, Warm Spices',
-        base: 'Saddlewood Musk, Vintage Leather, Rare Cedarwood',
+        top: 'Apple, Lemon, Bergamot & Neroli',
+        heart: 'Rose, Teak Wood & Patchouli',
+        base: 'Vanilla & Musk',
         topImg: 'assets/note-top-oud.jpg',
         heartImg: 'assets/note-heart-amber.jpg',
         baseImg: 'assets/note-base-woods.jpg'
@@ -38,15 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
     venta: {
       id: 'venta',
       name: 'Venta',
-      subtitle: 'Bold Leather & Italian Bergamot',
+      subtitle: 'Citrus Energy & Refined Woods',
       ratingText: '4.9 (94 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
-      description: 'Dynamic, invigorating, and decisively masculine. Venta opens with radiant Italian bergamot and crisp pink pepper, descending into a heart of smoky Tuscan birch and rich dark leather.',
-      story: 'Crafted for the modern visionary. Venta captures the relentless energy of ambition and quiet confidence. The fresh opening harmonizes with rugged Tuscan leather, embodying timeless masculine authority.',
-      ideal: 'Day to Night Wear',
+      description: 'VENTA is a fresh and energetic fragrance created for those who carry confidence with effortless ease. Bright citrus notes meet aromatic spices and refined woody depth, creating a modern scent that feels powerful, fresh, and undeniably confident.',
+      story: 'VENTA is a fresh and energetic fragrance created for those who carry confidence with effortless ease. Bright citrus notes meet aromatic spices and refined woody depth, creating a modern scent that feels powerful, fresh, and undeniably confident.',
+      ideal: 'Day & Evening Wear',
       best: 'Men',
-      occasion: 'Executive Boardroom & High-Profile Events',
+      occasion: 'Everyday Wear, Events & Special Occasions',
       images: [
         'assets/bottle-venta.jpg?v=20261004',
         'assets/gallery-venta-2.jpg',
@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/product-venta.jpg?v=20261004'
       ],
       notes: {
-        top: 'Italian Bergamot, Pink Peppercorn, Lemon Zest',
-        heart: 'Tuscan Birch, Smoked Patchouli, Dry Vetiver',
-        base: 'Dark Leather, Cedarwood, Rich Ambergris',
+        top: 'Lemon',
+        heart: 'Cardamom',
+        base: 'Vetiver',
         topImg: 'assets/note-top-oud.jpg',
         heartImg: 'assets/note-heart-amber.jpg',
         baseImg: 'assets/note-base-woods.jpg'
@@ -65,16 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     fatima: {
       id: 'fatima',
-      name: 'Fatima',
-      subtitle: 'Royal Damask Rose & Silk Musk',
+      name: 'Fatimaa',
+      subtitle: 'Soft Florals & Sweet Elegance',
       ratingText: '5.0 (156 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
-      description: 'An ethereal expression of regal femininity and grace. Fatima envelops you in morning-picked Taif roses, wrapped in velvet silk musk and creamy Madagascar vanilla.',
-      story: 'Inspired by royal heritage and eternal elegance. Fatima is an intoxicating floral symphony. The delicacy of dew-kissed petals is elevated by an intoxicating aura of rare silk musk and golden amber.',
-      ideal: 'All-Day Luxury',
+      description: 'FATIMAA is more than a fragrance; it is a soft expression of femininity, confidence, and individuality. With a delicate floral opening and a touch of sweetness, FATIMAA creates a graceful, feminine aura that feels effortlessly beautiful and truly yours.',
+      story: 'FATIMAA is more than a fragrance; it is a soft expression of femininity, confidence, and individuality. With a delicate floral opening and a touch of sweetness, FATIMAA creates a graceful, feminine aura that feels effortlessly beautiful and truly yours.',
+      ideal: 'Day & Evening Wear',
       best: 'Women',
-      occasion: 'Weddings, Celebrations & Intimate Dinners',
+      occasion: 'Everyday Moments, Dates & Special Occasions',
       images: [
         'assets/bottle-fatima.jpg?v=20261004',
         'assets/gallery-fatima-2.jpg',
@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/product-fatima.jpg?v=20261004'
       ],
       notes: {
-        top: 'Taif Rose Petals, Sparkling Lychee, White Peach',
-        heart: 'Royal Damask Rose, Jasmine Sambac, Velvet Lily',
-        base: 'White Silk Musk, Bourbon Vanilla, Amber Mist',
+        top: 'Blossom Accord, Italian Mandarin & Red Berries',
+        heart: 'White Gardenia, Jasmine & Frangipani',
+        base: 'Patchouli & Brown Sugar',
         topImg: 'assets/note-top-oud.jpg',
         heartImg: 'assets/note-heart-amber.jpg',
         baseImg: 'assets/note-base-woods.jpg'
@@ -94,15 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
     afeee: {
       id: 'afeee',
       name: 'Afeee',
-      subtitle: 'Velvet Vanilla & Golden Caramel Amber',
+      subtitle: 'Fresh Greens & Soft Musk',
       ratingText: '4.9 (112 reviews)',
       basePrice: 4500,
       prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
-      description: 'Decadently sweet, magnetic, and effortlessly seductive. Afeee weaves warm roasted praline, bourbon vanilla, and precious cashmere wood into an unforgettable gourmand masterpiece.',
-      story: 'A delicious reverie of opulent indulgence. Afeee balances the warmth of golden spun caramel with the sophistication of French bourbon vanilla, creating an irresistible, compliments-guaranteed aura.',
-      ideal: 'Cool Evenings & Autumn/Winter',
-      best: 'Women & Unisex',
-      occasion: 'Date Nights & Cozy VIP Gatherings',
+      description: 'AFEEE is a distinctive fragrance that balances freshness with a soft, elegant character. Its delicate opening leads into refreshing green nuances before settling into a smooth musky and woody trail. A graceful and memorable scent for those who prefer understated elegance.',
+      story: 'AFEEE is a distinctive fragrance that balances freshness with a soft, elegant character. Its delicate opening leads into refreshing green nuances before settling into a smooth musky and woody trail. A graceful and memorable scent for those who prefer understated elegance.',
+      ideal: 'Day & Evening Wear',
+      best: 'Unisex',
+      occasion: 'Everyday Wear, Special Occasions & Gatherings',
       images: [
         'assets/bottle-afeee.jpg?v=20261004',
         'assets/gallery-afeee-2.jpg',
@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/product-afeee.jpg?v=20261004'
       ],
       notes: {
-        top: 'Golden Honey, Candied Orange, Saffron Flakes',
-        heart: 'Roasted Praline, Salted Caramel, Cocoa Bean',
-        base: 'Bourbon Vanilla, Cashmere Wood, Warm Musk',
+        top: 'Floral Crème Brûlée',
+        heart: 'Green Notes',
+        base: 'Musk & Woody Undertones',
         topImg: 'assets/note-top-oud.jpg',
         heartImg: 'assets/note-heart-amber.jpg',
         baseImg: 'assets/note-base-woods.jpg'
@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Determine Active Product from URL Query
   const urlParams = new URLSearchParams(window.location.search);
   let currentKey = (urlParams.get('product') || 'ember').toLowerCase();
+  if (currentKey === 'fatimaa') currentKey = 'fatima';
   if (!productsDB[currentKey]) {
     currentKey = 'ember';
   }

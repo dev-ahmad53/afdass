@@ -97,15 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
   updateHeaderBadge();
 
   const productDataMap = {
-    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Warm Amber & Velvet Woods', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Bold Leather & Fresh Citrus', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'Fatima': { id: 'fatima', name: 'Fatima', subtitle: 'Royal Damask Rose & Musk', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Saffron Nectar & White Amber', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
+    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
     // Backwards compatibility mappings
-    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Warm Amber & Velvet Woods', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Bold Leather & Fresh Citrus', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'AFDASS Fatima': { id: 'fatima', name: 'Fatima', subtitle: 'Royal Damask Rose & Musk', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Saffron Nectar & White Amber', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
+    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'AFDASS Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
   };
 
   addButtons.forEach((btn) => {
