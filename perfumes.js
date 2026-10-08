@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (val === 'price-asc') {
         sorted.sort((a, b) => {
-          const pA = parseFloat(a.getAttribute('data-price')) || 4500;
-          const pB = parseFloat(b.getAttribute('data-price')) || 4500;
+          const pA = parseFloat(a.getAttribute('data-price')) || 3000;
+          const pB = parseFloat(b.getAttribute('data-price')) || 3000;
           if (pA !== pB) return pA - pB;
           const nameA = a.querySelector('.prod-name')?.textContent || '';
           const nameB = b.querySelector('.prod-name')?.textContent || '';
@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       } else if (val === 'price-desc') {
         sorted.sort((a, b) => {
-          const pA = parseFloat(a.getAttribute('data-price')) || 4500;
-          const pB = parseFloat(b.getAttribute('data-price')) || 4500;
+          const pA = parseFloat(a.getAttribute('data-price')) || 3000;
+          const pB = parseFloat(b.getAttribute('data-price')) || 3000;
           if (pA !== pB) return pB - pA;
           const nameA = a.querySelector('.prod-name')?.textContent || '';
           const nameB = b.querySelector('.prod-name')?.textContent || '';
@@ -217,17 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Product Catalog Information
   const productCatalogMap = {
-    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
+    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 3000, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 3500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
     // Backwards compatibility mappings
-    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'AFDASS Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'AFDASS Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
+    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 3000, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'AFDASS Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 3500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
   };
 
   // Safe Helper: Get strictly visible, valid onscreen cart target
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Save item in LocalStorage
       const pName = btn.getAttribute('data-product') || btn.getAttribute('data-name') || 'Ember';
-      const pInfo = productCatalogMap[pName] || { id: 'ember', name: pName, subtitle: 'Haute Parfumerie', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' };
+      const pInfo = productCatalogMap[pName] || { id: 'ember', name: pName, subtitle: 'Haute Parfumerie', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' };
 
       let cart = [];
       try {

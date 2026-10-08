@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Fragrance Detail | AFDASS PERFUMES</title>
-  <meta name="description" content="Handcrafted 50ml Eau de Parfum by AFDASS. Formulated with pure French essences, rich amber, and long-lasting notes. Rs. 4,500 with complimentary nationwide delivery." />
+  <meta name="description" content="Handcrafted 50ml Eau de Parfum by AFDASS. Formulated with pure French essences, rich amber, and long-lasting notes. Starting from Rs. 3,000 with up to 35% OFF with complimentary nationwide delivery." />
   <meta name="keywords" content="AFDASS perfume, luxury perfume 50ml, buy perfume Pakistan, long lasting fragrance, amber perfume, French perfume" />
   <meta name="author" content="AFDASS PERFUMES" />
   <meta name="robots" content="index, follow" />
@@ -14,7 +14,7 @@
   <meta property="og:type" content="product" />
   <meta property="og:site_name" content="AFDASS PERFUMES" />
   <meta property="og:title" content="AFDASS Haute Parfumerie | Bespoke 50ml Fragrance" />
-  <meta property="og:description" content="Discover handcrafted luxury perfumes with pure French essences, rich amber, and long-lasting elegance. Rs. 4,500 with free nationwide shipping." />
+  <meta property="og:description" content="Discover handcrafted luxury perfumes with pure French essences, rich amber, and long-lasting elegance. Starting from Rs. 3,000 with up to 35% OFF with free nationwide shipping." />
   <meta property="og:image" content="https://afdass.vercel.app/assets/og-share.jpg?v=20261005_logo" />
   <meta property="og:image:secure_url" content="https://afdass.vercel.app/assets/og-share.jpg?v=20261005_logo" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -61,7 +61,7 @@
       "@type": "Offer",
       "url": "https://afdassperfumes.com/product-detail.html",
       "priceCurrency": "PKR",
-      "price": "4500",
+      "price": "3000",
       "priceValidUntil": "2027-12-31",
       "itemCondition": "https://schema.org/NewCondition",
       "availability": "https://schema.org/InStock",
@@ -254,7 +254,11 @@
 
             <!-- Price & Stock Row -->
             <div class="detail-price-row">
-              <span class="detail-price" id="prodPrice">Rs. 4,500</span>
+              <div class="detail-price-box">
+                <span class="detail-price" id="prodPrice">Rs. 3,000</span>
+                <span class="detail-old-price" id="prodOldPrice">Rs. 4,285</span>
+              </div>
+              <span class="detail-discount-tag" id="prodDiscountTag">30% OFF</span>
               <span class="detail-stock-badge">
                 <span class="stock-dot"></span>
                 <span>In Stock</span>
@@ -270,17 +274,17 @@
             <div class="control-block">
               <label class="control-label">Size</label>
               <div class="size-options-grid">
-                <button class="size-card-btn" data-size="30ml" data-price="2800">
+                <button class="size-card-btn" data-size="30ml" data-price="2000" id="sizeBtn30">
                   <span class="size-vol">30ml</span>
-                  <span class="size-pr">Rs. 2,800</span>
+                  <span class="size-pr" id="sizePrice30">Rs. 2,000</span>
                 </button>
-                <button class="size-card-btn active" data-size="50ml" data-price="4500">
+                <button class="size-card-btn active" data-size="50ml" data-price="3000" id="sizeBtn50">
                   <span class="size-vol">50ml</span>
-                  <span class="size-pr">Rs. 4,500</span>
+                  <span class="size-pr" id="sizePrice50">Rs. 3,000</span>
                 </button>
-                <button class="size-card-btn" data-size="100ml" data-price="7500">
+                <button class="size-card-btn" data-size="100ml" data-price="5200" id="sizeBtn100">
                   <span class="size-vol">100ml</span>
-                  <span class="size-pr">Rs. 7,500</span>
+                  <span class="size-pr" id="sizePrice100">Rs. 5,200</span>
                 </button>
               </div>
             </div>

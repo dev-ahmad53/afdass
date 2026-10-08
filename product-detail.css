@@ -369,12 +369,41 @@ html {
   margin-bottom: 1.25rem;
 }
 
+.detail-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
 .detail-price {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2.15rem;
   font-weight: 500;
   color: #f7dfbe;
   letter-spacing: 0.02em;
+}
+
+.detail-old-price {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.45rem;
+  color: rgba(247, 223, 190, 0.45);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.detail-discount-tag {
+  font-family: var(--font-sans, 'Cinzel', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #100a06;
+  background: linear-gradient(135deg, #dfa863, #f5c78a);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(223, 168, 99, 0.25);
+  line-height: 1.2;
 }
 
 .detail-stock-badge {

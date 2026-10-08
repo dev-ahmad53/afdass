@@ -97,17 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
   updateHeaderBadge();
 
   const productDataMap = {
-    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
+    'Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 3000, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 3500, size: '50ml', image: 'assets/bottle-afeee.jpg' },
     // Backwards compatibility mappings
-    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' },
-    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 4500, size: '50ml', image: 'assets/bottle-venta.jpg' },
-    'AFDASS Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'AFDASS Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 4500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
-    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 4500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
+    'AFDASS Ember': { id: 'ember', name: 'Ember', subtitle: 'Velvet Woods & Warm Amber', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' },
+    'AFDASS Venta': { id: 'venta', name: 'Venta', subtitle: 'Citrus Energy & Refined Woods', price: 3000, size: '50ml', image: 'assets/bottle-venta.jpg' },
+    'AFDASS Fatimaa': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Fatima': { id: 'fatima', name: 'Fatimaa', subtitle: 'Soft Florals & Sweet Elegance', price: 3500, size: '50ml', image: 'assets/bottle-fatima.jpg' },
+    'AFDASS Afeee': { id: 'afeee', name: 'Afeee', subtitle: 'Fresh Greens & Soft Musk', price: 3500, size: '50ml', image: 'assets/bottle-afeee.jpg' }
   };
 
   addButtons.forEach((btn) => {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('processing');
 
       const pName = btn.getAttribute('data-name') || btn.getAttribute('data-product') || 'Ember';
-      const pInfo = productDataMap[pName] || { id: 'ember', name: pName, subtitle: 'Haute Parfumerie', price: 4500, size: '50ml', image: 'assets/bottle-ember.jpg' };
+      const pInfo = productDataMap[pName] || { id: 'ember', name: pName, subtitle: 'Haute Parfumerie', price: 3000, size: '50ml', image: 'assets/bottle-ember.jpg' };
 
       let cart = [];
       try {

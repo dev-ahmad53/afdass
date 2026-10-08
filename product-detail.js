@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ember',
       subtitle: 'Velvet Woods & Warm Amber',
       ratingText: '4.9 (128 reviews)',
-      basePrice: 4500,
-      prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
+      basePrice: 3000,
+      originalPrice: 4285,
+      discount: '30% OFF',
+      prices: { '30ml': 2000, '50ml': 3000, '100ml': 5200 },
+      originalPrices: { '30ml': 2850, '50ml': 4285, '100ml': 7400 },
       description: 'EMBER is a bold and captivating fragrance crafted for those who appreciate depth and sophistication. A fresh fruity opening gradually unfolds into warm florals and rich woods, settling into a smooth, comforting trail of vanilla and musk. A confident scent that leaves a lasting impression wherever you go.',
       story: 'EMBER is a bold and captivating fragrance crafted for those who appreciate depth and sophistication. A fresh fruity opening gradually unfolds into warm florals and rich woods, settling into a smooth, comforting trail of vanilla and musk. A confident scent that leaves a lasting impression wherever you go.',
       ideal: 'Evening Wear',
@@ -40,8 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Venta',
       subtitle: 'Citrus Energy & Refined Woods',
       ratingText: '4.9 (94 reviews)',
-      basePrice: 4500,
-      prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
+      basePrice: 3000,
+      originalPrice: 4285,
+      discount: '30% OFF',
+      prices: { '30ml': 2000, '50ml': 3000, '100ml': 5200 },
+      originalPrices: { '30ml': 2850, '50ml': 4285, '100ml': 7400 },
       description: 'VENTA is a fresh and energetic fragrance created for those who carry confidence with effortless ease. Bright citrus notes meet aromatic spices and refined woody depth, creating a modern scent that feels powerful, fresh, and undeniably confident.',
       story: 'VENTA is a fresh and energetic fragrance created for those who carry confidence with effortless ease. Bright citrus notes meet aromatic spices and refined woody depth, creating a modern scent that feels powerful, fresh, and undeniably confident.',
       ideal: 'Day & Evening Wear',
@@ -68,8 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Fatimaa',
       subtitle: 'Soft Florals & Sweet Elegance',
       ratingText: '5.0 (156 reviews)',
-      basePrice: 4500,
-      prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
+      basePrice: 3500,
+      originalPrice: 5385,
+      discount: '35% OFF',
+      prices: { '30ml': 2400, '50ml': 3500, '100ml': 5900 },
+      originalPrices: { '30ml': 3700, '50ml': 5385, '100ml': 9100 },
       description: 'FATIMAA is more than a fragrance; it is a soft expression of femininity, confidence, and individuality. With a delicate floral opening and a touch of sweetness, FATIMAA creates a graceful, feminine aura that feels effortlessly beautiful and truly yours.',
       story: 'FATIMAA is more than a fragrance; it is a soft expression of femininity, confidence, and individuality. With a delicate floral opening and a touch of sweetness, FATIMAA creates a graceful, feminine aura that feels effortlessly beautiful and truly yours.',
       ideal: 'Day & Evening Wear',
@@ -96,8 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Afeee',
       subtitle: 'Fresh Greens & Soft Musk',
       ratingText: '4.9 (112 reviews)',
-      basePrice: 4500,
-      prices: { '30ml': 2800, '50ml': 4500, '100ml': 7500 },
+      basePrice: 3500,
+      originalPrice: 5385,
+      discount: '35% OFF',
+      prices: { '30ml': 2400, '50ml': 3500, '100ml': 5900 },
+      originalPrices: { '30ml': 3700, '50ml': 5385, '100ml': 9100 },
       description: 'AFEEE is a distinctive fragrance that balances freshness with a soft, elegant character. Its delicate opening leads into refreshing green nuances before settling into a smooth musky and woody trail. A graceful and memorable scent for those who prefer understated elegance.',
       story: 'AFEEE is a distinctive fragrance that balances freshness with a soft, elegant character. Its delicate opening leads into refreshing green nuances before settling into a smooth musky and woody trail. A graceful and memorable scent for those who prefer understated elegance.',
       ideal: 'Day & Evening Wear',
@@ -180,6 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (attrIdeal) attrIdeal.textContent = currentProduct.ideal;
     if (attrBest) attrBest.textContent = currentProduct.best;
     if (attrOccasion) attrOccasion.textContent = currentProduct.occasion;
+
+    // Update Size Option Price Badges
+    const sizePrice30 = document.getElementById('sizePrice30');
+    const sizePrice50 = document.getElementById('sizePrice50');
+    const sizePrice100 = document.getElementById('sizePrice100');
+    if (sizePrice30 && currentProduct.prices['30ml']) sizePrice30.textContent = `Rs. ${currentProduct.prices['30ml'].toLocaleString()}`;
+    if (sizePrice50 && currentProduct.prices['50ml']) sizePrice50.textContent = `Rs. ${currentProduct.prices['50ml'].toLocaleString()}`;
+    if (sizePrice100 && currentProduct.prices['100ml']) sizePrice100.textContent = `Rs. ${currentProduct.prices['100ml'].toLocaleString()}`;
 
     // Notes
     const n = currentProduct.notes;
@@ -322,10 +342,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updatePriceAndWhatsApp() {
     const unitPrice = currentProduct.prices[currentSize] || currentProduct.basePrice;
+    const oldUnitPrice = (currentProduct.originalPrices && currentProduct.originalPrices[currentSize]) || currentProduct.originalPrice;
     const totalPrice = unitPrice * currentQuantity;
 
     if (prodPrice) {
       prodPrice.textContent = `Rs. ${unitPrice.toLocaleString()}`;
+    }
+
+    const prodOldPrice = document.getElementById('prodOldPrice');
+    if (prodOldPrice) {
+      prodOldPrice.textContent = `Rs. ${oldUnitPrice.toLocaleString()}`;
+    }
+
+    const prodDiscountTag = document.getElementById('prodDiscountTag');
+    if (prodDiscountTag) {
+      prodDiscountTag.textContent = currentProduct.discount;
     }
 
     // Dynamic WhatsApp Order Link

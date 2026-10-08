@@ -526,12 +526,40 @@
   border-top: 1px solid rgba(138, 90, 50, 0.16);
 }
 
+.prod-price-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .prod-price {
   font-family: var(--font-sans);
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--gold-primary);
   letter-spacing: 0.02em;
+}
+
+.prod-old-price {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: line-through;
+}
+
+.prod-discount-badge {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #100a06;
+  background: linear-gradient(135deg, #dfa863, #f5c78a);
+  padding: 0.12rem 0.42rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .prod-in-stock {
