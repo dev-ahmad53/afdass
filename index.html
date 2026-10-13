@@ -78,8 +78,130 @@
   <link rel="stylesheet" href="style.css?v=20261005_every_moment" />
   <link rel="stylesheet" href="drawer.css?v=20261004_master_header" />
   <link rel="stylesheet" href="search.css?v=20261004_master_header" />
+  <link rel="stylesheet" href="loader.css" />
 </head>
 <body>
+
+  <!-- ====================================================================
+       AFDASS HAUTE PARFUMERIE REALISTIC PRELOADER
+       ==================================================================== -->
+  <aside id="afdass-preloader" class="afdass-loader-overlay" aria-label="Loading AFDASS Haute Parfumerie" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="loader-bg-veil"></div>
+    <div class="loader-bloom-glow"></div>
+    <canvas id="transition-mist-canvas"></canvas>
+
+    <div class="loader-stage">
+      <div class="bottle-aura"></div>
+      <div class="flacon-container">
+        <div class="spray-canvas-wrap">
+          <canvas id="perfume-mist-canvas"></canvas>
+        </div>
+
+        <svg class="flacon-svg" viewBox="0 0 220 270" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldCapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#faecd0"/>
+              <stop offset="35%" stop-color="#d4af37"/>
+              <stop offset="70%" stop-color="#8a6310"/>
+              <stop offset="100%" stop-color="#f5d67e"/>
+            </linearGradient>
+
+            <linearGradient id="goldCollarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7a550d"/>
+              <stop offset="50%" stop-color="#faecd0"/>
+              <stop offset="100%" stop-color="#7a550d"/>
+            </linearGradient>
+
+            <linearGradient id="elixirGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffeaa7"/>
+              <stop offset="25%" stop-color="#f3b83f"/>
+              <stop offset="65%" stop-color="#cf8e1d"/>
+              <stop offset="100%" stop-color="#693d05"/>
+            </linearGradient>
+
+            <linearGradient id="crystalBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.75)"/>
+              <stop offset="30%" stop-color="rgba(212,175,55,0.45)"/>
+              <stop offset="70%" stop-color="rgba(255,255,255,0.12)"/>
+              <stop offset="100%" stop-color="rgba(212,175,55,0.5)"/>
+            </linearGradient>
+
+            <clipPath id="bottleInterior">
+              <rect x="58" y="108" width="104" height="136" rx="14" ry="14" />
+            </clipPath>
+          </defs>
+
+          <!-- 1. SPRAYER ACTUATOR / PUMP -->
+          <g id="sprayer-actuator-group" class="sprayer-actuator-group">
+            <rect x="100" y="62" width="20" height="22" rx="3" fill="url(#goldCapGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="0.7"/>
+            <ellipse cx="102.5" cy="71" rx="1.6" ry="2.0" fill="#321e02" />
+            <circle cx="102.8" cy="71" r="0.8" fill="#ffd966" />
+            <ellipse cx="110" cy="63" rx="8" ry="2" fill="rgba(255,255,255,0.3)" />
+          </g>
+
+          <!-- 2. MAGNETIC GOLD CAP -->
+          <g id="bottle-cap-group" class="bottle-cap-group cap-closed">
+            <rect x="85" y="44" width="50" height="42" rx="4" fill="url(#goldCapGrad)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+            <line x1="85" y1="64" x2="135" y2="64" stroke="rgba(100,65,10,0.55)" stroke-width="0.9"/>
+            <text x="110" y="60" font-family="'Cinzel', serif" font-size="12" font-weight="700" fill="#462c03" text-anchor="middle">A</text>
+            <rect x="88" y="46" width="6" height="38" rx="1" fill="rgba(255,255,255,0.25)" />
+          </g>
+
+          <!-- 3. GOLDEN NECK COLLAR -->
+          <rect x="92" y="86" width="36" height="18" rx="2" fill="url(#goldCollarGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/>
+          <line x1="92" y1="94" x2="128" y2="94" stroke="#523906" stroke-width="1.2"/>
+
+          <!-- 4. CRYSTAL FLACON GLASS BODY -->
+          <rect x="52" y="102" width="116" height="148" rx="18" ry="18" fill="rgba(15, 14, 18, 0.65)" stroke="url(#crystalBorderGrad)" stroke-width="2.5" />
+
+          <!-- 5. LIQUID CHAMBER -->
+          <g clip-path="url(#bottleInterior)">
+            <rect x="58" y="108" width="104" height="136" fill="rgba(10, 9, 12, 0.85)" />
+            <g id="liquid-wave-group" class="liquid-wave-group" style="transform: translateY(120px);">
+              <path class="liquid-wave-path" d="M -20 0 Q 20 -10 60 0 T 140 0 T 220 0 L 220 180 L -20 180 Z" fill="url(#elixirGrad)" />
+              <path d="M -20 1 Q 20 -9 60 1 T 140 1 T 220 1" stroke="rgba(255,245,210,0.7)" stroke-width="2" fill="none" />
+              <circle class="elixir-bubble b1" cx="90" cy="210" r="1.8" />
+              <circle class="elixir-bubble b2" cx="110" cy="220" r="2.2" />
+              <circle class="elixir-bubble b3" cx="80" cy="200" r="1.5" />
+              <circle class="elixir-bubble b4" cx="130" cy="215" r="2.0" />
+            </g>
+          </g>
+
+          <!-- 6. DIP TUBE -->
+          <line x1="110" y1="102" x2="110" y2="238" stroke="rgba(255,255,255,0.25)" stroke-width="2.2" stroke-dasharray="1 1"/>
+
+          <!-- 7. GLASS CORNER FACETS -->
+          <g class="facet-shine">
+            <polygon points="62,112 74,112 66,242 56,238" fill="rgba(255,255,255,0.2)" />
+            <polygon points="78,112 82,112 74,242 71,242" fill="rgba(255,255,255,0.08)" />
+            <circle cx="152" cy="116" r="2" fill="rgba(255,255,255,0.6)" />
+          </g>
+
+          <!-- 8. GOLD FOIL EMBOSSED LABEL -->
+          <rect x="74" y="152" width="72" height="38" rx="2" fill="rgba(10, 9, 13, 0.72)" stroke="rgba(212, 175, 55, 0.45)" stroke-width="0.8"/>
+          <text x="110" y="170" font-family="'Cinzel', serif" font-size="8.5" font-weight="700" letter-spacing="2" fill="#ffd966" text-anchor="middle">AFDASS</text>
+          <text x="110" y="180" font-family="'Cormorant Garamond', serif" font-size="5.5" letter-spacing="1" fill="#e0c99a" text-anchor="middle">PARFUM</text>
+        </svg>
+      </div>
+
+      <!-- Minimalist Luxury Typography -->
+      <div class="loader-brand-title">AFDASS</div>
+      <div class="loader-brand-subtitle">HAUTE PARFUMERIE</div>
+
+      <!-- Sleek Minimalist Luxury Progress Bar -->
+      <div class="loader-progress-wrap">
+        <div class="loader-progress-track">
+          <div id="loader-progress-bar" class="loader-progress-bar"></div>
+        </div>
+        <div id="loader-percentage" class="loader-percentage">0%</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ====================================================================
+       WEBSITE CONTENT STAGE (Reveals smoothly through parting mist)
+       ==================================================================== -->
+  <div class="website-reveal-stage">
 
   <!-- Fullscreen Luxury Hero Section -->
   <div class="hero-stage">
@@ -264,8 +386,8 @@
             <h3 class="product-title"><a href="product-detail.html?product=ember" class="product-title-link">Ember</a></h3>
             <p class="product-notes">Velvet Woods &amp; Warm Amber</p>
             <div class="product-price-wrap">
-              <span class="product-price">Rs. 3,000</span>
-              <span class="product-old-price">Rs. 4,285</span>
+              <span class="product-price">Rs. 2,100</span>
+              <span class="product-old-price">Rs. 3,000</span>
               <span class="product-discount-badge">30% OFF</span>
             </div>
             <button class="btn-add-cart" data-name="Ember">
@@ -288,8 +410,8 @@
             <h3 class="product-title"><a href="product-detail.html?product=venta" class="product-title-link">Venta</a></h3>
             <p class="product-notes">Citrus Energy &amp; Refined Woods</p>
             <div class="product-price-wrap">
-              <span class="product-price">Rs. 3,000</span>
-              <span class="product-old-price">Rs. 4,285</span>
+              <span class="product-price">Rs. 2,100</span>
+              <span class="product-old-price">Rs. 3,000</span>
               <span class="product-discount-badge">30% OFF</span>
             </div>
             <button class="btn-add-cart" data-name="Venta">
@@ -312,8 +434,8 @@
             <h3 class="product-title"><a href="product-detail.html?product=fatima" class="product-title-link">Fatimaa</a></h3>
             <p class="product-notes">Soft Florals &amp; Sweet Elegance</p>
             <div class="product-price-wrap">
-              <span class="product-price">Rs. 3,500</span>
-              <span class="product-old-price">Rs. 5,385</span>
+              <span class="product-price">Rs. 2,275</span>
+              <span class="product-old-price">Rs. 3,500</span>
               <span class="product-discount-badge">35% OFF</span>
             </div>
             <button class="btn-add-cart" data-name="Fatimaa">
@@ -336,8 +458,8 @@
             <h3 class="product-title"><a href="product-detail.html?product=afeee" class="product-title-link">Afeee</a></h3>
             <p class="product-notes">Fresh Greens &amp; Soft Musk</p>
             <div class="product-price-wrap">
-              <span class="product-price">Rs. 3,500</span>
-              <span class="product-old-price">Rs. 5,385</span>
+              <span class="product-price">Rs. 2,275</span>
+              <span class="product-old-price">Rs. 3,500</span>
               <span class="product-discount-badge">35% OFF</span>
             </div>
             <button class="btn-add-cart" data-name="Afeee">
@@ -726,6 +848,7 @@
 
     </div>
   </footer>
+  </div><!-- /.website-reveal-stage -->
 
   <!-- Mobile Drawer Menu & Frosted Backdrop -->
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
@@ -752,7 +875,18 @@
     </div>
   </aside>
 
+  <!-- Core Scripts -->
   <script src="script.js?v=20261004_clear_nav"></script>
   <script src="search.js?v=20261004_clear_nav"></script>
+  <script src="loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const siteLoader = new AfdassPerfumeLoader({
+        duration: 2100,
+        autoDismiss: true
+      });
+      siteLoader.start();
+    });
+  </script>
 </body>
 </html>

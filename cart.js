@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'Ember',
           subtitle: 'Velvet Woods & Warm Amber',
           size: '50ml',
-          price: 3000,
+          price: 2100,
           quantity: 1,
           image: 'assets/bottle-ember.jpg',
           checked: true
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'Venta',
           subtitle: 'Citrus Energy & Refined Woods',
           size: '50ml',
-          price: 3000,
+          price: 2100,
           quantity: 1,
           image: 'assets/bottle-venta.jpg',
           checked: true
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'Fatimaa',
           subtitle: 'Soft Florals & Sweet Elegance',
           size: '50ml',
-          price: 3500,
+          price: 2275,
           quantity: 1,
           image: 'assets/bottle-fatima.jpg',
           checked: true
@@ -693,28 +693,28 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'ember',
       name: 'Ember',
       subtitle: 'Velvet Woods & Warm Amber',
-      price: 3000,
+      price: 2100,
       image: 'assets/bottle-ember.jpg'
     },
     {
       id: 'venta',
       name: 'Venta',
       subtitle: 'Citrus Energy & Refined Woods',
-      price: 3000,
+      price: 2100,
       image: 'assets/bottle-venta.jpg'
     },
     {
       id: 'fatima',
       name: 'Fatimaa',
       subtitle: 'Soft Florals & Sweet Elegance',
-      price: 3500,
+      price: 2275,
       image: 'assets/bottle-fatima.jpg'
     },
     {
       id: 'afeee',
       name: 'Afeee',
       subtitle: 'Fresh Greens & Soft Musk',
-      price: 3500,
+      price: 2275,
       image: 'assets/bottle-afeee.jpg'
     }
   ];

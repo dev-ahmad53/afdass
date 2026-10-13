@@ -1,0 +1,457 @@
+/* ==========================================================================
+   AFDASS HAUTE PARFUMERIE — SIGNATURE LUXURY REALISTIC PRELOADER
+   Features:
+   - Realistic Magnetic Gold Cap Opening (Dhakkan Lifts & Floats)
+   - Realistic Actuator Pump Press (Depression action)
+   - Photorealistic Fragrance Spray Mist (Vapor atomization & micro-droplets)
+   - Pure minimalist luxury: No extra cluttered text below the line
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
+
+:root {
+  --perfume-bg: #060608;
+  --perfume-bg-gradient: radial-gradient(circle at 50% 42%, #191612 0%, #0c0b0e 45%, #050507 100%);
+  --gold-primary: #d4af37;
+  --gold-bright: #ffd966;
+  --gold-pale: #faecd0;
+  --gold-deep: #9d7718;
+  --gold-gradient: linear-gradient(135deg, #faecd0 0%, #d4af37 45%, #9d7718 80%, #f4d068 100%);
+  --amber-glow: rgba(212, 175, 55, 0.35);
+  --font-brand: 'Cinzel', serif;
+  --font-sub: 'Cormorant Garamond', serif;
+  --font-mono: 'Montserrat', sans-serif;
+}
+
+/* ==========================================================================
+   PRELOADER OVERLAY & ULTRA-SMOOTH 60FPS CINEMATIC WEBSITE REVEAL
+   (Zero Blur Jank, Zero Abrupt Cut, Silky S-Curve Cross-Dissolve)
+   ========================================================================== */
+.afdass-loader-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+/* Velvety Warm Noir-Amber Veil (Matches Hero Palette & Melts Gradually via S-Curve) */
+.loader-bg-veil {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 44%,
+    #1c130c 0%,
+    #0e0907 52%,
+    #060404 100%
+  );
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  z-index: 1;
+  pointer-events: none;
+  /* Gentle S-curve (0.4, 0, 0.2, 1) prevents the sudden 190ms flash cut! */
+  transition:
+    opacity 1.85s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Full-Screen Transition Mist Canvas (Floats over the live website as veil melts) */
+#transition-mist-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+  display: block;
+}
+
+/* Soft Golden Fragrance Aura Wave (Pure GPU radial gradient — no heavy CSS filter) */
+.loader-bloom-glow {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 680px;
+  height: 680px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0.35, 0.35, 1);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 236, 175, 0.36) 0%,
+    rgba(222, 166, 95, 0.20) 32%,
+    rgba(165, 105, 38, 0.08) 58%,
+    rgba(18, 6, 5, 0) 76%
+  );
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* When Loader Transitions Into Website: Silky, unhurried 60FPS melt */
+.afdass-loader-overlay.loader-exiting {
+  pointer-events: none;
+}
+
+.afdass-loader-overlay.loader-exiting .loader-bloom-glow {
+  animation: silkyBloomWash 1.95s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes silkyBloomWash {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale3d(0.45, 0.45, 1);
+    opacity: 0;
+  }
+  28% {
+    opacity: 0.92;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale3d(3.2, 3.2, 1);
+    opacity: 0;
+  }
+}
+
+.afdass-loader-overlay.loader-exiting .loader-stage {
+  opacity: 0;
+  transform: translate3d(0, -14px, 0) scale3d(1.06, 1.06, 1);
+}
+
+.afdass-loader-overlay.loader-exiting .loader-bg-veil {
+  opacity: 0;
+  transform: scale3d(1.08, 1.08, 1);
+}
+
+/* Final cleanup after all floating mist particles over the website have dissolved */
+.afdass-loader-overlay.loader-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   SMOOTH WEBSITE REVEAL CHOREOGRAPHY (Pure 60FPS GPU Transform & Opacity)
+   ========================================================================== */
+.website-reveal-stage {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Smooth Cinematic Ken-Burns Settle on Hero Background Image */
+.website-reveal-stage .master-bg-image {
+  transform: scale3d(1.10, 1.10, 1);
+  transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.website-reveal-stage.website-visible .master-bg-image {
+  transform: scale3d(1, 1, 1);
+}
+
+/* Staggered Silky Glide of Website Hero Elements as Golden Mist Parts */
+.website-reveal-stage .navbar,
+.website-reveal-stage .hero-eyebrow,
+.website-reveal-stage .hero-headline,
+.website-reveal-stage .hero-sparkle-divider,
+.website-reveal-stage .hero-cta-area,
+.website-reveal-stage .hero-trust-strip-container {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity 1.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.website-reveal-stage .navbar {
+  transform: translate3d(0, -18px, 0);
+}
+
+.website-reveal-stage.website-visible .navbar {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.18s;
+}
+.website-reveal-stage.website-visible .hero-eyebrow {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.30s;
+}
+.website-reveal-stage.website-visible .hero-headline {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.42s;
+}
+.website-reveal-stage.website-visible .hero-sparkle-divider {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.54s;
+}
+.website-reveal-stage.website-visible .hero-cta-area {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.66s;
+}
+.website-reveal-stage.website-visible .hero-trust-strip-container {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.78s;
+}
+
+/* ==========================================================================
+   STAGE & AMBIENT AURA
+   ========================================================================== */
+.loader-stage {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 460px;
+  width: 90%;
+  text-align: center;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transition:
+    opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.bottle-aura {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(245, 158, 11, 0.07) 50%, transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+  animation: pulseAura 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseAura {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.95; }
+}
+
+/* ==========================================================================
+   FLACON STAGE CONTAINER
+   ========================================================================== */
+.flacon-container {
+  position: relative;
+  width: 220px;
+  height: 270px;
+  margin: 0 auto 20px auto;
+  filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.85))
+          drop-shadow(0 0 25px rgba(212, 175, 55, 0.15));
+}
+
+.flacon-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ==========================================================================
+   1. DHAKKAN / CAP OPENING ANIMATION (Fast Magnetic Lift & Tilt)
+   ========================================================================== */
+.bottle-cap-group {
+  transform-origin: 110px 85px;
+  transition: transform 0.68s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  will-change: transform;
+}
+
+/* State: Cap Closed (Initial) */
+.bottle-cap-group.cap-closed {
+  transform: translate(0, 0) rotate(0deg);
+}
+
+/* State: Cap Open (Lifts smoothly up and tilts to the side) */
+.bottle-cap-group.cap-open {
+  transform: translate(18px, -54px) rotate(14deg);
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,0.6));
+}
+
+/* ==========================================================================
+   2. ACTUATOR / SPRAYER PUMP PRESS (Realistic Depression)
+   ========================================================================== */
+.sprayer-actuator-group {
+  transform-origin: 110px 72px;
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: transform;
+}
+
+/* Pump pressed down smoothly */
+.sprayer-actuator-group.pump-pressed {
+  transform: translateY(5px);
+}
+
+/* ==========================================================================
+   3. ULTRA-SMOOTH FRAGRANCE MIST SPRAY (Volumetric Fluid Canvas)
+   ========================================================================== */
+.spray-canvas-wrap {
+  position: absolute;
+  top: -120px;
+  left: -130px;
+  width: 480px;
+  height: 380px;
+  pointer-events: none;
+  z-index: 25;
+  overflow: visible;
+}
+
+#perfume-mist-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   4. LIQUID FILL & CAUSTIC BUBBLES
+   ========================================================================== */
+.liquid-wave-group {
+  transition: transform 0.15s linear;
+}
+
+.liquid-wave-path {
+  animation: waveSlosh 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes waveSlosh {
+  0% { transform: translateX(0) scaleY(1); }
+  50% { transform: translateX(-15px) scaleY(1.08); }
+  100% { transform: translateX(-30px) scaleY(0.96); }
+}
+
+.elixir-bubble {
+  fill: #fff3c4;
+  opacity: 0;
+  animation: bubbleAscend 3s ease-in infinite;
+}
+
+.b1 { cx: 90; animation-delay: 0.2s; animation-duration: 2.6s; }
+.b2 { cx: 110; animation-delay: 0.9s; animation-duration: 3.1s; }
+.b3 { cx: 80; animation-delay: 1.5s; animation-duration: 2.4s; }
+.b4 { cx: 130; animation-delay: 2.1s; animation-duration: 2.9s; }
+
+@keyframes bubbleAscend {
+  0% { cy: 220; r: 1.5; opacity: 0; }
+  25% { opacity: 0.8; }
+  85% { opacity: 0.6; }
+  100% { cy: 130; r: 2.8; opacity: 0; }
+}
+
+/* Glass shine */
+.facet-shine {
+  opacity: 0.45;
+}
+
+/* ==========================================================================
+   5. CLEAN LUXURY TYPOGRAPHY & MINIMALIST LINE (NO EXTRA NOISY TEXT)
+   ========================================================================== */
+.loader-brand-title {
+  font-family: var(--font-brand);
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  position: relative;
+  display: inline-block;
+  animation: titleGleam 4s ease-in-out infinite alternate;
+}
+
+@keyframes titleGleam {
+  0% { filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.3)); letter-spacing: 0.32em; }
+  100% { filter: drop-shadow(0 0 8px rgba(255, 222, 115, 0.6)); letter-spacing: 0.36em; }
+}
+
+.loader-brand-subtitle {
+  font-family: var(--font-sub);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  color: rgba(225, 205, 165, 0.78);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* Sleek Minimalist Luxury Line with Centered Counter */
+.loader-progress-wrap {
+  width: 220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.loader-progress-track {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #9d7718 0%, #d4af37 60%, #fff1b8 100%);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 18px rgba(255, 217, 102, 0.4);
+  transition: width 0.15s ease-out;
+  border-radius: 4px;
+}
+
+.loader-percentage {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--gold-bright);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .flacon-container {
+    width: 180px;
+    height: 230px;
+    margin-bottom: 16px;
+  }
+  .loader-brand-title {
+    font-size: 22px;
+    letter-spacing: 0.28em;
+  }
+  .loader-brand-subtitle {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .loader-progress-wrap {
+    width: 180px;
+  }
+}
+
+/* Lock scrolling while loader is active */
+body.loader-active {
+  overflow: hidden !important;
+}

@@ -13,7 +13,7 @@
       category: 'men unisex',
       tag: 'Best Seller',
       notes: 'Velvet Woods & Warm Amber · Apple, Lemon, Rose, Patchouli & Vanilla',
-      price: 3000,
+      price: 2100,
       image: 'assets/bottle-ember.jpg',
       url: 'product-detail.html?product=ember'
     },
@@ -23,7 +23,7 @@
       category: 'men',
       tag: 'Fresh Citrus',
       notes: 'Citrus Energy & Refined Woods · Lemon, Cardamom & Vetiver',
-      price: 3000,
+      price: 2100,
       image: 'assets/bottle-venta.jpg',
       url: 'product-detail.html?product=venta'
     },
@@ -33,7 +33,7 @@
       category: 'women',
       tag: 'Soft Florals',
       notes: 'Soft Florals & Sweet Elegance · Mandarin, Gardenia, Jasmine & Brown Sugar',
-      price: 3500,
+      price: 2275,
       image: 'assets/bottle-fatima.jpg',
       url: 'product-detail.html?product=fatima'
     },
@@ -43,7 +43,7 @@
       category: 'unisex',
       tag: 'Fresh Greens',
       notes: 'Fresh Greens & Soft Musk · Floral Crème Brûlée, Green Notes & Woods',
-      price: 3500,
+      price: 2275,
       image: 'assets/bottle-afeee.jpg',
       url: 'product-detail.html?product=afeee'
     }
