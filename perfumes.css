@@ -402,23 +402,30 @@
   transform: scale(1.04);
 }
 
-/* Floating Tag */
+/* Floating Luxury Tag */
 .prod-tag {
   position: absolute;
   top: 0.85rem;
   left: 0.85rem;
   z-index: 2;
-  background: rgba(222, 166, 95, 0.18);
-  border: 1px solid rgba(222, 166, 95, 0.4);
-  color: var(--gold-title);
+  background: linear-gradient(135deg, #fff2d6 0%, #dea65f 48%, #b87d3b 100%);
+  border: 1px solid rgba(255, 248, 225, 0.65);
+  color: #0d0704;
   font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 600;
+  font-size: 0.74rem;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0.22rem 0.6rem;
+  padding: 0.34rem 0.74rem;
   border-radius: 50px;
-  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.75), 0 0 14px rgba(222, 166, 95, 0.45);
+  line-height: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prod-card:hover .prod-tag {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85), 0 0 18px rgba(222, 166, 95, 0.65);
 }
 
 /* Wishlist Button */
