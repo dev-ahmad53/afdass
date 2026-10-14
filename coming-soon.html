@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFDASS HAUTE PARFUMERIE — Coming Soon | Official Launch</title>
+  <meta name="description" content="Something extraordinary is unfolding. AFDASS Haute Parfumerie is launching soon with pure French essences and signature long-lasting fragrances in Pakistan." />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===================================================================
+       AFDASS HAUTE PARFUMERIE — SIGNATURE COMING SOON EXPERIENCE
+       Palette: Rich Espresso Noir, Roasted Amber Silk & Metallic Gold
+       =================================================================== */
+    :root {
+      --gold-primary: #dea65f;
+      --gold-bright: #ffd966;
+      --gold-pale: #faecd0;
+      --gold-dark: #b87d3b;
+      --gold-gradient: linear-gradient(135deg, #fff2d6 0%, #dea65f 48%, #b87d3b 100%);
+      --bg-espresso: #120704;
+      --bg-card: rgba(22, 12, 7, 0.72);
+      --border-gold: rgba(222, 166, 95, 0.28);
+      --border-gold-bright: rgba(222, 166, 95, 0.55);
+      --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+      --font-cinzel: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg-espresso);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    /* Fixed Stage Background Layer */
+    .bg-master-wrap {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bg-master-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.05);
+      filter: brightness(0.62) contrast(1.05);
+      animation: subtlePan 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes subtlePan {
+      0% { transform: scale(1.05) translate(0, 0); }
+      100% { transform: scale(1.10) translate(-10px, -8px); }
+    }
+
+    /* Rich Noir-Amber Radial & Vignette Overlay */
+    .bg-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 50% 38%,
+        rgba(26, 12, 6, 0.65) 0%,
+        rgba(14, 6, 4, 0.90) 58%,
+        rgba(6, 2, 2, 0.98) 100%
+      );
+    }
+
+    /* Golden Stardust Canvas */
+    #ambient-particles-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Ambient Warm Pulse Glow */
+    .ambient-gold-glow {
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(222, 166, 95, 0.22) 0%, rgba(185, 105, 48, 0.08) 45%, transparent 72%);
+      filter: blur(55px);
+      pointer-events: none;
+      animation: glowBreathing 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowBreathing {
+      0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+      100% { transform: translate(-50%, -50%) scale(1.18); opacity: 0.95; }
+    }
+
+    /* ===================================================================
+       PAGE CONTENT CONTAINER
+       =================================================================== */
+    .coming-soon-main {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.2rem 1.5rem 2.8rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Header / Logo */
+    .header-logo-wrap {
+      margin-bottom: 2rem;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .header-logo-wrap:hover {
+      transform: scale(1.03);
+    }
+
+    .brand-logo-img {
+      height: 95px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 20px rgba(222, 166, 95, 0.38));
+    }
+
+    /* Hero Center Stage */
+    .hero-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Eyebrow Pill Tag */
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(222, 166, 95, 0.12);
+      border: 1px solid var(--border-gold-bright);
+      color: var(--gold-pale);
+      padding: 0.4rem 1.25rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 12px rgba(222, 166, 95, 0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow-sparkle {
+      color: var(--gold-bright);
+      font-size: 0.9rem;
+    }
+
+    /* Main Headline */
+    .main-headline {
+      font-family: var(--font-cinzel);
+      font-size: clamp(2.2rem, 5.2vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 28px rgba(222, 166, 95, 0.35);
+    }
+
+    /* Subtitle Tagline */
+    .hero-desc {
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.48rem);
+      font-weight: 400;
+      font-style: italic;
+      color: #ded6cb;
+      line-height: 1.6;
+      max-width: 680px;
+      margin-bottom: 2.4rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-desc strong {
+      color: var(--gold-bright);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* ===================================================================
+       COUNTDOWN TIMER (4 Luxurious Glass Cards)
+       =================================================================== */
+    .countdown-section {
+      width: 100%;
+      max-width: 660px;
+      margin: 0 auto 2.6rem auto;
+    }
+
+    .countdown-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .countdown-label::before,
+    .countdown-label::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary));
+    }
+    .countdown-label::after {
+      background: linear-gradient(90deg, var(--gold-primary), transparent);
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .countdown-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 1.2rem 0.6rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 240, 200, 0.12);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .countdown-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold-gradient);
+      opacity: 0.7;
+    }
+
+    .countdown-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(222, 166, 95, 0.28);
+    }
+
+    .countdown-val {
+      font-family: var(--font-cinzel);
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 14px rgba(222, 166, 95, 0.4);
+    }
+
+    .countdown-unit {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a89f92;
+    }
+
+    /* ===================================================================
+       VIP NOTIFY FORM (High-Conversion Gold Pill)
+       =================================================================== */
+    .vip-form-wrap {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto 2.2rem auto;
+    }
+
+    .vip-form {
+      display: flex;
+      align-items: center;
+      background: rgba(22, 11, 7, 0.85);
+      border: 1px solid var(--border-gold-bright);
+      border-radius: 9999px;
+      padding: 0.4rem 0.45rem 0.4rem 1.4rem;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.75), 0 0 20px rgba(222, 166, 95, 0.22);
+      backdrop-filter: blur(16px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .vip-form:focus-within {
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 26px rgba(222, 166, 95, 0.45);
+    }
+
+    .vip-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 0.94rem;
+      padding: 0.6rem 0.4rem;
+    }
+
+    .vip-input::placeholder {
+      color: rgba(210, 195, 180, 0.55);
+    }
+
+    .vip-submit-btn {
+      background: var(--gold-gradient);
+      color: #0c0704;
+      border: none;
+      border-radius: 9999px;
+      padding: 0.85rem 1.8rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(222, 166, 95, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .vip-submit-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 22px rgba(222, 166, 95, 0.6);
+      filter: brightness(1.05);
+    }
+
+    .vip-subtext {
+      font-size: 0.76rem;
+      color: #9f9486;
+      margin-top: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .vip-subtext span {
+      color: var(--gold-bright);
+      font-weight: 600;
+    }
+
+    /* VIP Success Notification */
+    .vip-success-box {
+      display: none;
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.16) 0%, rgba(222, 166, 95, 0.15) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.45);
+      border-radius: 50px;
+      padding: 0.85rem 1.6rem;
+      color: #e8f9ee;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===================================================================
+       DIRECT WHATSAPP CONCIERGE BUTTON
+       =================================================================== */
+    .concierge-wrap {
+      margin-bottom: 3rem;
+    }
+
+    .btn-wa-concierge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.18) 0%, rgba(222, 166, 95, 0.18) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.45);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.85rem 1.9rem;
+      border-radius: 9999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-wa-concierge:hover {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.32) 0%, rgba(222, 166, 95, 0.28) 100%);
+      border-color: #25d366;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
+    }
+
+    .wa-icon-svg {
+      width: 22px;
+      height: 22px;
+      fill: #25d366;
+      flex-shrink: 0;
+    }
+
+    /* ===================================================================
+       SNEAK PEEK OF 4 MASTERPIECES (Mini Cards Grid)
+       =================================================================== */
+    .sneak-peek-section {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .sneak-peek-title {
+      font-family: var(--font-cinzel);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-pale);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .sneak-peek-title::before,
+    .sneak-peek-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(222, 166, 95, 0.25);
+    }
+
+    .sneak-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.1rem;
+    }
+
+    .sneak-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .sneak-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 18px rgba(222, 166, 95, 0.25);
+    }
+
+    .sneak-img-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      position: relative;
+      background: #0f0704;
+    }
+
+    .sneak-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .sneak-card:hover .sneak-img {
+      transform: scale(1.06);
+    }
+
+    .sneak-tag {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      z-index: 2;
+      background: var(--gold-gradient);
+      color: #0c0704;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 0.22rem 0.55rem;
+      border-radius: 50px;
+      line-height: 1;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .sneak-name {
+      font-family: var(--font-cinzel);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .sneak-notes {
+      font-size: 0.74rem;
+      color: #9e9385;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .sneak-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+    }
+
+    .sneak-old-price {
+      font-size: 0.74rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: line-through;
+      margin-left: 0.35rem;
+    }
+
+    /* ===================================================================
+       FOOTER STRIP
+       =================================================================== */
+    .coming-soon-footer {
+      width: 100%;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(222, 166, 95, 0.16);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .trust-strip-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.4rem;
+      font-size: 0.8rem;
+      color: #b0a699;
+      margin-bottom: 0.4rem;
+    }
+
+    .trust-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .trust-pill-item span.sparkle {
+      color: var(--gold-primary);
+    }
+
+    .footer-copy {
+      font-size: 0.76rem;
+      color: #7b7267;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-tel {
+      color: var(--gold-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-tel:hover {
+      text-decoration: underline;
+    }
+
+    /* ===================================================================
+       RESPONSIVE ADJUSTMENTS
+       =================================================================== */
+    @media (max-width: 900px) {
+      .sneak-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .coming-soon-main {
+        padding: 1.5rem 1rem 2rem 1rem;
+      }
+      .brand-logo-img {
+        height: 75px;
+      }
+      .eyebrow-pill {
+        font-size: 0.72rem;
+        padding: 0.35rem 1rem;
+        margin-bottom: 1.1rem;
+      }
+      .main-headline {
+        letter-spacing: 0.08em;
+      }
+      .countdown-grid {
+        gap: 0.6rem;
+      }
+      .countdown-card {
+        padding: 0.9rem 0.3rem;
+        border-radius: 12px;
+      }
+      .countdown-val {
+        font-size: 1.7rem;
+      }
+      .countdown-unit {
+        font-size: 0.64rem;
+      }
+      .vip-form {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 0.85rem;
+        gap: 0.75rem;
+      }
+      .vip-input {
+        width: 100%;
+        text-align: center;
+        padding: 0.4rem;
+      }
+      .vip-submit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem;
+      }
+      .btn-wa-concierge {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.86rem;
+        padding: 0.8rem 1.2rem;
+      }
+      .sneak-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+      .sneak-card {
+        padding: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Master Art & Ambient Particles -->
+  <div class="bg-master-wrap">
+    <img src="assets/hero-ember-stage.jpg" alt="AFDASS Haute Parfumerie" class="bg-master-img" />
+    <div class="bg-vignette"></div>
+    <div class="ambient-gold-glow"></div>
+    <canvas id="ambient-particles-canvas"></canvas>
+  </div>
+
+  <!-- Main Coming Soon Stage -->
+  <main class="coming-soon-main">
+    
+    <!-- Top Brand Logo -->
+    <header class="header-logo-wrap">
+      <img src="assets/logo.png" alt="AFDASS PERFUMES" class="brand-logo-img" />
+    </header>
+
+    <!-- Center Hero Section -->
+    <div class="hero-center">
+      
+      <!-- Eyebrow Pill -->
+      <div class="eyebrow-pill">
+        <span class="eyebrow-sparkle">✦</span>
+        <span>Something Extraordinary Is Brewing</span>
+        <span class="eyebrow-sparkle">✦</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="main-headline">The Art of Pure Elegance</h1>
+
+      <!-- Description -->
+      <p class="hero-desc">
+        A scent that feels like you. Handcrafted with pure French essences, rich amber, and long-lasting notes. 
+        <strong>AFDASS Haute Parfumerie</strong> is officially unveiling its signature collection.
+      </p>
+
+      <!-- Live Countdown Timer -->
+      <section class="countdown-section" aria-label="Official Launch Countdown">
+        <div class="countdown-label">
+          <span>Official Launch In</span>
+        </div>
+        <div class="countdown-grid">
+          <div class="countdown-card">
+            <div class="countdown-val" id="cd-days">07</div>
+            <div class="countdown-unit">Days</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-val" id="cd-hours">14</div>
+            <div class="countdown-unit">Hours</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-val" id="cd-minutes">42</div>
+            <div class="countdown-unit">Minutes</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-val" id="cd-seconds">18</div>
+            <div class="countdown-unit">Seconds</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIP Early Access Form -->
+      <div class="vip-form-wrap">
+        <form class="vip-form" id="vipNotifyForm" onsubmit="handleVipSubmit(event)">
+          <input 
+            type="text" 
+            class="vip-input" 
+            id="vipContactInput" 
+            placeholder="Enter your WhatsApp number or email..." 
+            required 
+          />
+          <button type="submit" class="vip-submit-btn">
+            <span>Get VIP Access</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+        
+        <div class="vip-success-box" id="vipSuccessBox">
+          ✨ You're on the VIP list! We will send your exclusive <strong>35% Launch Discount</strong> invitation.
+        </div>
+
+        <p class="vip-subtext">
+          Join <span>1,200+ fragrance connoisseurs</span> &bull; Early access &amp; special launch gift.
+        </p>
+      </div>
+
+      <!-- Direct WhatsApp Concierge Button -->
+      <div class="concierge-wrap">
+        <a 
+          href="https://wa.me/923125797051?text=Hi%20AFDASS,%20I'd%20like%20to%20get%20VIP%20early%20access%20to%20your%20luxury%20perfume%20collection!" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-wa-concierge"
+        >
+          <svg class="wa-icon-svg" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.53C9.36 7.53 9.08 7.6 8.84 7.86C8.6 8.12 7.93 8.75 7.93 10.03C7.93 11.31 8.86 12.55 9 12.72C9.13 12.9 10.79 15.46 13.33 16.55C15.44 17.47 15.87 17.29 16.33 17.24C16.8 17.2 17.84 16.62 18.06 16.02C18.27 15.42 18.27 14.9 18.21 14.8C18.15 14.7 17.98 14.64 17.72 14.5C17.47 14.38 16.21 13.76 15.98 13.67C15.75 13.59 15.58 13.55 15.41 13.8C15.24 14.06 14.76 14.64 14.62 14.8C14.47 14.97 14.33 15 14.07 14.87C13.82 14.75 13.01 14.48 12.05 13.62C11.3 12.95 10.79 12.13 10.65 11.89C10.51 11.64 10.63 11.51 10.76 11.38C10.87 11.27 11.01 11.09 11.14 10.94C11.27 10.79 11.31 10.69 11.4 10.52C11.49 10.35 11.44 10.2 11.38 10.07C11.31 9.95 10.83 8.77 10.63 8.28C10.43 7.8 10.23 7.87 10.07 7.86L9.53 7.53Z"/>
+          </svg>
+          <span>Chat with Perfume Concierge</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Sneak Peek Section (4 Signature Creations) -->
+    <section class="sneak-peek-section">
+      <h2 class="sneak-peek-title">Exclusive Sneak Peek</h2>
+      <div class="sneak-grid">
+        
+        <!-- Fragrance 1: Ember -->
+        <div class="sneak-card">
+          <div class="sneak-img-box">
+            <span class="sneak-tag">30% OFF</span>
+            <img src="assets/product-ember.jpg?v=20261004" alt="Ember" class="sneak-img" />
+          </div>
+          <h3 class="sneak-name">Ember</h3>
+          <p class="sneak-notes">Velvet Woods &amp; Warm Amber</p>
+          <div class="sneak-price">
+            <span>Rs. 2,100</span>
+            <span class="sneak-old-price">Rs. 3,000</span>
+          </div>
+        </div>
+
+        <!-- Fragrance 2: Venta -->
+        <div class="sneak-card">
+          <div class="sneak-img-box">
+            <span class="sneak-tag">30% OFF</span>
+            <img src="assets/product-venta.jpg?v=20261004" alt="Venta" class="sneak-img" />
+          </div>
+          <h3 class="sneak-name">Venta</h3>
+          <p class="sneak-notes">Citrus Energy &amp; Refined Woods</p>
+          <div class="sneak-price">
+            <span>Rs. 2,100</span>
+            <span class="sneak-old-price">Rs. 3,000</span>
+          </div>
+        </div>
+
+        <!-- Fragrance 3: Fatimaa -->
+        <div class="sneak-card">
+          <div class="sneak-img-box">
+            <span class="sneak-tag">35% OFF</span>
+            <img src="assets/product-fatima.jpg?v=20261004" alt="Fatimaa" class="sneak-img" />
+          </div>
+          <h3 class="sneak-name">Fatimaa</h3>
+          <p class="sneak-notes">Soft Florals &amp; Sweet Elegance</p>
+          <div class="sneak-price">
+            <span>Rs. 2,275</span>
+            <span class="sneak-old-price">Rs. 3,500</span>
+          </div>
+        </div>
+
+        <!-- Fragrance 4: Afeee -->
+        <div class="sneak-card">
+          <div class="sneak-img-box">
+            <span class="sneak-tag">35% OFF</span>
+            <img src="assets/product-afeee.jpg?v=20261004" alt="Afeee" class="sneak-img" />
+          </div>
+          <h3 class="sneak-name">Afeee</h3>
+          <p class="sneak-notes">Fresh Greens &amp; Soft Musk</p>
+          <div class="sneak-price">
+            <span>Rs. 2,275</span>
+            <span class="sneak-old-price">Rs. 3,500</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Strip -->
+    <footer class="coming-soon-footer">
+      <div class="trust-strip-pills">
+        <div class="trust-pill-item"><span class="sparkle">✦</span> Pure French Essences</div>
+        <div class="trust-pill-item"><span class="sparkle">✦</span> Free Nationwide Delivery</div>
+        <div class="trust-pill-item"><span class="sparkle">✦</span> Cash on Delivery</div>
+        <div class="trust-pill-item"><span class="sparkle">✦</span> Luxury Unboxing Experience</div>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 AFDASS Haute Parfumerie. All rights reserved. &bull; Inquiries: <a href="tel:+923125797051" class="footer-tel">+92 312 5797051</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Scripts: Live Countdown, Particles Canvas & VIP Handler -->
+  <script>
+    /* ===================================================================
+       1. LIVE COUNTDOWN TIMER (Dynamic Target: 7 Days from now)
+       =================================================================== */
+    // Store launch date in localStorage so countdown remains consistent across refreshes
+    let launchTime = localStorage.getItem('afdass_launch_time');
+    if (!launchTime) {
+      // Set target to 7 days from initial visit
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 7);
+      targetDate.setHours(18, 0, 0, 0); // 6:00 PM
+      launchTime = targetDate.getTime();
+      localStorage.setItem('afdass_launch_time', launchTime);
+    } else {
+      launchTime = parseInt(launchTime, 10);
+      // If expired, refresh target for 5 more days
+      if (launchTime - Date.now() <= 0) {
+        launchTime = Date.now() + 5 * 24 * 60 * 60 * 1000;
+        localStorage.setItem('afdass_launch_time', launchTime);
+      }
+    }
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = Math.max(0, launchTime - now);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    /* ===================================================================
+       2. VIP EARLY ACCESS FORM SUBMISSION
+       =================================================================== */
+    function handleVipSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('vipContactInput');
+      const val = input.value.trim();
+      if (!val) return;
+
+      // Save to localStorage
+      try {
+        const existing = JSON.parse(localStorage.getItem('afdass_vip_leads') || '[]');
+        existing.push({ contact: val, date: new Date().toISOString() });
+        localStorage.setItem('afdass_vip_leads', JSON.stringify(existing));
+      } catch (err) {}
+
+      // Show luxury success feedback
+      const form = document.getElementById('vipNotifyForm');
+      const successBox = document.getElementById('vipSuccessBox');
+      form.style.display = 'none';
+      successBox.style.display = 'block';
+    }
+
+    /* ===================================================================
+       3. AMBIENT GOLDEN STARDUST CANVAS PARTICLES
+       =================================================================== */
+    const canvas = document.getElementById('ambient-particles-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particleCount = 45;
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: -Math.random() * 0.55 - 0.15, // Gentle upward rise
+          size: Math.random() * 1.8 + 0.6,
+          alpha: Math.random() * 0.65 + 0.2,
+          pulse: Math.random() * 0.02 + 0.01,
+          color: Math.random() > 0.4 ? '255, 238, 185' : '222, 166, 95'
+        });
+      }
+
+      function renderParticles() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.alpha += Math.sin(Date.now() * p.pulse * 0.05) * 0.015;
+
+          // Wrap boundaries
+          if (p.y < -10) {
+            p.y = height + 10;
+            p.x = Math.random() * width;
+          }
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+
+          const clampedAlpha = Math.max(0.1, Math.min(0.85, p.alpha));
+
+          // Soft golden core
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.color}, ${clampedAlpha})`;
+          ctx.fill();
+
+          // Soft outer halo
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size * 2.2, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.color}, ${clampedAlpha * 0.22})`;
+          ctx.fill();
+        }
+        requestAnimationFrame(renderParticles);
+      }
+
+      requestAnimationFrame(renderParticles);
+    }
+  </script>
+</body>
+</html>
