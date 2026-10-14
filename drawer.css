@@ -24,35 +24,40 @@
   pointer-events: auto !important;
 }
 
-/* Off-Canvas Slide Drawer */
+/* Off-Canvas Luxury Floating Drawer */
 .mobile-drawer {
   position: fixed !important;
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
+  top: 14px !important;
+  right: 14px !important;
+  bottom: auto !important;
   left: auto !important;
-  width: 86% !important;
-  max-width: 320px !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  background: linear-gradient(180deg, #24130b 0%, #140904 100%) !important;
-  border-left: 1px solid rgba(222, 166, 95, 0.35) !important;
-  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.95) !important;
+  width: calc(100vw - 28px) !important;
+  max-width: 335px !important;
+  height: auto !important;
+  max-height: calc(100dvh - 28px) !important;
+  background: linear-gradient(168deg, rgba(34, 18, 10, 0.97) 0%, rgba(18, 9, 4, 0.98) 55%, rgba(10, 5, 2, 0.99) 100%) !important;
+  backdrop-filter: blur(24px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(170%) !important;
+  border: 1px solid rgba(222, 166, 95, 0.42) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(222, 166, 95, 0.12), inset 0 1px 1px rgba(255, 235, 195, 0.25) !important;
   z-index: 99999 !important;
-  padding: 1.5rem 1.4rem 2rem 1.4rem !important;
+  padding: 1.35rem 1.3rem 1.45rem 1.3rem !important;
   box-sizing: border-box !important;
   display: flex !important;
   flex-direction: column !important;
-  transform: translateX(105%) !important;
+  transform: translateX(115%) scale(0.96) !important;
+  opacity: 0 !important;
   visibility: hidden !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s !important;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.38s !important;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch !important;
   margin: 0 !important;
 }
 
 .mobile-drawer.active {
-  transform: translateX(0) !important;
+  transform: translateX(0) scale(1) !important;
+  opacity: 1 !important;
   visibility: visible !important;
 }
 
@@ -61,9 +66,9 @@
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding-bottom: 1.15rem !important;
-  border-bottom: 1px solid rgba(138, 90, 50, 0.25) !important;
-  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.95rem !important;
+  border-bottom: 1px solid rgba(222, 166, 95, 0.2) !important;
+  margin-bottom: 1rem !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -74,9 +79,10 @@
   max-width: 120px !important;
   object-fit: contain !important;
   display: block !important;
+  filter: drop-shadow(0 2px 8px rgba(222, 166, 95, 0.35)) !important;
 }
 
-/* Close Button Reset & Styling */
+/* Close Button Reset & Fancy Luxury Styling */
 .drawer-close {
   appearance: none !important;
   -webkit-appearance: none !important;
@@ -85,10 +91,10 @@
   min-width: 36px !important;
   min-height: 36px !important;
   border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(222, 166, 95, 0.08) !important;
   border: 1px solid rgba(222, 166, 95, 0.35) !important;
   color: #dea65f !important;
-  font-size: 1.6rem !important;
+  font-size: 1.45rem !important;
   line-height: 1 !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -96,74 +102,119 @@
   cursor: pointer !important;
   padding: 0 !important;
   margin: 0 !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   outline: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
 }
 
 .drawer-close:hover,
 .drawer-close:active {
-  background: rgba(222, 166, 95, 0.22) !important;
+  background: rgba(222, 166, 95, 0.25) !important;
   color: #ffffff !important;
-  border-color: #dea65f !important;
-  transform: scale(1.05);
+  border-color: #f7dfbe !important;
+  transform: rotate(90deg) scale(1.08) !important;
+  box-shadow: 0 0 15px rgba(222, 166, 95, 0.4) !important;
 }
 
-/* Nav Link List */
+/* Fancy Nav Link List */
 .mobile-nav-list {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.25rem !important;
+  gap: 0.45rem !important;
   flex: 1 !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  margin-bottom: 1rem !important;
 }
 
 .mobile-link {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 0.9rem 0.65rem !important;
-  color: #e4dfd7 !important;
+  padding: 0.8rem 1rem !important;
+  color: #f0ebe4 !important;
   text-decoration: none !important;
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 1.18rem !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.02em !important;
-  border-bottom: 1px solid rgba(138, 90, 50, 0.15) !important;
-  border-radius: 6px !important;
-  transition: all 0.2s ease !important;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  border: 1px solid rgba(222, 166, 95, 0.14) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 12px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
+/* Luxury circular trailing arrow */
 .mobile-link::after {
-  content: '›' !important;
+  content: '→' !important;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
-  font-size: 1.35rem !important;
-  color: rgba(222, 166, 95, 0.4) !important;
-  transition: transform 0.2s ease, color 0.2s ease !important;
-}
-
-.mobile-link:hover,
-.mobile-link.active {
-  color: #dea65f !important;
-  padding-left: 0.9rem !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: rgba(222, 166, 95, 0.6) !important;
   background: rgba(222, 166, 95, 0.08) !important;
+  border: 1px solid rgba(222, 166, 95, 0.2) !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.mobile-link:hover::after,
+.mobile-link:hover {
+  color: #ffffff !important;
+  background: rgba(222, 166, 95, 0.1) !important;
+  border-color: rgba(222, 166, 95, 0.4) !important;
+  transform: translateX(-2px) !important;
+}
+
+.mobile-link:hover::after {
+  color: #1a0e07 !important;
+  background: linear-gradient(135deg, #fcead2 0%, #dea65f 100%) !important;
+  border-color: #dea65f !important;
+  transform: scale(1.1) !important;
+}
+
+/* Active Link State */
+.mobile-link.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(222, 166, 95, 0.2) 0%, rgba(184, 125, 59, 0.1) 100%) !important;
+  border-color: rgba(222, 166, 95, 0.55) !important;
+  box-shadow: 0 4px 18px rgba(222, 166, 95, 0.15), inset 0 1px 0 rgba(255, 235, 195, 0.25) !important;
+}
+
+.mobile-link.active::before {
+  content: '' !important;
+  width: 4px !important;
+  height: 18px !important;
+  background: linear-gradient(180deg, #ffe0b3 0%, #dea65f 100%) !important;
+  border-radius: 2px !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  box-shadow: 0 0 10px rgba(222, 166, 95, 0.8) !important;
+}
+
 .mobile-link.active::after {
-  color: #dea65f !important;
-  transform: translateX(4px) !important;
+  color: #1a0e07 !important;
+  background: linear-gradient(135deg, #ffe0b3 0%, #dea65f 100%) !important;
+  border-color: #ffe0b3 !important;
+  box-shadow: 0 0 10px rgba(222, 166, 95, 0.5) !important;
 }
 
 /* Drawer CTA Footer */
 .drawer-cta {
   margin-top: auto !important;
-  padding-top: 1.25rem !important;
-  border-top: 1px solid rgba(138, 90, 50, 0.25) !important;
+  padding-top: 0.95rem !important;
+  border-top: 1px solid rgba(222, 166, 95, 0.2) !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.75rem !important;
+  gap: 0.65rem !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -173,51 +224,53 @@
   align-items: center !important;
   justify-content: center !important;
   gap: 0.65rem !important;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.14) 0%, rgba(222, 166, 95, 0.15) 100%) !important;
-  border: 1px solid rgba(222, 166, 95, 0.45) !important;
+  background: linear-gradient(135deg, #182e22 0%, #0d1e15 100%) !important;
+  border: 1px solid rgba(37, 211, 102, 0.45) !important;
   color: #f7dfbe !important;
   text-decoration: none !important;
-  padding: 0.82rem 1.2rem !important;
-  border-radius: 9999px !important;
+  padding: 0.82rem 1.15rem !important;
+  border-radius: 14px !important;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
-  font-size: 0.9rem !important;
+  font-size: 0.88rem !important;
   font-weight: 600 !important;
   letter-spacing: 0.02em !important;
   transition: all 0.25s ease !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 211, 102, 0.15) !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
 .drawer-wa-btn:hover,
 .drawer-wa-btn:active {
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.25) 0%, rgba(222, 166, 95, 0.25) 100%) !important;
-  border-color: #dea65f !important;
+  background: linear-gradient(135deg, #203f2e 0%, #12281c 100%) !important;
+  border-color: #25d366 !important;
   color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25) !important;
   transform: translateY(-1px) !important;
 }
 
 /* Explicit WhatsApp SVG Sizing */
 .drawer-wa-icon {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  max-width: 20px !important;
-  min-height: 20px !important;
-  max-height: 20px !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  min-height: 18px !important;
+  max-height: 18px !important;
   fill: #25d366 !important;
   flex-shrink: 0 !important;
   display: block !important;
+  filter: drop-shadow(0 0 4px rgba(37, 211, 102, 0.6)) !important;
 }
 
 .drawer-tagline {
   text-align: center !important;
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-style: italic !important;
-  font-size: 0.95rem !important;
-  color: rgba(222, 166, 95, 0.72) !important;
+  font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  color: rgba(222, 166, 95, 0.7) !important;
   margin: 0 !important;
-  letter-spacing: 0.03em !important;
 }
 
 /* Mobile Toggle Hamburger Icon */
