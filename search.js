@@ -5,8 +5,28 @@
  */
 
 (function () {
-  // 1. Catalog Database for Live Search
+  // 1. Catalog Database for Live Search (Signature Creations first)
   const searchCatalog = [
+    {
+      id: 'fatima',
+      name: 'Fatimaa',
+      category: 'women',
+      tag: 'Signature',
+      notes: 'Soft Florals & Sweet Elegance · Mandarin, Gardenia, Jasmine & Brown Sugar',
+      price: 2275,
+      image: 'assets/bottle-fatima.jpg',
+      url: 'product-detail.html?product=fatima'
+    },
+    {
+      id: 'afeee',
+      name: 'Afeee',
+      category: 'unisex',
+      tag: 'Signature',
+      notes: 'Fresh Greens & Soft Musk · Floral Crème Brûlée, Green Notes & Woods',
+      price: 2275,
+      image: 'assets/bottle-afeee.jpg',
+      url: 'product-detail.html?product=afeee'
+    },
     {
       id: 'ember',
       name: 'Ember',
@@ -26,26 +46,6 @@
       price: 2100,
       image: 'assets/bottle-venta.jpg',
       url: 'product-detail.html?product=venta'
-    },
-    {
-      id: 'fatima',
-      name: 'Fatimaa',
-      category: 'women',
-      tag: 'Soft Florals',
-      notes: 'Soft Florals & Sweet Elegance · Mandarin, Gardenia, Jasmine & Brown Sugar',
-      price: 2275,
-      image: 'assets/bottle-fatima.jpg',
-      url: 'product-detail.html?product=fatima'
-    },
-    {
-      id: 'afeee',
-      name: 'Afeee',
-      category: 'unisex',
-      tag: 'Fresh Greens',
-      notes: 'Fresh Greens & Soft Musk · Floral Crème Brûlée, Green Notes & Woods',
-      price: 2275,
-      image: 'assets/bottle-afeee.jpg',
-      url: 'product-detail.html?product=afeee'
     }
   ];
 

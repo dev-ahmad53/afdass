@@ -195,8 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
           return nameB.localeCompare(nameA);
         });
       } else if (val === 'best') {
-        // Priority order based on popularity
-        const priority = { 'ember': 1, 'fatima': 2, 'venta': 3, 'afeee': 4 };
+        // Priority order: Signature creations first
+        const priority = { 'fatima': 1, 'afeee': 2, 'ember': 3, 'venta': 4 };
         sorted.sort((a, b) => {
           const idA = a.querySelector('a.prod-img-link')?.getAttribute('href')?.split('=')[1] || '';
           const idB = b.querySelector('a.prod-img-link')?.getAttribute('href')?.split('=')[1] || '';
