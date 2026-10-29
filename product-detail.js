@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Men & Unisex',
       occasion: 'Special Occasions, Dates & Soirées',
       images: [
-        'assets/bottle-ember.jpg',
+        'assets/display-ember.jpg',
         'assets/gallery-ember-real-1.jpg',
         'assets/gallery-ember-real-2.jpg',
         'assets/gallery-ember-real-3.jpg',
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Men',
       occasion: 'Everyday Wear, Events & Special Occasions',
       images: [
-        'assets/bottle-venta.jpg',
+        'assets/display-venta.jpg',
         'assets/gallery-venta-real-1.jpg',
         'assets/gallery-venta-real-2.jpg',
         'assets/gallery-venta-real-3.jpg',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Women',
       occasion: 'Everyday Moments, Dates & Special Occasions',
       images: [
-        'assets/bottle-fatima.jpg',
+        'assets/display-fatima.jpg',
         'assets/gallery-fatima-2.jpg',
         'assets/story-box.jpg',
         'assets/product-fatima.jpg'
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Unisex',
       occasion: 'Everyday Wear, Special Occasions & Gatherings',
       images: [
-        'assets/bottle-afeee.jpg',
+        'assets/display-afeee.jpg',
         'assets/gallery-afeee-real-1.jpg',
         'assets/gallery-afeee-real-2.jpg',
         'assets/gallery-afeee-real-3.jpg',
