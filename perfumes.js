@@ -392,6 +392,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       localStorage.setItem('afdass_cart', JSON.stringify(cart));
       localStorage.setItem('afdass_cart_seeded', 'done');
+      if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', { content_name: pInfo.name, content_ids: [pInfo.id], content_type: 'product', value: pInfo.price, currency: 'PKR' });
+      }
 
       // Button feedback animation
       const originalContent = btn.innerHTML;

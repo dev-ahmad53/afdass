@@ -241,6 +241,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Init Cart Count
     initCartCount();
+    if (typeof fbq === 'function' && currentProduct) {
+      fbq('track', 'ViewContent', {
+        content_name: currentProduct.name,
+        content_ids: [currentKey],
+        content_type: 'product',
+        value: (currentProduct.prices && currentProduct.prices[currentSize]) ? currentProduct.prices[currentSize] : (currentProduct.basePrice || 0),
+        currency: 'PKR'
+      });
+    }
   }
 
   // 6. Gallery Image Switcher

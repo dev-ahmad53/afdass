@@ -256,6 +256,9 @@
 
     localStorage.setItem('afdass_cart', JSON.stringify(cart));
     localStorage.setItem('afdass_cart_seeded', 'done');
+        if (typeof fbq === 'function') {
+          fbq('track', 'AddToCart', { content_name: item.name, content_ids: [item.id], content_type: 'product', value: item.price, currency: 'PKR' });
+        }
 
     // Visual feedback
     const originalText = btn.innerHTML;

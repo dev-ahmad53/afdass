@@ -470,6 +470,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Open Checkout Modal
   function openCheckoutModal() {
+    if (typeof fbq === 'function') {
+      try {
+        const activeItems = (typeof cart !== 'undefined' && Array.isArray(cart)) ? cart.filter(it => it.checked !== false) : [];
+        const totalVal = activeItems.reduce((sum, it) => sum + (it.price * it.quantity), 0);
+        fbq('track', 'InitiateCheckout', {
+          num_items: activeItems.reduce((sum, it) => sum + it.quantity, 0),
+          value: totalVal,
+          currency: 'PKR'
+        });
+      } catch (err) {}
+    }
     if (cartItems.length === 0) {
       showToast('Cart is Empty', 'Your cart is currently empty. Please select a fragrance to proceed.');
       return;
@@ -642,7 +653,21 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(waUrl, '_blank');
 
       // Close checkout modal
-      closeCheckoutModal();
+      if (typeof fbq === 'function') {
+      try {
+        const activeItems = (typeof cart !== 'undefined' && Array.isArray(cart)) ? cart.filter(it => it.checked !== false) : [];
+        const totalVal = activeItems.reduce((sum, it) => sum + (it.price * it.quantity), 0);
+        fbq('track', 'Purchase', {
+          content_type: 'product',
+          content_ids: activeItems.map(it => it.id),
+          value: totalVal,
+          currency: 'PKR',
+          order_id: orderId
+        });
+      } catch (err) {}
+    }
+
+    closeCheckoutModal();
 
       // Show Success Modal
       if (orderSuccessModal) {
