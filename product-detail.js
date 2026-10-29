@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         'assets/display-fatima.jpg',
         'assets/gallery-fatima-2.jpg',
-        'assets/story-box.jpg',
         'assets/product-fatima.jpg'
       ],
       notes: {
