@@ -198,36 +198,9 @@
           <div class="gallery-col">
             <!-- Vertical Thumbnails Strip -->
             <div class="thumb-carousel-wrap">
-              <button class="thumb-nav-btn prev" id="thumbPrevBtn" aria-label="Previous image">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-              </button>
-
               <div class="thumb-track" id="thumbTrack">
-                <!-- Dynamically populated or static slots -->
-                <button class="thumb-item active" data-index="0" aria-label="Thumbnail 1">
-                  <img src="assets/bottle-ember.jpg" alt="Angle 1" class="thumb-img" id="thumbImg0" />
-                </button>
-                <button class="thumb-item" data-index="1" aria-label="Thumbnail 2">
-                  <img src="assets/gallery-ember-2.jpg" alt="Angle 2" class="thumb-img" id="thumbImg1" />
-                </button>
-                <button class="thumb-item" data-index="2" aria-label="Thumbnail 3">
-                  <img src="assets/story-box.jpg" alt="Angle 3" class="thumb-img" id="thumbImg2" />
-                </button>
-                <button class="thumb-item" data-index="3" aria-label="Thumbnail 4">
-                  <img src="assets/story-box-from-user.png" alt="Angle 4" class="thumb-img" id="thumbImg3" />
-                </button>
-                <button class="thumb-item" data-index="4" aria-label="Thumbnail 5">
-                  <img src="assets/product-ember.jpg" alt="Angle 5" class="thumb-img" id="thumbImg4" />
-                </button>
+                <!-- Dynamically populated by renderProduct() -->
               </div>
-
-              <button class="thumb-nav-btn next" id="thumbNextBtn" aria-label="Next image">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
             </div>
 
             <!-- Large Main Display Stage -->

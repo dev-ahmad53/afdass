@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/display-ember.jpg',
         'assets/gallery-ember-real-1.jpg',
         'assets/gallery-ember-real-2.jpg',
-        'assets/gallery-ember-real-3.jpg',
-        'assets/story-box.jpg'
+        'assets/gallery-ember-real-3.jpg'
       ],
       notes: {
         top: 'Apple, Lemon, Bergamot & Neroli',
@@ -57,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/display-venta.jpg',
         'assets/gallery-venta-real-1.jpg',
         'assets/gallery-venta-real-2.jpg',
-        'assets/gallery-venta-real-3.jpg',
-        'assets/story-box.jpg'
+        'assets/gallery-venta-real-3.jpg'
       ],
       notes: {
         top: 'Lemon',
@@ -118,8 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/display-afeee.jpg',
         'assets/gallery-afeee-real-1.jpg',
         'assets/gallery-afeee-real-2.jpg',
-        'assets/gallery-afeee-real-3.jpg',
-        'assets/story-box.jpg'
+        'assets/gallery-afeee-real-3.jpg'
       ],
       notes: {
         top: 'Floral Crème Brûlée',

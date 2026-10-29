@@ -154,17 +154,7 @@ html {
 }
 
 .thumb-nav-btn {
-  background: rgba(26, 17, 10, 0.8);
-  border: 1px solid rgba(138, 90, 50, 0.3);
-  color: var(--gold-primary);
-  width: 32px;
-  height: 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
+  display: none !important;
 }
 
 .thumb-nav-btn svg {
