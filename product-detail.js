@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Men & Unisex',
       occasion: 'Special Occasions, Dates & Soirées',
       images: [
-        'assets/bottle-ember.jpg?v=20261004',
-        'assets/gallery-ember-2.jpg',
-        'assets/story-box.jpg',
-        'assets/story-box-from-user.png',
-        'assets/product-ember.jpg?v=20261004'
+        'assets/bottle-ember.jpg',
+        'assets/gallery-ember-real-1.jpg',
+        'assets/gallery-ember-real-2.jpg',
+        'assets/gallery-ember-real-3.jpg',
+        'assets/story-box.jpg'
       ],
       notes: {
         top: 'Apple, Lemon, Bergamot & Neroli',
@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Men',
       occasion: 'Everyday Wear, Events & Special Occasions',
       images: [
-        'assets/bottle-venta.jpg?v=20261004',
-        'assets/gallery-venta-2.jpg',
-        'assets/story-box.jpg',
-        'assets/story-box-from-user.png',
-        'assets/product-venta.jpg?v=20261004'
+        'assets/bottle-venta.jpg',
+        'assets/gallery-venta-real-1.jpg',
+        'assets/gallery-venta-real-2.jpg',
+        'assets/gallery-venta-real-3.jpg',
+        'assets/story-box.jpg'
       ],
       notes: {
         top: 'Lemon',
@@ -85,11 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Women',
       occasion: 'Everyday Moments, Dates & Special Occasions',
       images: [
-        'assets/bottle-fatima.jpg?v=20261004',
+        'assets/bottle-fatima.jpg',
         'assets/gallery-fatima-2.jpg',
         'assets/story-box.jpg',
-        'assets/story-box-from-user.png',
-        'assets/product-fatima.jpg?v=20261004'
+        'assets/product-fatima.jpg'
       ],
       notes: {
         top: 'Blossom Accord, Italian Mandarin & Red Berries',
@@ -116,11 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
       best: 'Unisex',
       occasion: 'Everyday Wear, Special Occasions & Gatherings',
       images: [
-        'assets/bottle-afeee.jpg?v=20261004',
-        'assets/gallery-afeee-2.jpg',
-        'assets/story-box.jpg',
-        'assets/story-box-from-user.png',
-        'assets/product-afeee.jpg?v=20261004'
+        'assets/bottle-afeee.jpg',
+        'assets/gallery-afeee-real-1.jpg',
+        'assets/gallery-afeee-real-2.jpg',
+        'assets/gallery-afeee-real-3.jpg',
+        'assets/story-box.jpg'
       ],
       notes: {
         top: 'Floral Crème Brûlée',
